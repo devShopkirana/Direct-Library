@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:text="@string/filter"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_clear_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="@string/clear_all"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:gravity="center|top"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_filter_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey1"
+                android:layout_weight="0.4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_filter_cate_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:layout_weight="0.6" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_filter_brands_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:layout_weight="0.6" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_filter_discount_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:layout_weight="0.6" />
+            <TextView
+                android:id="@+id/tv_no_data"
+                style="@style/font_normal_sami_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.6"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:id="@+id/price_filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_filter_type"
+                    style="@style/font_normal_sami_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center|start"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:maxLines="1"
+                    android:padding="2dp"
+                    android:textColor="@color/Darkgrey"
+                    android:text="@string/select_price_range"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_min_max_range"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="0"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <com.innovattic.rangeseekbar.RangeSeekBar
+                    android:id="@+id/rangeSeekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rsb_maxThumbDrawable="@drawable/ic_black_dot"
+                    app:rsb_maxThumbOffsetHorizontal="2dp"
+                    app:rsb_minThumbDrawable="@drawable/ic_black_dot"
+                    app:rsb_minThumbOffsetHorizontal="-2dp"
+                    app:rsb_trackSelectedRoundedCaps="true"
+                    app:rsb_trackRoundedCaps="true"
+                    app:rsb_trackColor="#888"
+                    app:rsb_trackSelectedColor="#222"
+                    app:rsb_trackSelectedThickness="6dp"
+                    app:rsb_trackThickness="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey" />
+
+
+                <TextView
+                    android:id="@+id/tv_apply"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="@string/apply"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_logo">
+
+            </ImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/verification"
+                android:id="@+id/tvVerificationHead"
+                style="@style/font_normal"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_verifaction_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:text=""
+                style="@style/font_normal_sami_bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <com.skdirect.utils.OtpEditText
+                android:id="@+id/et_otp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:cursorVisible="false"
+                android:digits="1234567890"
+                android:text="5678"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textIsSelectable="false"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resendotp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/resend_otp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/resend_otp_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_lodding_otp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/bg_background"
+                android:drawableRight="@drawable/ic_left_arrow__1_"
+                android:drawablePadding="10dp"
+                android:padding="5dp"
+                style="@style/font_normal_sami_bold"
+                android:paddingEnd="10dp"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/teal_200"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

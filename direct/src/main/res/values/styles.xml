@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background"> @android:color/transparent</item>
+    </style>
+    <style name="Text">Text</style>
+
+    <style name="font_normal" parent="@style/Text">
+        <item name="android:fontFamily">@font/segoeui</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font_Bold" parent="@style/Text">
+        <item name="android:fontFamily">@font/segoeuib</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font_normal_lite" parent="@style/Text">
+        <item name="android:fontFamily">@font/segoeuil</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font_normal_sami_lite" parent="@style/Text">
+        <item name="android:fontFamily">@font/segoeuisl</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font_normal_sami_bold" parent="@style/Text">
+        <item name="android:fontFamily">@font/seguisb</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="BottomTheme" parent="@style/Theme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

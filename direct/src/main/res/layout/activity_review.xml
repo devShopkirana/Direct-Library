@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar_tittle"
+                layout="@layout/toolbar_arrow" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="5dp"
+                style="@style/font_normal_sami_bold"
+                android:text="@string/rate_your_experience"
+                android:id="@+id/tvRateExperience"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:maxLines="1"
+                style="@style/font_normal"
+                android:padding="5dp"
+                android:id="@+id/tvHowWouldRate"
+                android:text="@string/how_would_you_rate_the_seller"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="normal" />
+
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="5dp"
+                style="@style/font_normal"
+                android:text="@string/comments"
+                android:id="@+id/tvComments"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="normal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_cardview"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_enter_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@null"
+                    android:hint="@string/enter_comments"
+                    style="@style/font_normal"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:padding="10dp"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_save_ratting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/db_button_save"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save"
+            android:textColor="@color/seller_button_color"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
+</layout>

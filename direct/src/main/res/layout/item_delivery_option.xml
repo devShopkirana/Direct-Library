@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_change_delivery_opction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/tv_delivery_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/grid_divder"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/iv_select_opction"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_right"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:button="@null"
+            app:buttonCompat="@null" />
+
+    </RelativeLayout>
+
+</layout>
+
+

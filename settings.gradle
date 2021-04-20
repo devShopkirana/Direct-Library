@@ -1,0 +1,3 @@
+include ':direct'
+include ':app'
+rootProject.name = "Demo"

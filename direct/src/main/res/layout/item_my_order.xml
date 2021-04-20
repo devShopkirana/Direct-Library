@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/LLMainCat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/white_rectangle_box"
+        android:elevation="3dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/imItemImage"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imItemImage"
+                android:orientation="vertical"
+               >
+
+                <TextView
+                    android:id="@+id/tv_OrderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    style="@style/font_normal_sami_bold"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                   />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_ProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/font_normal"
+                        android:textColor="@color/black"
+                        android:layout_toLeftOf="@+id/iv_forword"
+                        android:layout_alignParentLeft="true"
+                        android:maxLines="2"
+                        android:padding="3dp"
+                        android:textSize="13dp"
+                        android:textStyle="normal" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_forword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/font_normal_lite"
+                        android:layout_alignParentRight="true"
+                        android:maxLines="2"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:textStyle="normal" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_order_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    style="@style/font_normal"
+                    android:textColor="@color/black"
+                    android:padding="3dp"
+                    android:textSize="13dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_saller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    style="@style/font_normal"
+                    android:textColor="@color/black"
+                    android:padding="3dp"
+                    android:textSize="13dp"
+                    android:textStyle="normal" />
+
+
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_add_review"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rounded_drawer"
+                        android:padding="5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        style="@style/font_normal_sami_lite"
+                        android:text="@string/add_review"
+                        android:textColor="@color/seller_button_color"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:visibility="gone"
+                        android:numStars="5"
+
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

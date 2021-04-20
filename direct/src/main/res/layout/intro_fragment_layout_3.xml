@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/intro_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:text="Buyer"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:text="Browse products"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/b3" />
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_margin="30dp"
+            android:rotation="45"
+            android:layout_gravity="center"
+            android:background="@color/seller_button_color" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/s3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:text="Seller"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+            android:text="Display your Product"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+    </LinearLayout>
+</FrameLayout>

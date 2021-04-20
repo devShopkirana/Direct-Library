@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/LLMainCat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/white_rectangle_box"
+        android:elevation="1dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/imItemImage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_magrgin_off"
+                    style="@style/font_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_off"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_no_of_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_item_view"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_item_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="20"
+                        android:textSize="10dp"
+                        android:drawableLeft="@drawable/ic_item_eye"
+                        android:paddingStart="2dp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rl_image"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_saller_name"
+                    style="@style/font_normal_sami_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/font_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_mrp"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tv_mrp"
+                            style="@style/font_normal_sami_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_selling_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/font_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_selling_price"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tv_selling_price"
+                            style="@style/font_normal_sami_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="@color/teal_200"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_descount_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/font_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/discount"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tv_discount"
+                            style="@style/font_normal_sami_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:textColor="@color/teal_200"
+                            android:textSize="13dp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_tax"
+                    style="@style/font_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Inclusive"
+                    android:textColor="@color/seller_button_color"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    style="@style/font_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+
+                    <LinearLayout
+                        android:id="@+id/LLPlusMinus"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_bg"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/tvQtyMinus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_bg_minus"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSelectedQty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:maxLength="3"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/seller_button_color"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvQtyPlus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_bg_plus"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_add"
+                        style="@style/font_normal_sami_bold"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/rounded_drawer"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Add"
+                        android:textColor="@color/seller_button_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

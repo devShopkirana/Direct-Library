@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/editext_drawble"
+                    android:gravity="center_vertical"
+                    android:hint="@string/name_reg"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/editext_drawble"
+                    android:gravity="center_vertical"
+                    android:hint="@string/email_is_optional"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pin_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/pincode"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_save_addresh"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_for_buttons"
+            android:text="@string/save"
+            android:textColor="@color/seller_button_color"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</layout>

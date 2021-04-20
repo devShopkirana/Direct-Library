@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_cardview"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text=""
+                style="@style/font_Bold"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+
+            <CheckBox
+                android:id="@+id/img_verified"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="invisible"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_shop_name"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                app:buttonCompat="@null"
+                />
+
+            <ImageView
+                android:id="@+id/iv_opcation_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/ic_stat_name"
+                android:tint="@color/black" />
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_addres_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            style="@style/font_normal"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/tv_addres_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=""
+            style="@style/font_normal"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            style="@style/font_normal"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="@color/grid_divder"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+</layout>
