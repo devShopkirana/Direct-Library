@@ -2,16 +2,246 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.skdirect">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <application android:name=".utils.MyApplication">
-        <activity android:name=".activity.MainActivity">
+    <queries>
+        <package android:name="com.whatsapp" />
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+
+    <application
+        android:name=".utils.MyApplication"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".activity.WebviewActivity"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlaceSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserLocationActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SellerImageGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MapsExtendedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlacesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GenerateOTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginWithPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NearByItemProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SellerProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CategoriesListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.NearSellerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MostVisitedSellerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.NewSellerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ProductDetailsActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="skdirectbuyer.shopkirana.in"
+                    android:pathPrefix="/product"
+                    android:scheme="https" />
+                <data
+                    android:host="virtualstockuat.shopkirana.in"
+                    android:pathPrefix="/product"
+                    android:scheme="https" />
+                <data
+                    android:host="directbuyer.er15.xyz"
+                    android:pathPrefix="/product"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ProfilePrimaryAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UpdateProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrimaryAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SellerProfileActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="skdirectbuyer.shopkirana.in"
+                    android:pathPrefix="/seller"
+                    android:scheme="https" />
+                <data
+                    android:host="virtualstockuat.shopkirana.in"
+                    android:pathPrefix="/seller"
+                    android:scheme="https" />
+                <data
+                    android:host="directbuyer.er15.xyz"
+                    android:pathPrefix="/seller"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.CartActivity"
+            android:label="@string/shopping_bag"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.MapsActivity"
+            android:hardwareAccelerated="false"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeLanguageActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OfferActivity"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".broadcast.SmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
     </application>
 </manifest>
