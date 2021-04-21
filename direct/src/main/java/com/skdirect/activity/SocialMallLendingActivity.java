@@ -49,7 +49,6 @@ public class SocialMallLendingActivity extends AppCompatActivity {
             latitude = getIntent().getDoubleExtra("LATITUDE", 0);
             longitude = getIntent().getDoubleExtra("LONGITUDE", 0);
             SOURCEKEY = getIntent().getStringExtra("SOURCEKEY");
-            SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
             if (!TextUtils.isNullOrEmpty(SOURCEKEY)) {
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SOURCEKEY, SOURCEKEY);
             } else {
@@ -121,6 +120,8 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                     }, fcmToken);
                     Utils.getTokenData(getApplicationContext(), model);
                     SharePrefs.setSharedPreference(getApplicationContext(), SharePrefs.Is_First_Time, true);
+                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
+
                     if (model.getIsRegistrationComplete()) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     } else {
