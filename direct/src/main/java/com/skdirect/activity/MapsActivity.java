@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,13 +35,11 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.libraries.places.api.Places;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
-import com.skdirect.adapter.PlacesAutoCompleteAdapter;
 import com.skdirect.databinding.ActivityMapsBinding;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.MapViewViewMode;
@@ -72,7 +69,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_maps);
         mapViewViewMode = ViewModelProviders.of(this).get(MapViewViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
     }
 

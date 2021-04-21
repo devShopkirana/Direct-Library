@@ -30,9 +30,8 @@ import com.skdirect.model.MallMainPriceModel;
 import com.skdirect.model.PostBrandModel;
 import com.skdirect.utils.Constant;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
-import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -73,7 +72,7 @@ public class FilterActivity extends AppCompatActivity implements FilterTypeInter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_filter);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
 
         if (getIntent().getExtras() != null) {
             categoryId = getIntent().getIntExtra("categoryId", 0);

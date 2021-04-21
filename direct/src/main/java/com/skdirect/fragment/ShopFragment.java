@@ -22,7 +22,7 @@ import com.skdirect.databinding.FragmentShopBinding;
 import com.skdirect.interfacee.SearchInterface;
 import com.skdirect.model.ShopMainModel;
 import com.skdirect.model.TopSellerModel;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.SearchViewMode;
 
@@ -83,7 +83,7 @@ public class ShopFragment extends Fragment implements SearchInterface {
 
 
     private void initViews() {
-        mBinding.tvNotDataFound.setText(MyApplication.getInstance().dbHelper.getString(R.string.no_data_found));
+        mBinding.tvNotDataFound.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.no_data_found));
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mBinding.rvSearch.setLayoutManager(layoutManager);
         sellerShopListAdapter = new SellerShopListAdapter(getActivity(), sallerShopList);
@@ -123,7 +123,7 @@ public class ShopFragment extends Fragment implements SearchInterface {
             sallerShopList.clear();
             getShopData();
         } else {
-            Utils.setToast(activity, MyApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
+            Utils.setToast(activity, MySingltonApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
         }
     }
 

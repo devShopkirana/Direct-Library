@@ -17,15 +17,15 @@ import org.jetbrains.annotations.NotNull;
 
 import io.reactivex.observers.DisposableObserver;
 
-public class MyApplication extends Application implements LifecycleObserver {
+public class MySingltonApplication extends Application implements LifecycleObserver {
     public Context appContext;
-    private static MyApplication mInstance;
+    private static MySingltonApplication mInstance;
     public Activity activity;
     public CartRepository cartRepository;
     public DBHelper dbHelper;
     public String otp = "1234";
 
-    public static synchronized MyApplication getInstance() {
+    public static synchronized MySingltonApplication getInstance() {
         return mInstance;
     }
 

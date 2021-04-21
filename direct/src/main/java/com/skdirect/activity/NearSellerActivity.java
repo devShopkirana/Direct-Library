@@ -19,15 +19,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.skdirect.R;
 import com.skdirect.adapter.NearSellerListAdapter;
 import com.skdirect.databinding.ActivityNearSalleBinding;
-import com.skdirect.databinding.ActivitySallerProductListBinding;
 import com.skdirect.model.NearBySallerModel;
 import com.skdirect.model.NearBySellerMainModel;
 import com.skdirect.model.PaginationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.NearSellerViewMode;
-import com.skdirect.viewmodel.SellerProductListViewMode;
 
 import java.util.ArrayList;
 
@@ -68,7 +66,7 @@ public class NearSellerActivity extends AppCompatActivity implements View.OnClic
         mBinding.toolbarTittle.tvTittle.setText("Seller List");
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
         nearBySallerList.clear();
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL,false);
         mBinding.rvSellerProduct.setLayoutManager(layoutManager);

@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +20,7 @@ import com.skdirect.interfacee.MakeDefaultInterface;
 import com.skdirect.model.MainLocationModel;
 import com.skdirect.model.UserLocationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.PrimaryAddressViewMode;
 
@@ -39,7 +38,7 @@ public class ProfilePrimaryAddressActivity extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_profile_primary_address);
         primaryAddressViewMode = ViewModelProviders.of(this).get(PrimaryAddressViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getSharedData();
         initView();
         callUserLocation();

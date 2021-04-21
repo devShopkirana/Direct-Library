@@ -26,7 +26,7 @@ import com.skdirect.model.DeliveryOptionModel;
 import com.skdirect.model.OrderPlaceRequestModel;
 import com.skdirect.model.UserLocationModel;
 import com.skdirect.model.response.OfferResponse;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.PaymentViewMode;
@@ -52,7 +52,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_payment);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle(MyApplication.getInstance().dbHelper.getString(R.string.title_activity_payment));
+        setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.title_activity_payment));
 
         paymentViewMode = ViewModelProviders.of(this).get(PaymentViewMode.class);
         getSharedData();
@@ -99,7 +99,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
             mBinding.tvAddreshTree.setText(userLocationModel.getAddressThree());
             mBinding.tvCityName.setText(userLocationModel.getCity() + " - " + userLocationModel.getPincode() + " (" + userLocationModel.getState() + ")");
             mBinding.liAddress.setVisibility(View.VISIBLE);
-            mBinding.btnAdd.setText(MyApplication.getInstance().dbHelper.getString(R.string.change));
+            mBinding.btnAdd.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.change));
             mBinding.btnPlaceOrder.setClickable(true);
             mBinding.btnPlaceOrder.setBackgroundResource(R.drawable.rounded_drawer);
             mBinding.btnPlaceOrder.setTextColor(Color.parseColor("#58ccc1"));
@@ -116,18 +116,18 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
 
     private void initView() {
-        mBinding.tvOrderValueH.setText(MyApplication.getInstance().dbHelper.getString(R.string.total_order_value));
-        mBinding.tvAmountH.setText(MyApplication.getInstance().dbHelper.getString(R.string.total_amount));
-        mBinding.tvItemPrice.setText(MyApplication.getInstance().dbHelper.getString(R.string.price_details));
-        mBinding.tvAddress.setText(MyApplication.getInstance().dbHelper.getString(R.string.address));
-        mBinding.tvCodTitle.setText(MyApplication.getInstance().dbHelper.getString(R.string.cash_on_delivery));
-        mBinding.tvDOption.setText(MyApplication.getInstance().dbHelper.getString(R.string.delivery_option));
-        mBinding.btnPlaceOrder.setText(MyApplication.getInstance().dbHelper.getString(R.string.place_order));
-        mBinding.tvSelectPromoTitle.setText(MyApplication.getInstance().dbHelper.getString(R.string.select_a_promo_code));
-        mBinding.btnOffer.setText(MyApplication.getInstance().dbHelper.getString(R.string.view_offer));
-        mBinding.tvPaymentTitle.setText(MyApplication.getInstance().dbHelper.getString(R.string.title_activity_payment));
-        mBinding.btnAdd.setText(MyApplication.getInstance().dbHelper.getString(R.string.change));
-        mBinding.tvDeleveryCharge.setText(MyApplication.getInstance().dbHelper.getString(R.string.delivery_charge));
+        mBinding.tvOrderValueH.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.total_order_value));
+        mBinding.tvAmountH.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.total_amount));
+        mBinding.tvItemPrice.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.price_details));
+        mBinding.tvAddress.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.address));
+        mBinding.tvCodTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.cash_on_delivery));
+        mBinding.tvDOption.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.delivery_option));
+        mBinding.btnPlaceOrder.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.place_order));
+        mBinding.tvSelectPromoTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.select_a_promo_code));
+        mBinding.btnOffer.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.view_offer));
+        mBinding.tvPaymentTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.title_activity_payment));
+        mBinding.btnAdd.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.change));
+        mBinding.tvDeleveryCharge.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.delivery_charge));
         mBinding.btnOffer.setOnClickListener(this);
         mBinding.btnRemove.setOnClickListener(this);
         mBinding.btnPlaceOrder.setOnClickListener(this);
@@ -168,9 +168,9 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
     public void orderPlaceAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(MyApplication.getInstance().dbHelper.getString(R.string.Confirmation));
-        builder.setMessage(MyApplication.getInstance().dbHelper.getString(R.string.order_place));
-        builder.setPositiveButton(MyApplication.getInstance().dbHelper.getString(R.string.yes), (dialog, which) -> {
+        builder.setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.Confirmation));
+        builder.setMessage(MySingltonApplication.getInstance().dbHelper.getString(R.string.order_place));
+        builder.setPositiveButton(MySingltonApplication.getInstance().dbHelper.getString(R.string.yes), (dialog, which) -> {
             if (Utils.isNetworkAvailable(getApplicationContext())) {
                 Utils.showProgressDialog(this);
                 orderPlaceAPI();
@@ -179,7 +179,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-        builder.setNegativeButton(MyApplication.getInstance().dbHelper.getString(R.string.no), (dialog, which) -> {
+        builder.setNegativeButton(MySingltonApplication.getInstance().dbHelper.getString(R.string.no), (dialog, which) -> {
 
         });
 
@@ -198,7 +198,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
             Utils.hideProgressDialog();
             if (response.isSuccess()) {
                 // clear cart
-                MyApplication.getInstance().cartRepository.truncateCart();
+                MySingltonApplication.getInstance().cartRepository.truncateCart();
                 orderPlaceDialog();
             } else {
                 Utils.setToast(getApplicationContext(), response.getErrorMessage());
@@ -213,9 +213,9 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
     private void orderPlaceDialog() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle(MyApplication.getInstance().dbHelper.getString(R.string.congratulation));
-        dialog.setMessage(MyApplication.getInstance().dbHelper.getString(R.string.order_place__popoup));
-        dialog.setPositiveButton(MyApplication.getInstance().dbHelper.getString(R.string.ok),
+        dialog.setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.congratulation));
+        dialog.setMessage(MySingltonApplication.getInstance().dbHelper.getString(R.string.order_place__popoup));
+        dialog.setPositiveButton(MySingltonApplication.getInstance().dbHelper.getString(R.string.ok),
                 (dialog1, which) -> {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     finish();
@@ -258,7 +258,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
                 }
             } else {
                 mBinding.liAddress.setVisibility(View.GONE);
-                mBinding.btnAdd.setText(MyApplication.getInstance().dbHelper.getString(R.string.add_new_address));
+                mBinding.btnAdd.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.add_new_address));
             }
         });
     }

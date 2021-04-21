@@ -14,7 +14,7 @@ import com.skdirect.databinding.ActivitySocialMallLendingBinding;
 import com.skdirect.model.AppVersionModel;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import io.reactivex.observers.DisposableObserver;
 
 public class SocialMallLendingActivity extends AppCompatActivity {
-    ActivitySocialMallLendingBinding  mBinding;
+    ActivitySocialMallLendingBinding mBinding;
     private DBHelper dbHelper;
     private String mobileNumber = "";
     private String address = "";
@@ -34,11 +34,12 @@ public class SocialMallLendingActivity extends AppCompatActivity {
     private CommonClassForAPI commonClassForAPI;
     private String fcmToken;
     private String SOURCEKEY;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_social_mall_lending);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         commonClassForAPI = CommonClassForAPI.getInstance(this);
         mBinding.tvPlzWait.setText(dbHelper.getString(R.string.plz_wait));
         fcmToken = Utils.getFcmToken();
@@ -46,21 +47,18 @@ public class SocialMallLendingActivity extends AppCompatActivity {
             mobileNumber = getIntent().getStringExtra("MOBILE_NUMBER");
             address = getIntent().getStringExtra("ADDRESS");
             pincode = getIntent().getStringExtra("PINCODE");
-            latitude = getIntent().getDoubleExtra("LATITUDE",0);
-            longitude = getIntent().getDoubleExtra("LONGITUDE",0);
+            latitude = getIntent().getDoubleExtra("LATITUDE", 0);
+            longitude = getIntent().getDoubleExtra("LONGITUDE", 0);
             SOURCEKEY = getIntent().getStringExtra("SOURCEKEY");
-            if(!TextUtils.isNullOrEmpty(SOURCEKEY))
-            {
+            SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
+            if (!TextUtils.isNullOrEmpty(SOURCEKEY)) {
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SOURCEKEY, SOURCEKEY);
-            }else
-            {
+            } else {
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SOURCEKEY, "");
             }
-            if(TextUtils.isNullOrEmpty(address) && TextUtils.isNullOrEmpty(pincode))
-            {
-                startActivity(new Intent(this,PlaceSearchActivity.class));
-            }else
-            {
+            if (latitude == 0 || longitude == 0 || TextUtils.isNullOrEmpty(pincode)) {
+                startActivity(new Intent(this, PlaceSearchActivity.class));
+            } else {
                 if (Utils.isNetworkAvailable(this)) {
                     if (commonClassForAPI != null) {
                         commonClassForAPI.getAppInfo(new DisposableObserver<AppVersionModel>() {
@@ -76,28 +74,31 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                                     }
                                 }
                             }
+
                             @Override
                             public void onError(Throwable e) {
                                 e.printStackTrace();
                             }
+
                             @Override
                             public void onComplete() {
                                 Utils.hideProgressDialog();
                             }
                         });
-                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(this), Utils.getDeviceUniqueID(this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(this), latitude, longitude, pincode, "",mobileNumber,SOURCEKEY);
+                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(this), Utils.getDeviceUniqueID(this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(this), latitude, longitude, pincode, "", mobileNumber, SOURCEKEY);
                     }
                 } else {
                     Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));
                 }
             }
-        }else
-        {
+        } else {
             Intent intent = new Intent();
+            intent.putExtra("Error", "No data found");
             setResult(Activity.RESULT_CANCELED, intent);
             finish();
         }
     }
+
     private final DisposableObserver<TokenModel> callToken = new DisposableObserver<TokenModel>() {
         @Override
         public void onNext(@NotNull TokenModel model) {
@@ -106,11 +107,14 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                 if (model != null) {
                     commonClassForAPI.getUpdateToken(new DisposableObserver<JsonObject>() {
                         @Override
-                        public void onNext(@NotNull JsonObject model) { }
+                        public void onNext(@NotNull JsonObject model) {
+                        }
+
                         @Override
                         public void onError(Throwable e) {
                             e.printStackTrace();
                         }
+
                         @Override
                         public void onComplete() {
                             Utils.hideProgressDialog();
@@ -118,20 +122,27 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                     }, fcmToken);
                     Utils.getTokenData(getApplicationContext(), model);
                     SharePrefs.setSharedPreference(getApplicationContext(), SharePrefs.Is_First_Time, true);
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    if (model.getIsRegistrationComplete()) {
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    } else {
+                        startActivity(new Intent(getApplicationContext(), RegisterationActivity.class));
+                    }
                     finish();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.invalid_pass));
             }
         }
 
         @Override
         public void onError(Throwable e) {
-            Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.invalid_pass));
             Utils.hideProgressDialog();
             e.printStackTrace();
+            Utils.setToast(getApplicationContext(), "Wrong key");
+            Intent intent = new Intent();
+            intent.putExtra("Error", "Wrong key");
+            setResult(Activity.RESULT_CANCELED, intent);
+            finish();
         }
 
         @Override

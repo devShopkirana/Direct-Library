@@ -25,7 +25,7 @@ import com.skdirect.model.CartMainModel;
 import com.skdirect.model.CartModel;
 import com.skdirect.model.ItemAddModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.CartItemViewMode;
@@ -57,10 +57,10 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_cart);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle(MyApplication.getInstance().dbHelper.getString(R.string.shopping_bag));
+        setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.shopping_bag));
 
         cartItemViewMode = ViewModelProviders.of(this).get(CartItemViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
     }
 
@@ -68,7 +68,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         commonClassForAPI = CommonClassForAPI.getInstance(this);
-        MyApplication.getInstance().cartRepository.getCartValue().observe(this, aDouble -> {
+        MySingltonApplication.getInstance().cartRepository.getCartValue().observe(this, aDouble -> {
             if (aDouble != null) {
                 totalAmount = aDouble;
                 mBinding.tvTotalAmount.setText("₹ " + totalAmount);
@@ -137,7 +137,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         int qty = cartModel.getQuantity();
         totalAmount = totalAmount + cartModel.getPrice();
         mBinding.tvTotalAmount.setText("₹ " + totalAmount);
-        MyApplication.getInstance().cartRepository.updateCartItem(cartModel);
+        MySingltonApplication.getInstance().cartRepository.updateCartItem(cartModel);
         addItemInCart(qty, cartModel);
     }
 
@@ -147,14 +147,14 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         if (qty >= 1) {
             totalAmount = totalAmount - cartModel.getPrice();
             mBinding.tvTotalAmount.setText("₹ " + totalAmount);
-            MyApplication.getInstance().cartRepository.updateCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.updateCartItem(cartModel);
             addItemInCart(qty, cartModel);
         } else {
             totalAmount = totalAmount - cartModel.getPrice();
             mBinding.tvTotalAmount.setText("₹ " + totalAmount);
             cartListAdapter.notifyDataSetChanged();
             removeItemFromCart(cartModel, position);
-            MyApplication.getInstance().cartRepository.deleteCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.deleteCartItem(cartModel);
             if (cartItemList.size() == 0) {
                 mBinding.rlCheckOut.setVisibility(View.GONE);
                 mBinding.blankBasket.setVisibility(View.VISIBLE);
@@ -242,7 +242,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                         for (CartModel itemModel : cartMainModel.getResultItem().getCart()) {
                             itemModel.setCarId(cartMainModel.getResultItem().getId());
                         }
-                        MyApplication.getInstance().cartRepository.addToCart(cartMainModel.getResultItem().getCart());
+                        MySingltonApplication.getInstance().cartRepository.addToCart(cartMainModel.getResultItem().getCart());
                     } else {
                         loading = false;
                     }
@@ -252,15 +252,15 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                 mBinding.rvCartItem.setVisibility(View.GONE);
                 mBinding.blankBasket.setVisibility(View.VISIBLE);
                 mBinding.rlCheckOut.setVisibility(View.GONE);
-                MyApplication.getInstance().cartRepository.truncateCart();
+                MySingltonApplication.getInstance().cartRepository.truncateCart();
             }
         });
     }
 
     private void showClearCartDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(MyApplication.getInstance().dbHelper.getString(R.string.clear_cart));
-        builder.setMessage(MyApplication.getInstance().dbHelper.getString(R.string.are_you_sure_clear_cart));
+        builder.setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.clear_cart));
+        builder.setMessage(MySingltonApplication.getInstance().dbHelper.getString(R.string.are_you_sure_clear_cart));
 
         builder.setPositiveButton("Yes", (dialog, which) -> {
             clearCart();
@@ -271,7 +271,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void addItemInCart(int QTY, CartModel sellerProductModel) {
-        MyApplication.getInstance().cartRepository.updateCartItem(sellerProductModel);
+        MySingltonApplication.getInstance().cartRepository.updateCartItem(sellerProductModel);
         ItemAddModel paginationModel = new ItemAddModel(QTY, "123", sellerProductModel.getId(), 0, 0,SharePrefs.getInstance(this).getString(SharePrefs.MALL_ID));
         cartItemViewMode.getAddItemsInCardVMRequest(paginationModel);
         cartItemViewMode.getAddItemsInCardVM().observe(this, sellerProdList -> {
@@ -301,7 +301,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                 Utils.hideProgressDialog();
                 try {
                     if (cartMainModel != null && cartMainModel.isSuccess()) {
-                        MyApplication.getInstance().cartRepository.deleteCartItem(cartModel);
+                        MySingltonApplication.getInstance().cartRepository.deleteCartItem(cartModel);
                         cartItemList.remove(position);
                         cartListAdapter.notifyDataSetChanged();
                     }
@@ -329,10 +329,10 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
 
     private void clearCart() {
         Utils.showProgressDialog(this);
-        String cartId = MyApplication.getInstance().cartRepository.getCartId();
+        String cartId = MySingltonApplication.getInstance().cartRepository.getCartId();
         cartItemViewMode.clearCartItemVMRequest(cartId);
         cartItemViewMode.getClearCartItemVM().observe(this, object -> {
-            MyApplication.getInstance().cartRepository.truncateCart();
+            MySingltonApplication.getInstance().cartRepository.truncateCart();
             Utils.hideProgressDialog();
             cartItemList.clear();
             cartListAdapter.notifyDataSetChanged();

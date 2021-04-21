@@ -8,17 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.skdirect.R;
-import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityProfileBinding;
-import com.skdirect.model.CustomerDataModel;
-import com.skdirect.model.UserDetailResponseModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
-
-import io.reactivex.annotations.NonNull;
-import io.reactivex.observers.DisposableObserver;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityProfileBinding mBinding;
@@ -29,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_profile);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
     }
 

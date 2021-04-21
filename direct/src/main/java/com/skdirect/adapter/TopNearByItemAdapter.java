@@ -16,7 +16,7 @@ import com.skdirect.R;
 import com.skdirect.activity.ProductDetailsActivity;
 import com.skdirect.databinding.ItemTopNearByBinding;
 import com.skdirect.model.TopNearByItemModel;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class TopNearByItemAdapter extends RecyclerView.Adapter<TopNearByItemAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TopNearByItemModel topNearByItemModel = topNearByItemList.get(position);
         holder.mBinding.tvItemName.setText(topNearByItemModel.getProductName());
-        holder.mBinding.tvItemPrice.setText(MyApplication.getInstance().dbHelper.getString(R.string.txt_mrp) +" "+String.valueOf(topNearByItemModel.getMrp()));
+        holder.mBinding.tvItemPrice.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.txt_mrp) +" "+String.valueOf(topNearByItemModel.getMrp()));
         holder.mBinding.tvMesserment.setText("("+topNearByItemModel.getMeasurement()+" "+topNearByItemModel.getUOM()+" )");
 
         if (topNearByItemModel.getMrp()==topNearByItemModel.getSellingPrice()){

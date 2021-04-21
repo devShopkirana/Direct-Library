@@ -18,7 +18,6 @@ import com.skdirect.model.OrderStatusMainModel;
 import com.skdirect.model.OtpResponceModel;
 import com.skdirect.model.OtpVerificationModel;
 import com.skdirect.model.PostBrandModel;
-import com.skdirect.model.ReviewMainModel;
 import com.skdirect.model.SearchMainModel;
 import com.skdirect.model.SearchRequestModel;
 import com.skdirect.model.ShopMainModel;
@@ -26,7 +25,7 @@ import com.skdirect.model.TokenModel;
 import com.skdirect.model.UpdateProfilePostModel;
 import com.skdirect.model.response.ApplyOfferResponse;
 import com.skdirect.model.response.OfferResponse;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -35,7 +34,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.http.Field;
 
 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
 public class CommonClassForAPI {
@@ -44,7 +42,7 @@ public class CommonClassForAPI {
 
 
     public static CommonClassForAPI getInstance(Activity activity) {
-        MyApplication.getInstance().activity = activity;
+        MySingltonApplication.getInstance().activity = activity;
         if (CommonClassForAPI == null) {
             CommonClassForAPI = new CommonClassForAPI(activity);
         }
@@ -61,7 +59,7 @@ public class CommonClassForAPI {
 
     public void getToken(final DisposableObserver observer, String grant_type, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type,String SOURCEKEY) {
         RestClient.getInstance().getService().getToken(grant_type, mobileNumber, passwordString, ISOTP, ISBUYER, buyerapp, isDevice, deviceID, lat, log, pincode,
-                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type,SOURCEKEY)
+                MySingltonApplication.getInstance().dbHelper.getString(R.string.language_code), type,SOURCEKEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<TokenModel>() {
@@ -88,7 +86,7 @@ public class CommonClassForAPI {
 
     public void getTokenwithphoneNo(final DisposableObserver observer, String password, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type, String phoneno,String SOURCEKEY) {
         RestClient.getInstance().getService().getTokenwithphoneno(password, mobileNumber, passwordString, ISOTP, ISBUYER, buyerapp, isDevice, deviceID, lat, log, pincode,
-                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno,SOURCEKEY)
+                MySingltonApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno,SOURCEKEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<TokenModel>() {

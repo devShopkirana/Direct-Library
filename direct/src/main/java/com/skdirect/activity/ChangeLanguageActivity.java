@@ -1,15 +1,8 @@
 package com.skdirect.activity;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +18,7 @@ import com.skdirect.R;
 import com.skdirect.adapter.LanguageListAdapter;
 import com.skdirect.databinding.ActivityChangeLanguageBinding;
 import com.skdirect.interfacee.OnLanguageClick;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 
@@ -51,7 +44,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
     private void initView() {
         Utils.showProgressDialog(activity);
 
-        mBinding.toolbarTittle.tvTittle.setText(MyApplication.getInstance().dbHelper.getString(R.string.change_language));
+        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.change_language));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
 
         languageList = new ArrayList<>();
@@ -110,6 +103,6 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
     @Override
     public void onSelectLanguage(int position) {
         Utils.showProgressDialog(activity);
-        MyApplication.getInstance().dbHelper.deleteAndUpdateTable(dataPostSnapshot);
+        MySingltonApplication.getInstance().dbHelper.deleteAndUpdateTable(dataPostSnapshot);
     }
 }

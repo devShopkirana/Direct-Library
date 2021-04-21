@@ -1,7 +1,6 @@
 package com.skdirect.activity;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
@@ -24,14 +23,12 @@ import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityPlacesSearchBinding;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +53,7 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_places_search);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
 
     }
@@ -90,7 +87,7 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
         } else {
             if (Utils.isNetworkAvailable(this)) {
                 if (commonClassForAPI != null) {
-                    commonClassForAPI.getToken(callToken, "password", Utils.getDeviceUniqueID(PlaceSearchActivity.this), Utils.getDeviceUniqueID(PlaceSearchActivity.this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(PlaceSearchActivity.this), latLng.latitude, latLng.longitude, pinCode, "",SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
+                    commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(PlaceSearchActivity.this), Utils.getDeviceUniqueID(PlaceSearchActivity.this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(PlaceSearchActivity.this), latLng.latitude, latLng.longitude, pinCode, "",SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.MOBILE_NUMBER),SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
                 }
             } else {
                 Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));
@@ -189,15 +186,17 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.invalid_pass));
+               // Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.invalid_pass));
             }
         }
 
         @Override
         public void onError(Throwable e) {
-            Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.invalid_pass));
+            Utils.setToast(getApplicationContext(), "Wrong key");
             Utils.hideProgressDialog();
             e.printStackTrace();
+            startActivity(new Intent(getApplicationContext(),SocialMallLendingActivity.class).putExtra("Error","Wrong Key"));
+            finish();
         }
 
         @Override

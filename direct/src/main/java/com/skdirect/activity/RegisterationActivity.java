@@ -14,7 +14,7 @@ import com.skdirect.databinding.ActivityRegistrationBinding;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.model.UpdateProfilePostModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -33,7 +33,7 @@ public class RegisterationActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_registration);
         updateProfileViewMode = ViewModelProviders.of(this).get(UpdateProfileViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
 
     }

@@ -7,16 +7,13 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityLoginWithPasswordBinding;
-import com.skdirect.model.LoginWithPasswordModel;
 import com.skdirect.model.TokenModel;
-import com.skdirect.model.UpdateTokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -35,7 +32,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_login_with_password);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
     }
@@ -147,7 +144,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
                     SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_SUPER_ADMIN, model.getIsSuperAdmin());
                     SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_LOGIN, true);
                     commonClassForAPI.getUpdateToken(updatecallToken, fcmToken);
-                    if(!TextUtils.isNullOrEmpty(MyApplication.getInstance().cartRepository.getCartId())){
+                    if(!TextUtils.isNullOrEmpty(MySingltonApplication.getInstance().cartRepository.getCartId())){
                         commonClassForAPI.assignCart(new DisposableObserver<JsonObject>() {
                             @Override
                             public void onNext(JsonObject model) { }
@@ -160,7 +157,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
                             public void onComplete() {
                                 Utils.hideProgressDialog();
                             }
-                        }, MyApplication.getInstance().cartRepository.getCartId());
+                        }, MySingltonApplication.getInstance().cartRepository.getCartId());
                     }
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();

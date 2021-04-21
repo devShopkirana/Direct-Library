@@ -30,7 +30,7 @@ import com.skdirect.model.SellerProductList;
 import com.skdirect.model.SellerProfileDataModel;
 import com.skdirect.model.UserDetailModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.SellerProfileViewMode;
@@ -59,7 +59,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_seller_profile);
         sellerProfileViewMode = ViewModelProviders.of(this).get(SellerProfileViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
         callSellerDetails();
@@ -68,7 +68,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        MyApplication.getInstance().cartRepository.getCartCount().observe(this, new Observer<Integer>() {
+        MySingltonApplication.getInstance().cartRepository.getCartCount().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
                 mBinding.cartBadge.setText("" + integer);
@@ -309,7 +309,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
                 0, 0, false, 0, 0, 0,
                 model.getQty(), model.getCreatedBy(), null, sellerID, 0,
                 0, model.getMargin(), model.getMrp(), model.getMOQ(), model.getId());
-        MyApplication.getInstance().cartRepository.updateCartItem(cartModel);
+        MySingltonApplication.getInstance().cartRepository.updateCartItem(cartModel);
     }
 
     @Override
@@ -332,16 +332,16 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
                 model.getCreatedBy(), null, sellerID, 0, 0,
                 model.getMargin(), model.getMrp(), model.getMOQ(), model.getId());
         if (qty > 0) {
-            MyApplication.getInstance().cartRepository.updateCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.updateCartItem(cartModel);
         } else {
-            MyApplication.getInstance().cartRepository.deleteCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.deleteCartItem(cartModel);
         }
     }
 
     @Override
     public void addButtonOnClick(SellerProductList sellerProductModel, TextView tvSelectedQty, TextView btAddToCart, LinearLayout LLPlusMinus) {
         mBinding.notifictionCount.setVisibility(View.VISIBLE);
-        Integer cartSellerId = MyApplication.getInstance().cartRepository.getCartSellerId();
+        Integer cartSellerId = MySingltonApplication.getInstance().cartRepository.getCartSellerId();
         if (cartSellerId != null && cartSellerId != 0) {
             if (cartSellerId == sellerID) {
                 btAddToCart.setVisibility(View.GONE);
@@ -353,7 +353,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
                         0, 0, 0, sellerProductModel.getQty(), sellerProductModel.getCreatedBy(),
                         null, sellerID, 0, 0, sellerProductModel.getMargin(),
                         sellerProductModel.getMrp(), sellerProductModel.getMOQ(), sellerProductModel.getId());
-                MyApplication.getInstance().cartRepository.addToCart(cartModel);
+                MySingltonApplication.getInstance().cartRepository.addToCart(cartModel);
                 SellerProfileActivity.this.plusButtonOnClick(sellerProductModel, tvSelectedQty);
             } else {
                 checkCustomerAlertDialog(cartSellerId, sellerProductModel, btAddToCart, LLPlusMinus);
@@ -370,7 +370,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
                     0, 0, 0, 1, sellerProductModel.getCreatedBy(), null,
                     sellerID, 0, 0, sellerProductModel.getMargin(),
                     sellerProductModel.getMrp(), sellerProductModel.getMOQ(), sellerProductModel.getId());
-            MyApplication.getInstance().cartRepository.addToCart(cartModel);
+            MySingltonApplication.getInstance().cartRepository.addToCart(cartModel);
             addItemInCart(1, sellerProductModel);
         }
     }
@@ -383,7 +383,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
             Utils.hideProgressDialog();
             if (addCartItemModel.isSuccess()) {
                 if (addCartItemModel != null && addCartItemModel.getResultItem() != null) {
-                    MyApplication.getInstance().cartRepository.updateCartId(addCartItemModel.getResultItem().getId());
+                    MySingltonApplication.getInstance().cartRepository.updateCartId(addCartItemModel.getResultItem().getId());
                 }
             } else {
                 Utils.setToast(this, addCartItemModel.getErrorMessage());
@@ -398,7 +398,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
         builder.setMessage("Your Cart has existing items from Another Seller. Do You Want to clear it and add items from this Seller?");
         builder.setPositiveButton("Yes", (dialog, which) -> {
             clearCartItem();
-            MyApplication.getInstance().cartRepository.truncateCart();
+            MySingltonApplication.getInstance().cartRepository.truncateCart();
             // cartModel.setSellerId(sellerID);
             CartModel cartItemModel = new CartModel(null, 0, null, false,
                     sellerProductModel.isStockRequired(), sellerProductModel.getStock(), sellerProductModel.getMeasurement(),
@@ -406,7 +406,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
                     0, 0, false, 0, 0, 0, sellerProductModel.getQty(),
                     sellerProductModel.getCreatedBy(), null, sellerID, 0, 0,
                     sellerProductModel.getMargin(), sellerProductModel.getMrp(), sellerProductModel.getMOQ(), sellerProductModel.getId());
-            MyApplication.getInstance().cartRepository.addToCart(cartItemModel);
+            MySingltonApplication.getInstance().cartRepository.addToCart(cartItemModel);
             sellerShopListAdapter.notifyDataSetChanged();
             btAddToCart.setVisibility(View.GONE);
             LLPlusMinus.setVisibility(View.VISIBLE);
@@ -423,7 +423,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
     }
 
     private void clearCartItem() {
-        String cartId = MyApplication.getInstance().cartRepository.getCartId();
+        String cartId = MySingltonApplication.getInstance().cartRepository.getCartId();
         sellerProfileViewMode.getClearCartItemVMRequest(cartId);
         sellerProfileViewMode.getClearCartItemVM().observe(this, object -> {
             Utils.hideProgressDialog();

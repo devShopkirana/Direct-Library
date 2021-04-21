@@ -1,6 +1,5 @@
 package com.skdirect.activity;
 
-import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -11,10 +10,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.skdirect.R;
 import com.skdirect.adapter.ProductImagesAdapter;
-import com.skdirect.adapter.ShowImagesAdapter;
 import com.skdirect.databinding.FragmentImageShoBinding;
 import com.skdirect.model.ImageListModel;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 
 import java.util.ArrayList;
 
@@ -36,7 +34,7 @@ public class ShowImageActivity extends AppCompatActivity {
 
     private void initialization() {
 
-        mBinding.toolbarTittle.tvTittle.setText(MyApplication.getInstance().dbHelper.getString(R.string.product));
+        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.product));
         mBinding.toolbarTittle.arrowToolbar.setOnClickListener(v -> {
             onBackPressed();
         });

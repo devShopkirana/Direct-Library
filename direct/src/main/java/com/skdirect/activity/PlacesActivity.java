@@ -1,7 +1,6 @@
 package com.skdirect.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import com.skdirect.adapter.PlacesAutoCompleteMapsAdapter;
 import com.skdirect.databinding.ActivityPlacesBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 
 
@@ -45,7 +44,7 @@ public class PlacesActivity extends AppCompatActivity implements PlacesAutoCompl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_places);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
 
         binding.llGps.setOnClickListener(V -> {
             if(Utils.ISGPSON(PlacesActivity.this)){

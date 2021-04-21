@@ -9,15 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.skdirect.BuildConfig;
 import com.skdirect.R;
-import com.skdirect.databinding.ItemDetailsItemBinding;
 import com.skdirect.databinding.ItemOrderStatusBinding;
-import com.skdirect.model.OrderItemModel;
 import com.skdirect.model.OrderStatusDC;
-import com.skdirect.utils.MyApplication;
 import com.skdirect.utils.Utils;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 

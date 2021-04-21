@@ -1,6 +1,5 @@
 package com.skdirect.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
@@ -15,13 +14,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.libraries.places.api.model.Place;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.databinding.ActivityNewAddreshBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GPSTracker;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -30,7 +28,6 @@ import com.skdirect.viewmodel.NewAddressViewMode;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
@@ -49,7 +46,7 @@ public class NewAddressActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_new_addresh);
         newAddressViewMode = ViewModelProviders.of(this).get(NewAddressViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
     }
 

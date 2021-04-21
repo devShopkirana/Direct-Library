@@ -10,6 +10,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
@@ -44,8 +45,8 @@ public class TestActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(getApplicationContext(), SocialMallLendingActivity.class);
-                intent.putExtra("MOBILE_NUMBER", "9752640201");
-                intent.putExtra("SOURCEKEY", "73F6CF7B-7C14-48B1-A392-C0590AB6A06C12");
+                intent.putExtra("MOBILE_NUMBER", "9584320306");
+                intent.putExtra("SOURCEKEY", "73F6CF7B-7C14-48B1-A392-C0590AB6A06C");
                 intent.putExtra("ADDRESS", address);
                 intent.putExtra("PINCODE", pincode);
                 intent.putExtra("LATITUDE", gpsTracker.getLatitude());
@@ -70,5 +71,19 @@ public class TestActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1199) {
+            if (data != null && resultCode == RESULT_OK) {
+                System.out.println("data::"+data.toString());
+            }else
+            {
+                System.out.println("data::"+data.getStringExtra("Error"));
+               // Toast.makeText(this, data.getStringExtra("Error"), Toast.LENGTH_SHORT).show();
+            }
+
+        }
     }
 }

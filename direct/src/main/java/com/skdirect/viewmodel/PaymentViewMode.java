@@ -12,7 +12,7 @@ import com.skdirect.model.DeliveryMainModel;
 import com.skdirect.model.MainLocationModel;
 import com.skdirect.model.OrderPlaceMainModel;
 import com.skdirect.model.OrderPlaceRequestModel;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 
 import retrofit2.Call;
@@ -166,7 +166,7 @@ public class PaymentViewMode extends ViewModel {
     }
 
     public MutableLiveData<Object> getClearCartDataRequest() {
-        String cartId = MyApplication.getInstance().cartRepository.getCartId();
+        String cartId = MySingltonApplication.getInstance().cartRepository.getCartId();
         RestClient.getInstance().getService().ClearCart(cartId).enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, Response<Object> response) {

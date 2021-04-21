@@ -11,17 +11,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.databinding.ActivityChnagePasswordBinding;
 import com.skdirect.model.ChangePasswordRequestModel;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.ChangePasswordViewMode;
-import com.skdirect.viewmodel.UpdateProfileViewMode;
 
 public class ChangePasswordActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityChnagePasswordBinding mBinding;
@@ -33,7 +31,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_chnage_password);
         changePasswordViewMode = ViewModelProviders.of(this).get(ChangePasswordViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
     }
 

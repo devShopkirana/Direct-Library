@@ -27,7 +27,7 @@ import com.skdirect.model.NearProductListModel;
 import com.skdirect.model.PaginationModel;
 import com.skdirect.utils.Constant;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.NearProductListViewMode;
 
@@ -61,7 +61,7 @@ public class NearByItemProductListActivity extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_product_list);
         nearProductListViewMode = ViewModelProviders.of(this).get(NearProductListViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
         callProductList();
         setString();

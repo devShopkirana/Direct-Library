@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.skdirect.R;
 import com.skdirect.activity.MainActivity;
 import com.skdirect.databinding.FragmentBasketBinding;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 
 public class BasketFragment extends Fragment {
     private FragmentBasketBinding mBinding;
@@ -36,7 +36,7 @@ public class BasketFragment extends Fragment {
     }
 
     private void initViews() {
-        mBinding.toolbarTittle.tvTittle.setText(MyApplication.getInstance().dbHelper.getString(R.string.basket));
+        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.basket));
         mBinding.toolbarTittle.ivBackPress.setVisibility(View.GONE);;
         activity.appBarLayout.setVisibility(View.GONE);
     }

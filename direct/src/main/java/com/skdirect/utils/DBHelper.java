@@ -100,10 +100,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 db.delete(TABLE_NAME, null, null);
 
                 for (DataSnapshot postSnapshot : dataPostSnapshot.getChildren()) {
-                    String selectedLanguage = SharePrefs.getInstance(MyApplication.getInstance()).getString(SharePrefs.SELECTED_LANGUAGE);
+                    String selectedLanguage = SharePrefs.getInstance(MySingltonApplication.getInstance()).getString(SharePrefs.SELECTED_LANGUAGE);
                     if (selectedLanguage.equals(postSnapshot.getKey())) {
                         for (DataSnapshot langSnapshot : postSnapshot.getChildren()) {
-                            MyApplication.getInstance().dbHelper.insertStrings(langSnapshot.getKey(), langSnapshot.getValue() + "");
+                            MySingltonApplication.getInstance().dbHelper.insertStrings(langSnapshot.getKey(), langSnapshot.getValue() + "");
                         }
                     }
                 }

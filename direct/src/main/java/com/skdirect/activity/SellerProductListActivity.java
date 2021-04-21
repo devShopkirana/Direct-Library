@@ -17,19 +17,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.skdirect.R;
-import com.skdirect.adapter.NearProductListAdapter;
 import com.skdirect.adapter.NearSellerListAdapter;
-import com.skdirect.databinding.ActivityProductListBinding;
 import com.skdirect.databinding.ActivitySallerProductListBinding;
 import com.skdirect.model.NearBySallerModel;
 import com.skdirect.model.NearBySellerMainModel;
-import com.skdirect.model.NearProductListModel;
 import com.skdirect.model.PaginationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
-import com.skdirect.model.TopSellerMainModel;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
-import com.skdirect.viewmodel.NearProductListViewMode;
 import com.skdirect.viewmodel.SellerProductListViewMode;
 
 import java.util.ArrayList;
@@ -52,7 +47,7 @@ public class SellerProductListActivity extends AppCompatActivity implements View
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_saller_product_list);
         sellerProductListViewMode = ViewModelProviders.of(this).get(SellerProductListViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
         callProductList();
     }

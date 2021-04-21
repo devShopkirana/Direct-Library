@@ -17,7 +17,7 @@ import com.skdirect.activity.ReviewActivity;
 import com.skdirect.databinding.ItemMyOrderBinding;
 import com.skdirect.model.MyOrderModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.squareup.picasso.Picasso;
 
@@ -32,7 +32,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.ViewHold
     public MyOrderAdapter(Context context, ArrayList<MyOrderModel> deliveryOptionList) {
         this.context = context;
         this.orderModelArrayList = deliveryOptionList;
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
     }
 
     @NonNull

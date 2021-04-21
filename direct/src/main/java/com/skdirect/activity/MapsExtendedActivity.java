@@ -40,12 +40,10 @@ import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityMapsExtendedBinding;
 import com.skdirect.model.CommonResponseModel;
-import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
-import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.MapViewViewMode;
 
@@ -53,12 +51,8 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
-
-import io.reactivex.observers.DisposableObserver;
 
 
 public class MapsExtendedActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
@@ -123,10 +117,10 @@ public class MapsExtendedActivity extends AppCompatActivity implements OnMapRead
             longitude=getIntent().getDoubleExtra("Lon",0.0);
         }
         utils = new Utils(MapsExtendedActivity.this);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         mapViewViewMode = ViewModelProviders.of(this).get(MapViewViewMode.class);
         commonClassForAPI = CommonClassForAPI.getInstance(MapsExtendedActivity.this);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         mBinding.tvFlatNo.setText(dbHelper.getString(R.string.flat_no));
         mBinding.editTextName.setHint(dbHelper.getString(R.string.name));
         mBinding.cancel.setText(dbHelper.getString(R.string.cancel));

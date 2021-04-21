@@ -35,7 +35,7 @@ import com.skdirect.model.OtpResponceModel;
 import com.skdirect.model.OtpVerificationModel;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -63,7 +63,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
         super.onCreate(savedInstanceState);
         Binding = DataBindingUtil.setContentView(this, R.layout.activity_generate_otp);
         otpVerificationViewModel = ViewModelProviders.of(this).get(OTPVerificationViewModel.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
     }
@@ -113,7 +113,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Binding.etOtp.setText(MyApplication.getInstance().otp);
+                Binding.etOtp.setText(MySingltonApplication.getInstance().otp);
                 //TODO Set your button auto perform click.
                 Binding.btLoddingOtp.performClick();
 
@@ -287,7 +287,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
                 if (model != null) {
                     Utils.getTokenData(getApplicationContext(), model);
                     commonClassForAPI.getUpdateToken(updatecallToken, fcmToken);
-                    if (!TextUtils.isNullOrEmpty(MyApplication.getInstance().cartRepository.getCartId())) {
+                    if (!TextUtils.isNullOrEmpty(MySingltonApplication.getInstance().cartRepository.getCartId())) {
                         commonClassForAPI.assignCart(new DisposableObserver<JsonObject>() {
                             @Override
                             public void onNext(@NotNull JsonObject model) {
@@ -303,7 +303,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
                             public void onComplete() {
                                 Utils.hideProgressDialog();
                             }
-                        }, MyApplication.getInstance().cartRepository.getCartId());
+                        }, MySingltonApplication.getInstance().cartRepository.getCartId());
                     }
                 }
             } catch (Exception e) {

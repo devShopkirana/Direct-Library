@@ -15,14 +15,13 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.bumptech.glide.Glide;
 import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivitySplashBinding;
 import com.skdirect.model.AppVersionModel;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 
@@ -96,7 +95,7 @@ public class SplashActivity extends AppCompatActivity {
                     });
                 }
             } else {
-                Utils.setToast(getBaseContext(), MyApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
+                Utils.setToast(getBaseContext(), MySingltonApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -127,13 +126,13 @@ public class SplashActivity extends AppCompatActivity {
                 @SuppressLint("RestrictedApi")
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
                 alertDialogBuilder.setTitle(R.string.update_available);
-                alertDialogBuilder.setMessage(MyApplication.getInstance().dbHelper.getString(R.string.update_to_latest_version) + " " + appVersionModels.getResultItem().getVersion() + " " + MyApplication.getInstance().dbHelper.getString(R.string.from_play_store));
+                alertDialogBuilder.setMessage(MySingltonApplication.getInstance().dbHelper.getString(R.string.update_to_latest_version) + " " + appVersionModels.getResultItem().getVersion() + " " + MySingltonApplication.getInstance().dbHelper.getString(R.string.from_play_store));
                 alertDialogBuilder.setCancelable(false);
-                alertDialogBuilder.setPositiveButton(MyApplication.getInstance().dbHelper.getString(R.string.update), (dialog, id) -> {
+                alertDialogBuilder.setPositiveButton(MySingltonApplication.getInstance().dbHelper.getString(R.string.update), (dialog, id) -> {
                     dialog.cancel();
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + activity.getPackageName())));
                 });
-                alertDialogBuilder.setNegativeButton(MyApplication.getInstance().dbHelper.getString(R.string.skip), (dialog, i) -> {
+                alertDialogBuilder.setNegativeButton(MySingltonApplication.getInstance().dbHelper.getString(R.string.skip), (dialog, i) -> {
                     startActivity(new Intent(activity, MainActivity.class));
                     finish();
                 });

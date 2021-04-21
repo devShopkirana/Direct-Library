@@ -18,7 +18,7 @@ import com.skdirect.model.AllCategoresMainModel;
 import com.skdirect.model.AllCategoriesModel;
 import com.skdirect.model.PaginationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.CategoriesViewMode;
 
@@ -43,7 +43,7 @@ public class CategoriesListActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_categories_list);
         categoriesViewMode = ViewModelProviders.of(this).get(CategoriesViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         initView();
         callProductList();
     }

@@ -7,10 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 import com.skdirect.R;
 import com.skdirect.adapter.DynamicTabAdapter;
 import com.skdirect.api.CommonClassForAPI;
@@ -18,12 +14,11 @@ import com.skdirect.databinding.ActivityMyOrderBinding;
 import com.skdirect.model.OrderStatusDetails;
 import com.skdirect.model.OrderStatusMainModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import io.reactivex.observers.DisposableObserver;
@@ -45,7 +40,7 @@ public class MyOrderActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initView() {
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         mBinding.toolbarTittle.tvTittle.setText(dbHelper.getString(R.string.my_order));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
         //mBinding.tabLayout.setupWithViewPager(mBinding.viewPager);

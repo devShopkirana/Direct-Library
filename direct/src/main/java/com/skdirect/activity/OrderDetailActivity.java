@@ -19,7 +19,7 @@ import com.skdirect.model.OrderItemModel;
 import com.skdirect.model.OrderStatusDC;
 import com.skdirect.stepform.MainStepperAdapter;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.OrderDetailsViewMode;
 
@@ -40,7 +40,7 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_order_deatils);
         orderDetailsViewMode = ViewModelProviders.of(this).get(OrderDetailsViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
         callOrderDetails();

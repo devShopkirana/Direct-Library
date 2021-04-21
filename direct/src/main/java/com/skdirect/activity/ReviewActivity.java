@@ -12,9 +12,8 @@ import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityReviewBinding;
 import com.skdirect.model.AddReviewModel;
-import com.skdirect.model.ReviewMainModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
@@ -31,7 +30,7 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_review);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
     }

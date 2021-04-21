@@ -37,7 +37,7 @@ import com.skdirect.model.MallMainModel;
 import com.skdirect.model.NearByMainModel;
 import com.skdirect.model.TopSellerMainModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.HomeViewModel;
@@ -302,7 +302,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             mBinding.rlHomeSearch.setVisibility(View.GONE);
         }
 
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         mBinding.etSearchSeller.setHint(dbHelper.getString(R.string.search_seller));
 
         mBinding.tvNearItem.setText(dbHelper.getString(R.string.near_by_item));

@@ -34,7 +34,7 @@ import com.skdirect.model.ProductResultModel;
 import com.skdirect.model.ProductVariantAttributeDCModel;
 import com.skdirect.model.VariationListModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.ProductDetailsViewMode;
@@ -60,7 +60,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_product_details);
         productDetailsViewMode = ViewModelProviders.of(this).get(ProductDetailsViewMode.class);
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         getIntentData();
         initView();
         ClickListener();
@@ -254,20 +254,20 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 0, null, resultModel.getSellerId(), 0, 0, 0,
                 resultModel.getMrp(), 0, resultModel.getId());
         if (qty >= 0) {
-            MyApplication.getInstance().cartRepository.updateCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.updateCartItem(cartModel);
         }
         if (qty == 0) {
             resultModel.setQty(0);
             mBinding.btAddToCart.setVisibility(View.VISIBLE);
             mBinding.LLPlusMinus.setVisibility(View.GONE);
-            MyApplication.getInstance().cartRepository.deleteCartItem(cartModel);
+            MySingltonApplication.getInstance().cartRepository.deleteCartItem(cartModel);
         }
         addItemInCart(qty, SellerItemID);
     }
 
     private void addToCart() {
         mBinding.toolbarTittle.notifictionCount.setVisibility(View.VISIBLE);
-        Integer cartSellerId = MyApplication.getInstance().cartRepository.getCartSellerId();
+        Integer cartSellerId = MySingltonApplication.getInstance().cartRepository.getCartSellerId();
         if (cartSellerId != null && cartSellerId != 0) {
             if (cartSellerId == resultModel.getSellerId()) {
                 mBinding.btAddToCart.setVisibility(View.GONE);
@@ -280,7 +280,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                         resultModel.getOffPercentage(), 0, 0, 1, 0,
                         null, resultModel.getSellerId(), 0, 0,
                         0, resultModel.getMrp(), 0, resultModel.getId());
-                MyApplication.getInstance().cartRepository.addToCart(cartModel);
+                MySingltonApplication.getInstance().cartRepository.addToCart(cartModel);
                 addItemInCart(1, SellerItemID);
             } else {
                 checkCustomerAlertDialog(cartSellerId);
@@ -289,7 +289,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             mBinding.btAddToCart.setVisibility(View.GONE);
             mBinding.LLPlusMinus.setVisibility(View.VISIBLE);
             // clear cart
-            MyApplication.getInstance().cartRepository.truncateCart();
+            MySingltonApplication.getInstance().cartRepository.truncateCart();
             // add item in cart
             CartModel cartModel = new CartModel(null, 0, null,
                     resultModel.IsActive, resultModel.IsStockRequired, resultModel.getStock(),
@@ -298,7 +298,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                     resultModel.getOffPercentage(), 0, 0, 1, 0, null,
                     resultModel.getSellerId(), 0, 0, 0,
                     resultModel.getMrp(), 0, resultModel.getId());
-            MyApplication.getInstance().cartRepository.addToCart(cartModel);
+            MySingltonApplication.getInstance().cartRepository.addToCart(cartModel);
             addItemInCart(1, SellerItemID);
         }
     }
@@ -379,7 +379,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             Utils.hideProgressDialog();
             Utils.hideProgressDialog();
             if (model != null && model.getCart() != null) {
-                MyApplication.getInstance().cartRepository.addToCart(model.getCart());
+                MySingltonApplication.getInstance().cartRepository.addToCart(model.getCart());
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.CART_ITEM_ID, model.getId());
             }
         });
@@ -545,7 +545,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             Utils.hideProgressDialog();
             if (addCartItemModel.isSuccess()) {
                 if (addCartItemModel != null && addCartItemModel.getResultItem() != null) {
-                    MyApplication.getInstance().cartRepository.updateCartId(addCartItemModel.getResultItem().getId());
+                    MySingltonApplication.getInstance().cartRepository.updateCartId(addCartItemModel.getResultItem().getId());
                 }
             } else {
                 Utils.setToast(getApplicationContext(), addCartItemModel.getErrorMessage());
@@ -565,7 +565,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                     0, resultModel.IsDelete, resultModel.getOffPercentage(), 0, 0, 1,
                     0, null, resultModel.getSellerId(), 0, 0, 0,
                     resultModel.getMrp(), 0, resultModel.getId());
-            MyApplication.getInstance().cartRepository.addToCart(cartModel);
+            MySingltonApplication.getInstance().cartRepository.addToCart(cartModel);
             addItemInCart(1, SellerItemID);
             mBinding.btAddToCart.setVisibility(View.GONE);
             mBinding.LLPlusMinus.setVisibility(View.VISIBLE);
@@ -580,8 +580,8 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     }
 
     private void clearCartItem() {
-        String cartId = MyApplication.getInstance().cartRepository.getCartId();
-        MyApplication.getInstance().cartRepository.truncateCart();
+        String cartId = MySingltonApplication.getInstance().cartRepository.getCartId();
+        MySingltonApplication.getInstance().cartRepository.truncateCart();
         productDetailsViewMode.getClearCartItemVMRequest(cartId);
         productDetailsViewMode.getClearCartItemVM().observe(this, new Observer<Object>() {
             @Override
@@ -592,10 +592,10 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     }
 
     private void checkAddButtonValidaction() {
-        if (MyApplication.getInstance().cartRepository.isItemInCart(SellerItemID)) {
+        if (MySingltonApplication.getInstance().cartRepository.isItemInCart(SellerItemID)) {
             mBinding.btAddToCart.setVisibility(View.GONE);
             mBinding.LLPlusMinus.setVisibility(View.VISIBLE);
-            resultModel.setQty(MyApplication.getInstance().cartRepository.getItemQty(SellerItemID));
+            resultModel.setQty(MySingltonApplication.getInstance().cartRepository.getItemQty(SellerItemID));
             mBinding.tvSelectedQty.setText(String.valueOf(resultModel.getQty()));
         } else {
             mBinding.btAddToCart.setVisibility(View.VISIBLE);
@@ -605,7 +605,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     }
 
     private void setupBadge() {
-        MyApplication.getInstance().cartRepository.getCartCount().observe(this, count -> {
+        MySingltonApplication.getInstance().cartRepository.getCartCount().observe(this, count -> {
             if (count == 0) {
                 mBinding.toolbarTittle.notifictionCount.setVisibility(View.GONE);
             } else {

@@ -31,7 +31,7 @@ import com.skdirect.model.CartModel;
 import com.skdirect.utils.AppSignatureHelper;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MyApplication;
+import com.skdirect.utils.MySingltonApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        dbHelper = MyApplication.getInstance().dbHelper;
+        dbHelper = MySingltonApplication.getInstance().dbHelper;
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         appBarLayout = mBinding.toolbarId.toolbar;
         userNameTV = mBinding.navTop.tvUserName;
@@ -305,14 +305,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void clearSharePrefs() {
-        MyApplication.getInstance().cartRepository.truncateCart();
+        MySingltonApplication.getInstance().cartRepository.truncateCart();
         sharedPreferences.edit().clear().apply();
         SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_FETCH_LANGUAGE, true);
-        MyApplication.getInstance().dbHelper.deleteDataFromTable();
+        MySingltonApplication.getInstance().dbHelper.deleteDataFromTable();
     }
 
     private void setupBadge() {
-        int count = MyApplication.getInstance().cartRepository.getCartCount1();
+        int count = MySingltonApplication.getInstance().cartRepository.getCartCount1();
         if (count == 0) {
             mBinding.toolbarId.cartBadge.setVisibility(View.GONE);
         } else {
@@ -331,9 +331,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (CartModel itemModel : model.getResultItem().getCart()) {
                     itemModel.setCarId(model.getResultItem().getId());
                 }
-                MyApplication.getInstance().cartRepository.addToCart(model.getResultItem().getCart());
+                MySingltonApplication.getInstance().cartRepository.addToCart(model.getResultItem().getCart());
             } else {
-                MyApplication.getInstance().cartRepository.truncateCart();
+                MySingltonApplication.getInstance().cartRepository.truncateCart();
             }
             setupBadge();
         });
