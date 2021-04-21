@@ -34,7 +34,6 @@ public class SocialMallLendingActivity extends AppCompatActivity {
     private CommonClassForAPI commonClassForAPI;
     private String fcmToken;
     private String SOURCEKEY;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

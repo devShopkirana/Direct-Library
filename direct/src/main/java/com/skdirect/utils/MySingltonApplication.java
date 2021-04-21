@@ -85,12 +85,9 @@ public class MySingltonApplication extends Application implements LifecycleObser
             try {
                 Utils.hideProgressDialog();
                 if (model != null) {
-
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-
-
             }
         }
 
