@@ -1,0 +1,43 @@
+
+Q	java:S110%"<This class has 9 parents which is greater than 5 authorized.(Œ€²«
+Q
+java:S1141î"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¢é„
+l	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¥À•üÿÿÿÿ
+g	java:S117Ý"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Œ©§
+g	java:S117Þ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë±ËË
+l	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú’»˜øÿÿÿÿ
+g	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒªû
+C
+java:S1604Y"(Make this anonymous inner class a lambda(ÚÊŠÖüÿÿÿÿ
+D
+java:S1604‡"(Make this anonymous inner class a lambda(ø½É…ýÿÿÿÿ
+?
+java:S1604Ñ"(Make this anonymous inner class a lambda(ÓüÅô
+^
+java:S2259š"BA "NullPointerException" could be thrown; "data" is nullable here.(›Ç¯úÿÿÿÿ
+K
+java:S1128!"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ
+G
+java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ
+o
+java:S1450+"TRemove the "place" field and declare it as a local variable in the relevant methods.(éˆ Šüÿÿÿÿ
+@
+java:S1659*"%Declare "pincode" on a separate line.(·Ð‹…üÿÿÿÿ
+>
+java:S1659*"#Declare "state" on a separate line.(·Ð‹…üÿÿÿÿ
+@
+java:S1659*"%Declare "Address" on a separate line.(·Ð‹…üÿÿÿÿ
+l	java:S116*"RRename this field "Address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ð‹…üÿÿÿÿ
+V	java:S125P"<This block of commented-out lines of code should be removed.(·¹æ±ûÿÿÿÿ
+Q	java:S125h"<This block of commented-out lines of code should be removed.(îŽ´ 
+5
+java:S2178™"Correct this "&" to "&&".(¢Åâƒúÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(èï½²þÿÿÿÿ
+R	java:S125¼"<This block of commented-out lines of code should be removed.( °¾½
+n
+java:S3776Ï"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(î®Æƒøÿÿÿÿ
+W
+java:S1854à"@Remove this useless assignment to local variable "Addressthree".(ƒªû
+H
+java:S1481à"1Remove this unused "Addressthree" local variable.(ƒªû

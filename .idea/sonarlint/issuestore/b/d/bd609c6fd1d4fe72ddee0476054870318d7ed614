@@ -1,0 +1,78 @@
+
+—
+java:S1186`"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+
+java:S1186´"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+
+java:S1186æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+R	java:S107Y"=Method has 15 parameters, which is greater than 7 authorized.(ÎŒÑó
+F
+java:S3740”"/Provide the parametrized type for this generic.(ƒ–„ò
+i	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¸÷šüÿÿÿÿ
+˜
+java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•œùıúÿÿÿÿ
+N
+java:S1128&"1Remove this unused import 'retrofit2.http.Field'.(ÂÍ‹»8ŸçÕœ/
+f	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŒÑó
+U
+java:S1128"?Remove this unused import 'com.skdirect.model.ReviewMainModel'.(´îÿÅ
+m	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äò¸8ŸçÕœ/
+i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÆˆøüÿÿÿÿ
+
+java:S1186è"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+E
+java:S3740>"/Provide the parametrized type for this generic.(äò¸
+
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+J
+java:S3740t"/Provide the parametrized type for this generic.(ŠÒ¬°ùÿÿÿÿ
+M
+java:S3740±"/Provide the parametrized type for this generic.(€í­é8«•œ/
+˜
+java:S1186®"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äò¸
+w
+java:S3008+"\Rename this field "CommonClassForAPI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ’é¸øÿÿÿÿ
+
+java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+W	java:S125Å"<This block of commented-out lines of code should be removed.(¡º˜šûÿÿÿÿ
+f	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŒÑó
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äò¸
+m	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŒÑó8‚Ì×œ/
+˜
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+K
+java:S3740ú"/Provide the parametrized type for this generic.(÷†ªÈúÿÿÿÿ
+
+java:S1186È"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+
+java:S1186œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+Ÿ
+java:S1186·"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤8«•œ/
+g	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ò´®
+K
+java:S3740"/Provide the parametrized type for this generic.(•œùıúÿÿÿÿ
+R	java:S107>"=Method has 14 parameters, which is greater than 7 authorized.(äò¸
+
+java:S1186Î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+˜
+java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äò¸
+i	java:S100ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷†ªÈúÿÿÿÿ
+
+java:S1186ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+—
+java:S1186z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+E
+java:S3740Y"/Provide the parametrized type for this generic.(ÎŒÑó
+C
+java:S1068*"-Remove this unused "mActivity" private field.(ïĞÔ’
+
+java:S1186ı"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éô×âÿÿÿÿÿ
+K
+java:S3740¨"/Provide the parametrized type for this generic.(ğ¸÷šüÿÿÿÿ
+—
+java:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤

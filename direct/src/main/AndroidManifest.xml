@@ -21,7 +21,7 @@
         android:name=".utils.MyApplication"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".activity.SocialMallLendingActivity"></activity>
         <activity
             android:name=".activity.WebviewActivity"
             android:label=""
@@ -244,4 +244,5 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
     </application>
+
 </manifest>

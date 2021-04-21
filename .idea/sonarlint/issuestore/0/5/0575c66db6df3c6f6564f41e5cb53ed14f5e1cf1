@@ -1,0 +1,14 @@
+
+?	java:S108¾")Either remove or fill this block of code.(ÁÚî§
+\
+java:S1128"FRemove this unused import 'com.skdirect.model.LoginWithPasswordModel'.(ÎÑ–º
+E
+java:S1659"*Declare "mobileNumber" on a separate line.(¢‘úóýÿÿÿÿ
+˜
+java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºù®ì
+U
+java:S1128"@Remove this unused import 'com.skdirect.model.UpdateTokenModel'.(ÈŸÄz
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(ó¹¢¸üÿÿÿÿ
+b
+java:S1128
+"GRemove this unused import 'com.google.firebase.iid.FirebaseInstanceId'.(½ÉÈÊùÿÿÿÿ

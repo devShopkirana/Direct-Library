@@ -1,0 +1,48 @@
+
+V	java:S125{"<This block of commented-out lines of code should be removed.(Æ«ÉÑÿÿÿÿÿ
+n	java:S116ù"XRename this field "OTPVerfiyData" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñûÔë
+C
+java:S1604i"(Make this anonymous inner class a lambda(çÔ©ıÿÿÿÿ
+Q	java:S125U"<This block of commented-out lines of code should be removed.(†½Ë¨
+>
+java:S1604]"(Make this anonymous inner class a lambda(‡µ³œ
+W	java:S125 "<This block of commented-out lines of code should be removed.(Íâƒåúÿÿÿÿ
+L
+java:S1874Ÿ"0Remove this use of "getColor"; it is deprecated.(’ı¿ìıÿÿÿÿ
+R	java:S125š"<This block of commented-out lines of code should be removed.(™Ü‡
+F
+java:S5411Ñ"*Use the primitive boolean expression here.(Øö×£ûÿÿÿÿ
+?
+java:S16594"*Declare "mobileNumber" on a separate line.(ŒüÇ
+W	java:S125•"<This block of commented-out lines of code should be removed.(üÕøÿÿÿÿ
+
+java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦™û¨ûÿÿÿÿ
+E
+java:S1874q"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ
+˜
+java:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù šé
+i
+java:S1871Š"MThis branch's code block is the same as the block for the branch on line 391.(ÿø’ÿÿÿÿÿ
+>
+java:S1604q"(Make this anonymous inner class a lambda(„ÑñŒ
+Z
+java:S2583ı"CChange this condition so that it does not always evaluate to "true"(ÁÚî§
+N
+java:S2589Ğ"7Remove this expression which always evaluates to "true"(ÁÚî§
+V	java:S1100"<This class has 9 parents which is greater than 5 authorized.(Úâ‰·øÿÿÿÿ
+\
+java:S2184y"FCast one of the operands of this multiplication operation to a "long".(äÓÎä
+N
+java:S2589Ÿ"7Remove this expression which always evaluates to "true"(ÁÚî§
+M
+java:S1135u"2Complete the task associated to this TODO comment.(Üÿüğıÿÿÿÿ
+?
+java:S1604è"(Make this anonymous inner class a lambda(Æ³“­
+m
+java:S14504"XRemove the "otpString" field and declare it as a local variable in the relevant methods.(ŒüÇ
+c	java:S1161"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô Ğê
+<
+java:S16594"'Declare "otpString" on a separate line.(ŒüÇ
+g	java:S1162"RRename this field "Binding" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÁ’
+F
+java:S5411Ó"*Use the primitive boolean expression here.(‹ãêØøÿÿÿÿ

@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (getSupportFragmentManager().getBackStackEntryCount() <= 1) {
                 if (doubleBackToExitPressedOnce) {
                     super.onBackPressed();
-                    finishAffinity();
+                    //finishAffinity();
                     return;
                 }
                 doubleBackToExitPressedOnce = true;

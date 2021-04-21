@@ -8,6 +8,7 @@ import androidx.annotation.RequiresApi;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.model.AddReviewModel;
+import com.skdirect.model.AppVersionModel;
 import com.skdirect.model.CartMainModel;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.model.MallMainPriceModel;
@@ -34,6 +35,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.http.Field;
 
 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
 public class CommonClassForAPI {
@@ -57,9 +59,9 @@ public class CommonClassForAPI {
 
     }
 
-    public void getToken(final DisposableObserver observer, String grant_type, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type) {
+    public void getToken(final DisposableObserver observer, String grant_type, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type,String SOURCEKEY) {
         RestClient.getInstance().getService().getToken(grant_type, mobileNumber, passwordString, ISOTP, ISBUYER, buyerapp, isDevice, deviceID, lat, log, pincode,
-                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type)
+                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type,SOURCEKEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<TokenModel>() {
@@ -84,9 +86,9 @@ public class CommonClassForAPI {
                 });
     }
 
-    public void getTokenwithphoneNo(final DisposableObserver observer, String password, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type, String phoneno) {
+    public void getTokenwithphoneNo(final DisposableObserver observer, String password, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type, String phoneno,String SOURCEKEY) {
         RestClient.getInstance().getService().getTokenwithphoneno(password, mobileNumber, passwordString, ISOTP, ISBUYER, buyerapp, isDevice, deviceID, lat, log, pincode,
-                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno)
+                MyApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno,SOURCEKEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<TokenModel>() {
@@ -545,6 +547,33 @@ public class CommonClassForAPI {
 
                     @Override
                     public void onError(@NotNull Throwable e) {
+                        observer.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        observer.onComplete();
+                    }
+                });
+    }
+
+
+    public void getAppInfo(final DisposableObserver observer) {
+        RestClient.getInstance().getService().getAppversion()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<AppVersionModel>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onNext(AppVersionModel o) {
+                        observer.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
                         observer.onError(e);
                     }
 

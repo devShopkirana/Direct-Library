@@ -1,0 +1,29 @@
+
+M
+java:S1874&"7Remove this use of "GoogleApiClient"; it is deprecated.(½‘ğ
+P
+java:S1874£":Remove this use of "FirebaseInstanceId"; it is deprecated.(¼‘@
+Q
+java:S1874&";Remove this use of "ConnectionCallbacks"; it is deprecated.(½‘ğ
+F
+java:S1874£"0Remove this use of "getToken"; it is deprecated.(¼‘@
+œ
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–Ç¡§ÿÿÿÿÿ
+œ
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³ÆÌ¶øÿÿÿÿ
+Q	java:S110&"<This class has 9 parents which is greater than 5 authorized.(½‘ğ
+—
+java:S1186f"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½ë¿í
+R
+java:S1874"7Remove this use of "GoogleApiClient"; it is deprecated.(ÂÂ´»ûÿÿÿÿ
+M
+java:S1874,"7Remove this use of "GoogleApiClient"; it is deprecated.(©üß¦
+J
+java:S1874"/Remove this use of "Builder"; it is deprecated.(ÂÂ´»ûÿÿÿÿ
+N
+java:S2589Æ"7Remove this expression which always evaluates to "true"(ÁÚî§
+M
+java:S1874&"7Remove this use of "GoogleApiClient"; it is deprecated.(½‘ğ
+X
+java:S1874&"BRemove this use of "OnConnectionFailedListener"; it is deprecated.(½‘ğ
+i	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–êûÿÿÿÿ

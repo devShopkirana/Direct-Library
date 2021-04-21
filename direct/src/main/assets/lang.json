@@ -476,7 +476,8 @@
       "seller_catelogue": "s catalog order now on the social mall and get home delivery",
       "hello_check_product": "Hello! Check",
       "social_mall_home": "only on social mall. Order now and get home delivery",
-      "no_mall_availble": "We don't deliver to your address. Please change your address"
+      "no_mall_availble": "We don't deliver to your address. Please change your address",
+      "plz_wait": "Please wait..."
     }
   }
 }

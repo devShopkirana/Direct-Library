@@ -1,0 +1,21 @@
+
+s
+java:S1104D"]Make sharedPreferences a static final constant or non-public and provide accessors if needed.(¾ºë„
+Y
+java:S1874J"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(á©úØ
+l
+java:S1104
+"VMake PREFERENCE a static final constant or non-public and provide accessors if needed.(ê±°
+F
+java:S1444
+"0Make this "public static PREFERENCE" field final(ê±°
+o	java:S115&"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(©Ë‰
+B
+java:S1068C"'Remove this unused "ctx" private field.(ÖÖ¾­şÿÿÿÿ
+O
+java:S1874J"9Remove this use of "PreferenceManager"; it is deprecated.(á©úØ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(›Œ˜
+n	java:S115%"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¢äåh
+k
+java:S3008
+"URename this field "PREFERENCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê±°

@@ -18,21 +18,22 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.bumptech.glide.Glide;
-import com.skdirect.BuildConfig;
 import com.skdirect.R;
+import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivitySplashBinding;
 import com.skdirect.model.AppVersionModel;
 import com.skdirect.utils.MyApplication;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
-import com.skdirect.viewmodel.VersionViewModel;
+
+import org.jetbrains.annotations.NotNull;
+
+import io.reactivex.observers.DisposableObserver;
 
 public class SplashActivity extends AppCompatActivity {
     private ActivitySplashBinding mBinding;
     private SplashActivity activity;
-    private VersionViewModel versionViewModel;
-
-
+    private CommonClassForAPI commonClassForAPI;
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +42,8 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
-        versionViewModel = ViewModelProviders.of(this).get(VersionViewModel.class);
         activity = this;
+        commonClassForAPI = CommonClassForAPI.getInstance(this);
         initViews();
     }
 
@@ -63,7 +64,37 @@ public class SplashActivity extends AppCompatActivity {
     private void callAPI() {
         try {
             if (Utils.isNetworkAvailable(activity)) {
-                getAppVersionApi();
+                if (commonClassForAPI != null) {
+                    commonClassForAPI.getAppInfo(new DisposableObserver<AppVersionModel>() {
+                        @Override
+                        public void onNext(@NotNull AppVersionModel appVersionModels) {
+                            if (appVersionModels != null) {
+                                if (appVersionModels.isSuccess()) {
+                                    //                    if (BuildConfig.VERSION_NAME.equals(appVersionModels.getResultItem().getVersion())) {
+
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SELLER_URL, appVersionModels.getResultItem().getSellerUrl());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.BUYER_URL, appVersionModels.getResultItem().getBuyerUrl());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.PRIVACY_POLICY, appVersionModels.getResultItem().getPrivacyPolicy());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.TERMS_CONDITION, appVersionModels.getResultItem().getTermsCondition());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.ABOUT_APP, appVersionModels.getResultItem().getAboutApp());
+                                    launchHomeScreen();
+                                    finish();
+                                    //                    } else {
+//                        checkVersionData(appVersionModels);
+//                    }
+                                }
+                            }
+                        }
+                        @Override
+                        public void onError(Throwable e) {
+                            e.printStackTrace();
+                        }
+                        @Override
+                        public void onComplete() {
+                            Utils.hideProgressDialog();
+                        }
+                    });
+                }
             } else {
                 Utils.setToast(getBaseContext(), MyApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
             }
@@ -72,50 +103,8 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void getAppVersionApi() {
-        versionViewModel.getVersion().observe(this, appVersionModels -> {
-            mBinding.pBar.setVisibility(View.GONE);
-            if (appVersionModels != null) {
-                if (appVersionModels.isSuccess()) {
-//                    if (BuildConfig.VERSION_NAME.equals(appVersionModels.getResultItem().getVersion())) {
-                        SharePrefs.getInstance(activity).putString(SharePrefs.SELLER_URL, appVersionModels.getResultItem().getSellerUrl());
-                        SharePrefs.getInstance(activity).putString(SharePrefs.BUYER_URL, appVersionModels.getResultItem().getBuyerUrl());
-                        SharePrefs.getInstance(activity).putString(SharePrefs.PRIVACY_POLICY, appVersionModels.getResultItem().getPrivacyPolicy());
-                        SharePrefs.getInstance(activity).putString(SharePrefs.TERMS_CONDITION, appVersionModels.getResultItem().getTermsCondition());
-                        SharePrefs.getInstance(activity).putString(SharePrefs.ABOUT_APP, appVersionModels.getResultItem().getAboutApp());
-                        launchHomeScreen();
-                        finish();
-//                    } else {
-//                        checkVersionData(appVersionModels);
-//                    }
-                }
-            }
-        });
-    }
 
     private void launchHomeScreen() {
-      /*  if (SharePrefs.getSharedPreferences(getApplicationContext(), SharePrefs.IS_REGISTRATIONCOMPLETE)) {
-            if (SharePrefs.getInstance(getApplicationContext()).getBoolean(SharePrefs.IS_LOGIN)) {
-                startActivity(new Intent(activity, MainActivity.class));
-            } else {
-                startActivity(new Intent(activity, LoginActivity.class));
-            }
-
-        } else {
-            if (SharePrefs.getSharedPreferences(getApplicationContext(), SharePrefs.Is_First_Time)) {
-                if (SharePrefs.getInstance(getApplicationContext()).getBoolean(SharePrefs.IS_LOGIN)) {
-
-                    startActivity(new Intent(activity, MainActivity.class));
-                } else {
-                    startActivity(new Intent(activity, LoginActivity.class));
-
-                }
-            } else {
-                startActivity(new Intent(activity, IntroActivity.class));
-            }
-
-
-        }*/
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor prefEditor = prefs.edit();
         prefEditor.remove(SharePrefs.FILTER_CATEGORY_LIST);

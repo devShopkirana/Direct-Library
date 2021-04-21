@@ -62,7 +62,7 @@ public class SharePrefs {
     public static final String PRIVACY_POLICY = "privacy_policy";
     public static final String TERMS_CONDITION = "terms_condition";
     public static final String ABOUT_APP = "about_app";
-
+    public static final String SOURCEKEY ="SOURCEKEY";
 
     private Context ctx;
     public SharedPreferences sharedPreferences;

@@ -1,0 +1,28 @@
+
+Y	java:S125“"<This block of commented-out lines of code should be removed.(ïóÕ¦8­ÕÆœ/
+x
+java:S1450"[Remove the "mobileNumber" field and declare it as a local variable in the relevant methods.(Æ›¡ó8ÎçÌ˜/
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(¯¶Êõ
+Q
+java:S1066F"/Merge this if statement with the enclosing one.(¤‹“¢ıÿÿÿÿ8­ÕÆœ/
+s
+java:S1450"VRemove the "pincode" field and declare it as a local variable in the relevant methods.(¢¿ïÜ8ï‡Ñ˜/
+t
+java:S1450 "WRemove the "latitude" field and declare it as a local variable in the relevant methods.(Æ²å×8ğ‹¥š/
+£
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(àÿ’¨ÿÿÿÿÿ8­ÕÆœ/
+M
+java:S1068"0Remove this unused "mobileNumber" private field.(Æ›¡ó8İĞ˜/
+Y
+java:S2589E"7Remove this expression which always evaluates to "true"(†§ŸÂûÿÿÿÿ8­ÕÆœ/
+t
+java:S3776&"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(¨Œşÿÿÿÿ8Ïş­œ/
+u
+java:S1450$"XRemove the "SOURCEKEY" field and declare it as a local variable in the relevant methods.(ÂûÑü8°ÅÖš/
+p	java:S116$"TRename this field "SOURCEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂûÑü8°ÅÖš/
+s
+java:S1450"VRemove the "address" field and declare it as a local variable in the relevant methods.(›—Ô8—ùÏ˜/
+T
+java:S2589j"7Remove this expression which always evaluates to "true"(ÁÚî§8­ÕÆœ/
+z
+java:S1450!"XRemove the "longitude" field and declare it as a local variable in the relevant methods.(Ï¯ÿÿÿÿÿ8œè¦š/

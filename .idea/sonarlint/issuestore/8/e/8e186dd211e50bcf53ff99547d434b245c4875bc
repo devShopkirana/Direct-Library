@@ -1,0 +1,80 @@
+
+i	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ÖÑÍıÿÿÿÿ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã—”½ÿÿÿÿÿ
+l	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¤úûÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+i	java:S100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¤úûÿÿÿÿ
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+d	java:S100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ»Ø
+i	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì‡ùşÿÿÿÿ
+r	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ8ŒƒÔœ/
+g	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ü© 
+R	java:S107T"=Method has 14 parameters, which is greater than 7 authorized.(¨‚÷
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã—”½ÿÿÿÿÿ
+h	java:S100c"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÔõ¨øÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã—”½ÿÿÿÿÿ
+h	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸í€ßÿÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²À ½üÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+c	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÆ€s
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+d	java:S100­"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“…‚×
+d	java:S100Å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂñÔó
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+c	java:S100f"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö‘ÂÆ
+h	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¬Ğıÿÿÿÿÿ
+c	java:S100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¿¦ 
+d	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú­µÚ
+g	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂñÔó
+i	java:S100Î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şåâ—ûÿÿÿÿ
+c	java:S100¤"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Õ¢!
+d	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨İ¿ø
+d	java:S100³"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôõû
+d	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á©Æç
+i	java:S100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï—ùÎüÿÿÿÿ
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ùº˜
+i	java:S100è"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ —şüÿÿÿÿ
+d	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÔşû
+c	java:S100ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©„áU
+d	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·èÜÂ
+b	java:S100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à¢¶'
+d	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¥±’
+d	java:S100Ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´éúÍ
+i	java:S100¿"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æù”·şÿÿÿÿ
+l	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï—ùÎüÿÿÿÿ
+i	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¾…Äüÿÿÿÿ
+i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÃªøşÿÿÿÿ
+i	java:S100ä"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê»çœıÿÿÿÿ
+d	java:S100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ü© 
+i	java:S100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹®¶ßÿÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+l	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùŒ³Öøÿÿÿÿ
+c	java:S100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú§§æ
+i	java:S100ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÍáÄúÿÿÿÿ
+g	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿì‰ß
+f	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÆ€s
+i	java:S100à"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùŒ³Öøÿÿÿÿ
+d	java:S100›"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( á­õ
+U
+java:S1128("?Remove this unused import 'com.skdirect.model.ReviewMainModel'.(´îÿÅ
+l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÍáÄúÿÿÿÿ
+P	java:S125\"<This block of commented-out lines of code should be removed.(ç›a
+c	java:S100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìçõÎ
+i	java:S100¡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÊï×üÿÿÿÿ
+m	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷8×æÓœ/
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+i	java:S100Ø"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷âÉüÿÿÿÿ
+d	java:S100Ü"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÛäù
+W	java:S107X"=Method has 15 parameters, which is greater than 7 authorized.(¢ûœ˜şÿÿÿÿ
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+f	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ï à
+d	java:S100÷"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿì‰ß
+g	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( á­õ
+f	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨‚÷
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+k	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ûœ˜şÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ùº˜
