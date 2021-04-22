@@ -352,7 +352,7 @@ public class Utils {
             SharePrefs.getInstance(activity).putInt(SharePrefs.PIN_CODE_master, jsonObject.getInt("PinCodeMasterId"));
             SharePrefs.getInstance(activity).putBoolean(SharePrefs.IS_ACTIVE, jsonObject.getBoolean("IsActive"));
             SharePrefs.getInstance(activity).putBoolean(SharePrefs.IS_DELETE, jsonObject.getBoolean("IsDelete"));
-            JSONArray jsonArray = jsonObject.getJSONArray("UserDeliveryDC");
+        /*    JSONArray jsonArray = jsonObject.getJSONArray("UserDeliveryDC");
             if (jsonArray != null && jsonArray.length() > 0) {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject object = jsonArray.getJSONObject(i);
@@ -363,7 +363,7 @@ public class Utils {
                     SharePrefs.getInstance(activity).putString(SharePrefs.DELIVERY, object.getString("Delivery"));
 
                 }
-            }
+            }*/
         } catch (Exception ex) {
             ex.printStackTrace();
         }
