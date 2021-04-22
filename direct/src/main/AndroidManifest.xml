@@ -18,8 +18,7 @@
     </queries>
 
     <application
-        android:requestLegacyExternalStorage="true"
-        android:theme="@style/LibraryTheme">
+        android:requestLegacyExternalStorage="true">
 
         <activity android:name=".activity.SocialMallLendingActivity"
             android:theme="@style/CustomeAppTheme.NoActionBar"/>
