@@ -273,7 +273,7 @@
                     android:id="@+id/arrow_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?colorPrimary"
+                    android:background="@color/colorPrimaryDarkD"
                     app:layout_collapseMode="pin">
 
                     <RelativeLayout

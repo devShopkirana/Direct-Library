@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.skdirect.R;
 import com.skdirect.adapter.LanguageListAdapter;
-import com.skdirect.databinding.ActivityChangeLanguageBinding;
+import com.skdirect.databinding.ActivityChangeLanguagedBinding;
 import com.skdirect.interfacee.OnLanguageClick;
 import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 
 public class ChangeLanguageActivity extends AppCompatActivity implements View.OnClickListener, OnLanguageClick {
-    private ActivityChangeLanguageBinding mBinding;
+    private ActivityChangeLanguagedBinding mBinding;
     private ArrayList<DataSnapshot> languageList;
     private LanguageListAdapter adapter;
     private ChangeLanguageActivity activity;
@@ -36,7 +36,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_change_language);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_change_languaged);
         activity = this;
         initView();
     }
@@ -53,7 +53,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
 
         String selectedLanguage = SharePrefs.getInstance(activity).getString(SharePrefs.SELECTED_LANGUAGE);
         if (selectedLanguage == null || selectedLanguage.equals("")) {
-                SharePrefs.getInstance(activity).putString(SharePrefs.SELECTED_LANGUAGE, "English");
+            SharePrefs.getInstance(activity).putString(SharePrefs.SELECTED_LANGUAGE, "English");
         }
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();

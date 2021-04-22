@@ -18,7 +18,7 @@ import com.skdirect.R;
 import com.skdirect.activity.SearchActivity;
 import com.skdirect.adapter.SearchDataAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.FragmentProductBinding;
+import com.skdirect.databinding.FragmentProductdBinding;
 import com.skdirect.interfacee.SearchInterface;
 import com.skdirect.model.SearchDataModel;
 import com.skdirect.model.SearchMainModel;
@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import io.reactivex.observers.DisposableObserver;
 
 public class ProductFragment extends Fragment implements SearchInterface {
-    private FragmentProductBinding mBinding;
+    private FragmentProductdBinding mBinding;
     private SearchActivity activity;
 
     private final ArrayList<SearchDataModel.TableOneTwo> list = new ArrayList<>();
@@ -67,7 +67,7 @@ public class ProductFragment extends Fragment implements SearchInterface {
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_product, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_productd, container, false);
         searchViewMode = ViewModelProviders.of(this).get(SearchViewMode.class);
         initViews();
         callSearchAPi(searchSellerName);

@@ -31,7 +31,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityWelcomeBinding;
+import com.skdirect.databinding.ActivityWelcomedBinding;
 import com.skdirect.model.GenerateOtpModel;
 import com.skdirect.model.GenerateOtpResponseModel;
 import com.skdirect.model.OtpResponceModel;
@@ -49,7 +49,7 @@ import io.reactivex.observers.DisposableObserver;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private ActivityWelcomeBinding mBinding;
+    private ActivityWelcomedBinding mBinding;
     private ViewPager viewPager;
     private LinearLayout dotsLayout;
     private int[] layouts;
@@ -62,7 +62,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_welcome);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_welcomed);
         mBinding.setLifecycleOwner(this);
 
         init();
@@ -342,9 +342,9 @@ public class WelcomeActivity extends AppCompatActivity {
                 if (model != null) {
                     if (model.isSuccess()) {
                         Utils.setToast(WelcomeActivity.this, model.getSuccessMessage());
-                        startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                         finish();
-                    }else{
+                    } else {
                         Utils.setToast(WelcomeActivity.this, model.getErrorMessage());
                     }
                 }

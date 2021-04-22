@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.skdirect.R;
 import com.skdirect.adapter.DynamicTabAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityMyOrderBinding;
+import com.skdirect.databinding.ActivityMyOrderdBinding;
 import com.skdirect.model.OrderStatusDetails;
 import com.skdirect.model.OrderStatusMainModel;
 import com.skdirect.utils.DBHelper;
@@ -26,14 +26,14 @@ import io.reactivex.observers.DisposableObserver;
 import static androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT;
 
 public class MyOrderActivity extends AppCompatActivity implements View.OnClickListener {
-    private ActivityMyOrderBinding mBinding;
+    private ActivityMyOrderdBinding mBinding;
     public DBHelper dbHelper;
     private CommonClassForAPI commonClassForAPI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_my_order);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_my_orderd);
         commonClassForAPI = CommonClassForAPI.getInstance(this);
         initView();
 
@@ -44,7 +44,7 @@ public class MyOrderActivity extends AppCompatActivity implements View.OnClickLi
         mBinding.toolbarTittle.tvTittle.setText(dbHelper.getString(R.string.my_order));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
         //mBinding.tabLayout.setupWithViewPager(mBinding.viewPager);
-        if (commonClassForAPI!=null) {
+        if (commonClassForAPI != null) {
             Utils.showProgressDialog(this);
             commonClassForAPI.getAllOrderStatusList(observer);
         }
@@ -58,15 +58,16 @@ public class MyOrderActivity extends AppCompatActivity implements View.OnClickLi
                 if (orderStatusMainModel.isSuccess()) {
                     ArrayList<String> orderStatus = new ArrayList<>();
                     ArrayList<OrderStatusDetails> list = orderStatusMainModel.getResultItem();
-                    for (int i = 0; i <list.size() ; i++) {
+                    for (int i = 0; i < list.size(); i++) {
                         orderStatus.add(list.get(i).getStatus());
                     }
-                    setupViewPager(mBinding.viewPager,orderStatus);
+                    setupViewPager(mBinding.viewPager, orderStatus);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
         @Override
         public void onError(Throwable e) {
             Utils.hideProgressDialog();

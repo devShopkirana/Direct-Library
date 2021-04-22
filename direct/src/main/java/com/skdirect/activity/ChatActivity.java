@@ -7,18 +7,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.skdirect.R;
-import com.skdirect.databinding.FragmentChatBinding;
+import com.skdirect.databinding.FragmentChatdBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.DirectSDK;
 
-public class ChatActivity  extends AppCompatActivity {
-    private FragmentChatBinding mBinding;
+public class ChatActivity extends AppCompatActivity {
+    private FragmentChatdBinding mBinding;
     public DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_chat);
-        dbHelper = DirectSDK.getInstance().dbHelper;
+        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_chatd);
         initViews();
     }
 

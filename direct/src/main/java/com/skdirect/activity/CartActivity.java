@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.skdirect.R;
 import com.skdirect.adapter.CartListAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityCartBinding;
+import com.skdirect.databinding.ActivityCartdBinding;
 import com.skdirect.interfacee.CartItemInterface;
 import com.skdirect.model.CartItemModel;
 import com.skdirect.model.CartMainModel;
@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import io.reactivex.observers.DisposableObserver;
 
 public class CartActivity extends AppCompatActivity implements View.OnClickListener, CartItemInterface {
-    private ActivityCartBinding mBinding;
+    private ActivityCartdBinding mBinding;
     private CartItemViewMode cartItemViewMode;
     private final ArrayList<CartModel> cartItemList = new ArrayList<>();
     private CartListAdapter cartListAdapter;
@@ -55,7 +55,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_cart);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_cartd);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.shopping_bag));
 
@@ -101,12 +101,10 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         super.onBackPressed();
         if (getIntent().getExtras() != null) {
-            if(getIntent().getStringExtra("ComeTo").equalsIgnoreCase("Login"))
-            {
+            if (getIntent().getStringExtra("ComeTo").equalsIgnoreCase("Login")) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
-        }else
-        {
+        } else {
             finish();
         }
     }
@@ -272,7 +270,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
 
     private void addItemInCart(int QTY, CartModel sellerProductModel) {
         DirectSDK.getInstance().cartRepository.updateCartItem(sellerProductModel);
-        ItemAddModel paginationModel = new ItemAddModel(QTY, "123", sellerProductModel.getId(), 0, 0,SharePrefs.getInstance(this).getString(SharePrefs.MALL_ID));
+        ItemAddModel paginationModel = new ItemAddModel(QTY, "123", sellerProductModel.getId(), 0, 0, SharePrefs.getInstance(this).getString(SharePrefs.MALL_ID));
         cartItemViewMode.getAddItemsInCardVMRequest(paginationModel);
         cartItemViewMode.getAddItemsInCardVM().observe(this, sellerProdList -> {
             Utils.hideProgressDialog();

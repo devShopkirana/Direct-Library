@@ -13,7 +13,7 @@ import com.skdirect.activity.SplashActivity;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "LanguageDB";
+    public static final String DATABASE_NAME = "DLanguageDB";
     public static final String TABLE_NAME = "LanguageTable";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_KEY = "keystring";

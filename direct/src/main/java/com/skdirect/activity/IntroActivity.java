@@ -7,13 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.skdirect.R;
-import com.skdirect.databinding.ActivityIntroBinding;
+import com.skdirect.databinding.ActivityIntrodBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 
 public class IntroActivity extends AppCompatActivity {
-    private ActivityIntroBinding mBinding;
+    private ActivityIntrodBinding mBinding;
     private IntroActivity activity;
     private DBHelper dbHelper;
 
@@ -21,7 +21,7 @@ public class IntroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_intro);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_introd);
         activity = this;
         dbHelper = DirectSDK.getInstance().dbHelper;
         initViews();

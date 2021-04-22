@@ -9,7 +9,7 @@
 
         <include
             android:id="@+id/toolbar_tittle"
-            layout="@layout/toolbar_arrow" />
+            layout="@layout/toolbar_arrow_dir" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_loction_search"

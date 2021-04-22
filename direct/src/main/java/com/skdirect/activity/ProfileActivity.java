@@ -30,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onResume() {
         super.onResume();
-       // getProfileData();
+        // getProfileData();
     }
 
     @Override

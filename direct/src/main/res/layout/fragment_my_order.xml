@@ -6,7 +6,7 @@
         android:layout_height="wrap_content">
         <include
             android:id="@+id/toolbar_tittle"
-            layout="@layout/toolbar_arrow" />
+            layout="@layout/toolbar_arrow_dir" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"

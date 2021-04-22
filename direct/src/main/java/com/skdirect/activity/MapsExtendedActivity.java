@@ -41,8 +41,8 @@ import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityMapsExtendedBinding;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.GpsUtils;
 import com.skdirect.utils.DirectSDK;
+import com.skdirect.utils.GpsUtils;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.MapViewViewMode;
@@ -53,7 +53,6 @@ import org.json.JSONObject;
 
 import java.util.List;
 import java.util.Objects;
-
 
 public class MapsExtendedActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
     private ActivityMapsExtendedBinding mBinding;
@@ -112,15 +111,14 @@ public class MapsExtendedActivity extends AppCompatActivity implements OnMapRead
     }
 
     private void initializeViews() {
-        if(getIntent()!=null){
-            latitude=getIntent().getDoubleExtra("Lat",0.0);
-            longitude=getIntent().getDoubleExtra("Lon",0.0);
+        if (getIntent() != null) {
+            latitude = getIntent().getDoubleExtra("Lat", 0.0);
+            longitude = getIntent().getDoubleExtra("Lon", 0.0);
         }
         utils = new Utils(MapsExtendedActivity.this);
         dbHelper = DirectSDK.getInstance().dbHelper;
         mapViewViewMode = ViewModelProviders.of(this).get(MapViewViewMode.class);
         commonClassForAPI = CommonClassForAPI.getInstance(MapsExtendedActivity.this);
-        dbHelper = DirectSDK.getInstance().dbHelper;
         mBinding.tvFlatNo.setText(dbHelper.getString(R.string.flat_no));
         mBinding.editTextName.setHint(dbHelper.getString(R.string.name));
         mBinding.cancel.setText(dbHelper.getString(R.string.cancel));
@@ -176,11 +174,9 @@ public class MapsExtendedActivity extends AppCompatActivity implements OnMapRead
                 JSONObject jsonResponse = null;
                 try {
                     jsonResponse = new JSONObject(data.toString());
-                    if(jsonResponse.getBoolean("IsSuccess"))
-                    {
+                    if (jsonResponse.getBoolean("IsSuccess")) {
                         JSONObject resultItemObject = jsonResponse.getJSONObject("ResultItem");
-                        if(resultItemObject!=null)
-                        {
+                        if (resultItemObject != null) {
                             String CityName = resultItemObject.getString("CityName");
                             String StateName = resultItemObject.getString("StateName");
                             String Pincode = resultItemObject.getString("Pincode");
@@ -506,16 +502,15 @@ public class MapsExtendedActivity extends AppCompatActivity implements OnMapRead
             }
 
             if (!selectedLocation) {
-                if(latitude==0.0 && longitude==0.0){
+                if (latitude == 0.0 && longitude == 0.0) {
                     CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(location.getLatitude(), location.getLongitude())).zoom(16f).build();
                     mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-                }
-                else{
+                } else {
                     CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(latitude, longitude)).zoom(16f).build();
                     mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                 }
-                }
+            }
 
             if (mGoogleApiClient.isConnected()) {
                 LocationServices.FusedLocationApi.removeLocationUpdates(

@@ -18,7 +18,7 @@ import com.skdirect.R;
 import com.skdirect.activity.SearchActivity;
 import com.skdirect.adapter.SellerShopListAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.FragmentShopBinding;
+import com.skdirect.databinding.FragmentShopdBinding;
 import com.skdirect.interfacee.SearchInterface;
 import com.skdirect.model.ShopMainModel;
 import com.skdirect.model.TopSellerModel;
@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import io.reactivex.observers.DisposableObserver;
 
 public class ShopFragment extends Fragment implements SearchInterface {
-    private FragmentShopBinding mBinding;
+    private FragmentShopdBinding mBinding;
     private SearchActivity activity;
 
     private final int skipCount = 0;
@@ -64,7 +64,7 @@ public class ShopFragment extends Fragment implements SearchInterface {
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shop, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shopd, container, false);
         searchViewMode = ViewModelProviders.of(this).get(SearchViewMode.class);
         initViews();
         callShopAPi();

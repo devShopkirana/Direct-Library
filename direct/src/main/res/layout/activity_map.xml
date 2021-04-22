@@ -15,7 +15,7 @@
 
             <include
                 android:id="@+id/toolbar_map"
-                layout="@layout/toolbar_arrow" />
+                layout="@layout/toolbar_arrow_dir" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
