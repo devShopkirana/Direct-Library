@@ -14,7 +14,7 @@ import com.skdirect.databinding.ActivitySocialMallLendingBinding;
 import com.skdirect.model.AppVersionModel;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -39,7 +39,7 @@ public class SocialMallLendingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_social_mall_lending);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         commonClassForAPI = CommonClassForAPI.getInstance(this);
         mBinding.tvPlzWait.setText(dbHelper.getString(R.string.plz_wait));
         fcmToken = Utils.getFcmToken();

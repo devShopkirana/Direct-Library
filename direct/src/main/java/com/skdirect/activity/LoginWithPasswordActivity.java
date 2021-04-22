@@ -13,7 +13,7 @@ import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityLoginWithPasswordBinding;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -32,7 +32,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_login_with_password);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         getIntentData();
         initView();
     }
@@ -144,7 +144,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
                     SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_SUPER_ADMIN, model.getIsSuperAdmin());
                     SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_LOGIN, true);
                     commonClassForAPI.getUpdateToken(updatecallToken, fcmToken);
-                    if(!TextUtils.isNullOrEmpty(MySingltonApplication.getInstance().cartRepository.getCartId())){
+                    if(!TextUtils.isNullOrEmpty(DirectSDK.getInstance().cartRepository.getCartId())){
                         commonClassForAPI.assignCart(new DisposableObserver<JsonObject>() {
                             @Override
                             public void onNext(JsonObject model) { }
@@ -157,7 +157,7 @@ public class LoginWithPasswordActivity extends AppCompatActivity implements View
                             public void onComplete() {
                                 Utils.hideProgressDialog();
                             }
-                        }, MySingltonApplication.getInstance().cartRepository.getCartId());
+                        }, DirectSDK.getInstance().cartRepository.getCartId());
                     }
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();

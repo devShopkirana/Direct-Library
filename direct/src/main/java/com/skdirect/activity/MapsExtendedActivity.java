@@ -42,7 +42,7 @@ import com.skdirect.databinding.ActivityMapsExtendedBinding;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.MapViewViewMode;
@@ -117,10 +117,10 @@ public class MapsExtendedActivity extends AppCompatActivity implements OnMapRead
             longitude=getIntent().getDoubleExtra("Lon",0.0);
         }
         utils = new Utils(MapsExtendedActivity.this);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mapViewViewMode = ViewModelProviders.of(this).get(MapViewViewMode.class);
         commonClassForAPI = CommonClassForAPI.getInstance(MapsExtendedActivity.this);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mBinding.tvFlatNo.setText(dbHelper.getString(R.string.flat_no));
         mBinding.editTextName.setHint(dbHelper.getString(R.string.name));
         mBinding.cancel.setText(dbHelper.getString(R.string.cancel));

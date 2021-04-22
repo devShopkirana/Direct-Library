@@ -20,7 +20,7 @@ import com.skdirect.interfacee.MakeDefaultInterface;
 import com.skdirect.model.MainLocationModel;
 import com.skdirect.model.UserLocationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.PrimaryAddressViewMode;
 
@@ -38,7 +38,7 @@ public class ProfilePrimaryAddressActivity extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_profile_primary_address);
         primaryAddressViewMode = ViewModelProviders.of(this).get(PrimaryAddressViewMode.class);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         getSharedData();
         initView();
         callUserLocation();

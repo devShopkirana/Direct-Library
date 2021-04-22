@@ -14,7 +14,7 @@ import com.skdirect.databinding.ActivityMyOrderBinding;
 import com.skdirect.model.OrderStatusDetails;
 import com.skdirect.model.OrderStatusMainModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,7 +40,7 @@ public class MyOrderActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initView() {
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mBinding.toolbarTittle.tvTittle.setText(dbHelper.getString(R.string.my_order));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
         //mBinding.tabLayout.setupWithViewPager(mBinding.viewPager);

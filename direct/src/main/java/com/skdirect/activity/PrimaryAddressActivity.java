@@ -14,7 +14,7 @@ import com.skdirect.adapter.UserLocationAdapter;
 import com.skdirect.databinding.ActivityPrimaryAddressBinding;
 import com.skdirect.model.UserLocationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.PrimaryAddressViewMode;
 
@@ -34,7 +34,7 @@ public class PrimaryAddressActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_primary_address);
         primaryAddressViewMode = ViewModelProviders.of(this).get(PrimaryAddressViewMode.class);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         getSharedData();
         initView();
         callUserLocation();
@@ -58,7 +58,7 @@ public class PrimaryAddressActivity extends AppCompatActivity implements View.On
                 setResult(Activity.RESULT_OK, intent);
                 finish();
             } else {
-                Utils.setToast(getApplicationContext(), MySingltonApplication.getInstance().dbHelper.getString(R.string.please_enter_address));
+                Utils.setToast(getApplicationContext(), DirectSDK.getInstance().dbHelper.getString(R.string.please_enter_address));
             }
         } else if (id == R.id.bt_add_new_addresh) {
             startActivity(new Intent(getApplicationContext(), NewAddressActivity.class));

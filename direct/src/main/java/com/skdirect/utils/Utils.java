@@ -283,9 +283,9 @@ public class Utils {
         TextView tvSharewith = dialog.findViewById(R.id.tvSharewith);
         TextView tvWhasapp = dialog.findViewById(R.id.tvWhasapp);
         TextView tvWhasappBusiness = dialog.findViewById(R.id.tvWhasappBusiness);
-        tvSharewith.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.share_with));
-        tvWhasapp.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.whatsapp));
-        tvWhasappBusiness.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.whatsapp_business));
+        tvSharewith.setText(DirectSDK.getInstance().dbHelper.getString(R.string.share_with));
+        tvWhasapp.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp));
+        tvWhasappBusiness.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp_business));
 
         if (appInstalledOrNot(context,"com.whatsapp") && appInstalledOrNot(context,"com.whatsapp.w4b")) {
             dialog.show();

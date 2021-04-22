@@ -22,7 +22,7 @@ import com.skdirect.model.UpdateEditeAddreshMainModel;
 import com.skdirect.model.UserLocationModel;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GPSTracker;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.NewAddressViewMode;
@@ -48,7 +48,7 @@ public class EditAddressActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_edit_addresh);
         newAddressViewMode = ViewModelProviders.of(this).get(NewAddressViewMode.class);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mGeocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
         getIntentData();
         initView();

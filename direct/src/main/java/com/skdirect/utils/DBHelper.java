@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
+
 import com.google.firebase.database.DataSnapshot;
 import com.skdirect.activity.SplashActivity;
 
@@ -100,10 +101,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 db.delete(TABLE_NAME, null, null);
 
                 for (DataSnapshot postSnapshot : dataPostSnapshot.getChildren()) {
-                    String selectedLanguage = SharePrefs.getInstance(MySingltonApplication.getInstance()).getString(SharePrefs.SELECTED_LANGUAGE);
+                    String selectedLanguage = SharePrefs.getInstance(DirectSDK.getInstance().context).getString(SharePrefs.SELECTED_LANGUAGE);
                     if (selectedLanguage.equals(postSnapshot.getKey())) {
                         for (DataSnapshot langSnapshot : postSnapshot.getChildren()) {
-                            MySingltonApplication.getInstance().dbHelper.insertStrings(langSnapshot.getKey(), langSnapshot.getValue() + "");
+                            DirectSDK.getInstance().dbHelper.insertStrings(langSnapshot.getKey(), langSnapshot.getValue() + "");
                         }
                     }
                 }
@@ -113,8 +114,8 @@ public class DBHelper extends SQLiteOpenHelper {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                    Utils.hideProgressDialog();
-                    context.startActivity(new Intent(context, SplashActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                Utils.hideProgressDialog();
+                context.startActivity(new Intent(context, SplashActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }

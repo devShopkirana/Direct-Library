@@ -16,7 +16,7 @@ import com.skdirect.api.CommonClassForAPI;
 import com.skdirect.databinding.ActivityOfferBinding;
 import com.skdirect.model.response.ApplyOfferResponse;
 import com.skdirect.model.response.OfferResponse;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
@@ -40,11 +40,11 @@ public class OfferActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_offer);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.apply_coupon));
-        mBinding.etOffer.setHint(MySingltonApplication.getInstance().dbHelper.getString(R.string.enter_promo_code));
-        mBinding.btnApply.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.apply));
-        mBinding.tvAvailableOfferTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.available_offers));
-        mBinding.tvEmpty.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.no_offer_found));
+        setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.apply_coupon));
+        mBinding.etOffer.setHint(DirectSDK.getInstance().dbHelper.getString(R.string.enter_promo_code));
+        mBinding.btnApply.setText(DirectSDK.getInstance().dbHelper.getString(R.string.apply));
+        mBinding.tvAvailableOfferTitle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.available_offers));
+        mBinding.tvEmpty.setText(DirectSDK.getInstance().dbHelper.getString(R.string.no_offer_found));
 
         initViews();
     }
@@ -58,7 +58,7 @@ public class OfferActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (TextUtils.isNullOrEmpty(mBinding.etOffer.getText().toString())) {
-            Utils.setToast(getApplicationContext(), MySingltonApplication.getInstance().dbHelper.getString(R.string.enter_coupon_code));
+            Utils.setToast(getApplicationContext(), DirectSDK.getInstance().dbHelper.getString(R.string.enter_coupon_code));
         } else {
             callApplyCoupon(0, 0);
         }
@@ -73,7 +73,7 @@ public class OfferActivity extends AppCompatActivity implements View.OnClickList
         mBinding.rvOffer.setAdapter(adapter);
 
         commonClassForAPI = CommonClassForAPI.getInstance(this);
-        commonClassForAPI.getCouponList(couponObserver, MySingltonApplication.getInstance().cartRepository.getCartSellerId());
+        commonClassForAPI.getCouponList(couponObserver, DirectSDK.getInstance().cartRepository.getCartSellerId());
     }
 
     public void callApplyCoupon(int position, int id) {

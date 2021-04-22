@@ -30,7 +30,7 @@ import com.skdirect.model.MallMainPriceModel;
 import com.skdirect.model.PostBrandModel;
 import com.skdirect.utils.Constant;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 
@@ -72,7 +72,7 @@ public class FilterActivity extends AppCompatActivity implements FilterTypeInter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_filter);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
 
         if (getIntent().getExtras() != null) {
             categoryId = getIntent().getIntExtra("categoryId", 0);

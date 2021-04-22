@@ -15,7 +15,7 @@ import com.skdirect.fragment.ProductFragment;
 import com.skdirect.fragment.ShopFragment;
 import com.skdirect.interfacee.SearchInterface;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
@@ -34,7 +34,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_search);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         getIntentData();
         initView();
         setupViewPager(mBinding.viewpager);

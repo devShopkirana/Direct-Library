@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.skdirect.R;
 import com.skdirect.databinding.ActivityWebviewBinding;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 
@@ -28,7 +28,7 @@ public class WebviewActivity extends AppCompatActivity {
                {
                    mBinding.webView.loadUrl(privacy);
                }
-                setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.webview_title_name_privacy));
+                setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.webview_title_name_privacy));
             } else if(getIntent().getStringExtra("FunctionName").equalsIgnoreCase("TermsCondition"))
             {
                 String terms = SharePrefs.getInstance(this).getString(SharePrefs.TERMS_CONDITION);
@@ -36,7 +36,7 @@ public class WebviewActivity extends AppCompatActivity {
                 {
                     mBinding.webView.loadUrl(terms);
                 }
-                setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.terms_and_condition));
+                setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.terms_and_condition));
             } else
             {
                 String aboutApp = SharePrefs.getInstance(this).getString(SharePrefs.ABOUT_APP);
@@ -44,7 +44,7 @@ public class WebviewActivity extends AppCompatActivity {
                 {
                     mBinding.webView.loadUrl(aboutApp);
                 }
-                setTitle(MySingltonApplication.getInstance().dbHelper.getString(R.string.webview_title_name_about_direct));
+                setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.webview_title_name_about_direct));
             }
         }
 

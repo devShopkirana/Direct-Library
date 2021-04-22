@@ -23,7 +23,7 @@ import com.skdirect.interfacee.SearchInterface;
 import com.skdirect.model.SearchDataModel;
 import com.skdirect.model.SearchMainModel;
 import com.skdirect.model.SearchRequestModel;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.SearchViewMode;
@@ -96,7 +96,7 @@ public class ProductFragment extends Fragment implements SearchInterface {
 
 
     private void initViews() {
-        mBinding.tvNotDataFound.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.no_data_found));
+        mBinding.tvNotDataFound.setText(DirectSDK.getInstance().dbHelper.getString(R.string.no_data_found));
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
         mBinding.rvSearch.setLayoutManager(layoutManager);
         searchDataAdapter = new SearchDataAdapter(getActivity(), list);
@@ -136,7 +136,7 @@ public class ProductFragment extends Fragment implements SearchInterface {
             list.clear();
             getSearchData(searchSellerName);
         } else {
-            Utils.setToast(activity, MySingltonApplication.getInstance().dbHelper.getString(R.string.no_internet_connection));
+            Utils.setToast(activity, DirectSDK.getInstance().dbHelper.getString(R.string.no_internet_connection));
         }
     }
 
