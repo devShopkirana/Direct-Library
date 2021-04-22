@@ -276,9 +276,9 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/logo" />
-        <meta-data
+        <!--<meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccentDir" />
+            android:resource="@color/colorAccentDir" />-->
     </application>
 
 </manifest>
