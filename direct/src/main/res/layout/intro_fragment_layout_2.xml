@@ -18,7 +18,7 @@
             android:gravity="center"
             android:layout_gravity="start"
             android:text="Buyer"
-            android:textColor="@color/colorAccentD"
+            android:textColor="@color/colorAccentDir"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -30,7 +30,7 @@
             android:textStyle="bold"
             android:layout_gravity="start"
             android:text="Place order"
-            android:textColor="@color/colorAccentD"
+            android:textColor="@color/colorAccentDir"
             android:textSize="15sp" />
 
         <ImageView
@@ -61,7 +61,7 @@
             android:gravity="center"
             android:layout_gravity="right"
             android:text="Seller"
-            android:textColor="@color/colorAccentD"
+            android:textColor="@color/colorAccentDir"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -73,7 +73,7 @@
             android:textStyle="bold"
             android:layout_gravity="right"
             android:text="Accept and manage order"
-            android:textColor="@color/colorAccentD"
+            android:textColor="@color/colorAccentDir"
             android:textSize="15sp" />
     </LinearLayout>
 </FrameLayout>

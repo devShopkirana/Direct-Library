@@ -156,7 +156,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
                 resendotp.setBackgroundResource(R.drawable.rectangle);
                 resendotp.setPadding(8, 8, 8, 8);
                 Binding.resendotp.setVisibility(View.VISIBLE);
-                resendotp.setTextColor(getResources().getColor(R.color.colorAccentD));
+                resendotp.setTextColor(getResources().getColor(R.color.colorAccentDir));
                 //Toast.makeText(context, getString(R.string.resendotp), Toast.LENGTH_SHORT).show();
             }
         };

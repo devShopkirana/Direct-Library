@@ -135,7 +135,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setAutoCancel(true)
                         .setPriority(Notification.PRIORITY_MAX)
                         .setSound(defaultSoundUri)
-                        .setColor(ContextCompat.getColor(this, R.color.colorAccentD))
+                        .setColor(ContextCompat.getColor(this, R.color.colorAccentDir))
                         .setChannelId(getResources().getString(R.string.app_name))
                         .setContentIntent(pendingIntent);
             } else {
@@ -151,7 +151,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setSound(defaultSoundUri)
                         .setChannelId(getResources().getString(R.string.app_name))
                         .setColorized(true)
-                        .setColor(ContextCompat.getColor(this, R.color.colorAccentD))
+                        .setColor(ContextCompat.getColor(this, R.color.colorAccentDir))
                         .setContentIntent(pendingIntent);
             }
 

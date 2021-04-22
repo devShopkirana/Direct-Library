@@ -10,14 +10,14 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccentD"
+            android:background="@color/colorAccentDir"
             app:elevation="0dp">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorAccentD"
+                android:background="@color/colorAccentDir"
                 app:layout_scrollFlags="scroll|enterAlways">
 
 
@@ -52,7 +52,7 @@
                         android:maxLines="1"
                         android:padding="5dp"
                         android:text="@string/location"
-                        android:textColor="@color/colorAccentD"
+                        android:textColor="@color/colorAccentDir"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
-            android:background="@color/colorAccentD"
+            android:background="@color/colorAccentDir"
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:labelVisibilityMode="labeled"

@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:text=""
-                android:textColor="@color/colorAccentD"
+                android:textColor="@color/colorAccentDir"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:text=""
-                android:textColor="@color/colorAccentD"
+                android:textColor="@color/colorAccentDir"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 

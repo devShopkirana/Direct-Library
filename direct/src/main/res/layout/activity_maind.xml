@@ -57,7 +57,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/profile"
-                            android:textColor="@color/colorAccentD"
+                            android:textColor="@color/colorAccentDir"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -84,7 +84,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/profile"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -118,7 +118,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/change_pass"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -151,7 +151,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/chat"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="18sp"
                                 android:textStyle="normal" />
 
@@ -165,7 +165,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/other_settings"
-                            android:textColor="@color/colorAccentD"
+                            android:textColor="@color/colorAccentDir"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -192,7 +192,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/change_language"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -225,7 +225,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/rate_app"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -249,7 +249,7 @@
                                 android:padding="15dp"
                                 android:scaleType="centerInside"
                                 android:src="@drawable/ic_privcy_policy"
-                                app:tint="@color/colorAccentD" />
+                                app:tint="@color/colorAccentDir" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tvPrivacyTitle"
@@ -259,7 +259,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/privacy_policy"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -293,7 +293,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/about_direct"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -327,7 +327,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/terms_and_condition"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -341,7 +341,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/help"
-                            android:textColor="@color/colorAccentD"
+                            android:textColor="@color/colorAccentDir"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -368,7 +368,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/how_to_use"
-                                android:textColor="@color/colorAccentD"
+                                android:textColor="@color/colorAccentDir"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 

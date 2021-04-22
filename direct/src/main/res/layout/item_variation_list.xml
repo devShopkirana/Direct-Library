@@ -53,7 +53,7 @@
                     android:maxLines="1"
                     android:padding="2dp"
                     android:text=""
-                    android:textColor="@color/colorAccentD"
+                    android:textColor="@color/colorAccentDir"
                     android:textSize="12sp" />
 
 

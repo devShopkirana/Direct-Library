@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/coming_soon"
-            android:textColor="@color/colorAccentD"
+            android:textColor="@color/colorAccentDir"
             android:textSize="20sp">
 
         </TextView>

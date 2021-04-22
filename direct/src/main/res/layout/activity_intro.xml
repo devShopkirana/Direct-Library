@@ -68,7 +68,7 @@
                     android:gravity="center"
                     android:padding="15dp"
                     android:text="@string/continue_button"
-                    android:textColor="@color/colorAccentD"
+                    android:textColor="@color/colorAccentDir"
                     android:textStyle="bold" />
 
                 <TextView

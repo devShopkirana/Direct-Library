@@ -25,7 +25,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="@string/plz_wait"
-                android:textColor="@color/colorAccentD"
+                android:textColor="@color/colorAccentDir"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>

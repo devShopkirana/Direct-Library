@@ -1,9 +1,9 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorAccentD</item>
+        <item name="colorPrimary">@color/colorAccentDir</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkD</item>
-        <item name="colorAccent">@color/colorAccentD</item>
+        <item name="colorAccent">@color/colorAccentDir</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,7 +16,7 @@
     </style>
 
     <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="android:textColor">@color/colorAccentD</item>
+        <item name="android:textColor">@color/colorAccentDir</item>
     </style>
 
 

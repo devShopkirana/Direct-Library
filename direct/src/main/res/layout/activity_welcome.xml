@@ -33,7 +33,7 @@
                 android:layout_height="1dp"
                 android:alpha=".5"
                 android:layout_above="@id/btn_next"
-                android:background="@color/colorAccentD" />
+                android:background="@color/colorAccentDir" />
 
             <Button
                 style="@style/font_Bold"
@@ -45,7 +45,7 @@
                 android:background="@null"
                 android:text="@string/next"
                 android:visibility="invisible"
-                android:textColor="@color/colorAccentD" />
+                android:textColor="@color/colorAccentDir" />
 
             <Button
                 style="@style/font_Bold"
@@ -57,7 +57,7 @@
                 android:background="@null"
                 android:visibility="invisible"
                 android:text=   "@string/skip"
-                android:textColor="@color/colorAccentD" />
+                android:textColor="@color/colorAccentDir" />
 
         </RelativeLayout>
 

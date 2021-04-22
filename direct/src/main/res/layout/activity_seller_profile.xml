@@ -55,7 +55,7 @@
                         android:id="@+id/rl_share"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorAccentD">
+                        android:background="@color/colorAccentDir">
 
                         <RelativeLayout
                             android:id="@+id/RLShare"
@@ -414,7 +414,7 @@
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
                 android:text="@string/searched_item_is_not_available"
-                android:textColor="@color/colorAccentD"
+                android:textColor="@color/colorAccentDir"
                 android:textSize="14dp"
                 android:visibility="gone" />
         </RelativeLayout>
