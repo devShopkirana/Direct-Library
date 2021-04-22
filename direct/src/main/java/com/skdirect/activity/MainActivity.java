@@ -149,10 +149,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         MenuItem profile = menu.findItem(R.id.nav_profile);
         MenuItem myOrder = menu.findItem(R.id.nav_my_order);
         MenuItem chat = menu.findItem(R.id.nav_chat);
-        home.setTitle(dbHelper.getString(R.string.home));
-        profile.setTitle(dbHelper.getString(R.string.profile));
-        myOrder.setTitle(dbHelper.getString(R.string.my_order));
-        chat.setTitle(dbHelper.getString(R.string.chat));
+        try {
+            home.setTitle(dbHelper.getString(R.string.home));
+            profile.setTitle(dbHelper.getString(R.string.profile));
+            myOrder.setTitle(dbHelper.getString(R.string.my_order));
+            chat.setTitle(dbHelper.getString(R.string.chat));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         mBinding.toolbarId.bottomNavigation.setOnNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
