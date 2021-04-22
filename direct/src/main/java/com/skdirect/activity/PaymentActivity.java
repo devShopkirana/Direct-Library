@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.adapter.DeliveryOptionAdapter;
-import com.skdirect.databinding.ActivityPaymentBinding;
+import com.skdirect.databinding.ActivityPaymentdBinding;
 import com.skdirect.interfacee.DeliveryOptionInterface;
 import com.skdirect.model.CartItemModel;
 import com.skdirect.model.DeliveryMainModel;
@@ -35,7 +35,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PaymentActivity extends AppCompatActivity implements View.OnClickListener, DeliveryOptionInterface {
-    private ActivityPaymentBinding mBinding;
+    private ActivityPaymentdBinding mBinding;
     private PaymentViewMode paymentViewMode;
     private CartItemModel cartItemModel;
     private final ArrayList<DeliveryOptionModel> deliveryOptionList = new ArrayList<>();
@@ -50,7 +50,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_payment);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_paymentd);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.title_activity_payment));
 

@@ -37,7 +37,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.JsonObject;
 import com.skdirect.R;
-import com.skdirect.databinding.ActivityMapsBinding;
+import com.skdirect.databinding.ActivityMapsdBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
@@ -60,14 +60,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleApiClient googleApiClient;
     private Address address;
     private MapViewViewMode mapViewViewMode;
-    private ActivityMapsBinding mBinding;
+    private ActivityMapsdBinding mBinding;
     //private PlacesAutoCompleteAdapter placesAutoCompleteAdapter;
     DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_maps);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_mapsd);
         mapViewViewMode = ViewModelProviders.of(this).get(MapViewViewMode.class);
         dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
@@ -120,7 +120,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void searchLocation() {
         mBinding.placesRecyclerView.setVisibility(View.VISIBLE);
-        String location =  mBinding.etLoctionSearch.getText().toString();
+        String location = mBinding.etLoctionSearch.getText().toString();
         List<Address> addressList = null;
 
         if (location != null || !location.equals("")) {
@@ -131,7 +131,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             } catch (IOException e) {
                 e.printStackTrace();
             }
-           address = addressList.get(0);
+            address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
             mMap.addMarker(new MarkerOptions().position(latLng).title(location));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
@@ -171,8 +171,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         e.printStackTrace();
                     }
                     String cityName = addresses.get(0).getLocality();
-                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.CITYNAME,cityName);
-                    Log.e("cityName", "cityName  "+cityName);
+                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.CITYNAME, cityName);
+                    Log.e("cityName", "cityName  " + cityName);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -223,7 +223,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
                 .position(latLng)
                 .draggable(true)
-                .title(Utils.getFullAddress(this,latitude, longitude)));
+                .title(Utils.getFullAddress(this, latitude, longitude)));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15));

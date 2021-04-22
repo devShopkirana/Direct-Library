@@ -13,7 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import com.skdirect.R;
 import com.skdirect.adapter.OfferListAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityOfferBinding;
+import com.skdirect.databinding.ActivityOfferdBinding;
 import com.skdirect.model.response.ApplyOfferResponse;
 import com.skdirect.model.response.OfferResponse;
 import com.skdirect.utils.DirectSDK;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import io.reactivex.observers.DisposableObserver;
 
 public class OfferActivity extends AppCompatActivity implements View.OnClickListener {
-    private ActivityOfferBinding mBinding;
+    private ActivityOfferdBinding mBinding;
 
     private ArrayList<OfferResponse.Coupon> list;
     private OfferListAdapter adapter;
@@ -38,7 +38,7 @@ public class OfferActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_offer);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_offerd);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.apply_coupon));
         mBinding.etOffer.setHint(DirectSDK.getInstance().dbHelper.getString(R.string.enter_promo_code));

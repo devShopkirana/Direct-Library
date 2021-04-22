@@ -22,7 +22,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityLoginBinding;
+import com.skdirect.databinding.ActivityLogindBinding;
 import com.skdirect.model.GenerateOtpModel;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
@@ -36,7 +36,7 @@ import org.jetbrains.annotations.NotNull;
 import io.reactivex.observers.DisposableObserver;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
-    private ActivityLoginBinding mBinding;
+    private ActivityLogindBinding mBinding;
 
     private String mobileNumberString;
     private LoginViewModel loginViewModel;
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_logind);
         loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
         dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
@@ -173,7 +173,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Utils.getDeviceUniqueID(this),
                 Double.parseDouble(SharePrefs.getStringSharedPreferences(this, SharePrefs.LAT)),
                 Double.parseDouble(SharePrefs.getStringSharedPreferences(this, SharePrefs.LON)),
-                SharePrefs.getInstance(LoginActivity.this).getString(SharePrefs.PIN_CODE), "",SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
+                SharePrefs.getInstance(LoginActivity.this).getString(SharePrefs.PIN_CODE), "", SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
     }
 
     public void getHintPhoneNumber() {

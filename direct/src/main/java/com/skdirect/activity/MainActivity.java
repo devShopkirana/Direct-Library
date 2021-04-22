@@ -24,21 +24,21 @@ import androidx.lifecycle.ViewModelProviders;
 import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 import com.skdirect.R;
-import com.skdirect.databinding.ActivityMainBinding;
+import com.skdirect.databinding.ActivityMaindBinding;
 import com.skdirect.firebase.FirebaseLanguageFetch;
 import com.skdirect.fragment.HomeFragment;
 import com.skdirect.model.CartModel;
 import com.skdirect.utils.AppSignatureHelper;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.GpsUtils;
 import com.skdirect.utils.DirectSDK;
+import com.skdirect.utils.GpsUtils;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.MainActivityViewMode;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    public ActivityMainBinding mBinding;
+    public ActivityMaindBinding mBinding;
     private boolean doubleBackToExitPressedOnce = false;
     private SharedPreferences sharedPreferences;
     public boolean positionChanged = false;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_maind);
         mainActivityViewMode = ViewModelProviders.of(this).get(MainActivityViewMode.class);
         openFragment(new HomeFragment());
         Log.e("key: ", new AppSignatureHelper(getApplicationContext()).getAppSignatures() + "");

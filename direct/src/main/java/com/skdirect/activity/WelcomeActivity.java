@@ -105,7 +105,7 @@ public class WelcomeActivity extends AppCompatActivity {
         commonClassForAPI = CommonClassForAPI.getInstance(this);
 
         layouts = new int[]{
-                R.layout.activity_login,
+                R.layout.activity_logind,
                 R.layout.activity_generate_otp,
                 R.layout.activity_info,
         };
