@@ -84,9 +84,9 @@ public class CommonClassForAPI {
                 });
     }
 
-    public void getTokenwithphoneNo(final DisposableObserver observer, String password, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type, String phoneno,String SOURCEKEY) {
+    public void getTokenwithphoneNo(final DisposableObserver observer, String password, String mobileNumber, String passwordString, boolean ISOTP, boolean ISBUYER, String buyerapp, boolean isDevice, String deviceID, double lat, double log, String pincode, String type, String phoneno,String BUYERNAME,String SOURCEKEY) {
         RestClient.getInstance().getService().getTokenwithphoneno(password, mobileNumber, passwordString, ISOTP, ISBUYER, buyerapp, isDevice, deviceID, lat, log, pincode,
-                MySingltonApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno,SOURCEKEY)
+                MySingltonApplication.getInstance().dbHelper.getString(R.string.language_code), type, phoneno,BUYERNAME,SOURCEKEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<TokenModel>() {

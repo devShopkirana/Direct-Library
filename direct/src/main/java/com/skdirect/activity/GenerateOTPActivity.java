@@ -257,7 +257,7 @@ public class GenerateOTPActivity extends AppCompatActivity implements OtpReceive
                     commonClassForAPI
                             .getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(GenerateOTPActivity.this),
                                     Utils.getDeviceUniqueID(GenerateOTPActivity.this), true, true, "BUYERAPP", true,
-                                    Utils.getDeviceUniqueID(GenerateOTPActivity.this), Double.parseDouble(SharePrefs.getStringSharedPreferences(GenerateOTPActivity.this, SharePrefs.LAT)), Double.parseDouble(SharePrefs.getStringSharedPreferences(GenerateOTPActivity.this, SharePrefs.LON)), SharePrefs.getInstance(GenerateOTPActivity.this).getString(SharePrefs.PIN_CODE), "GET", mobileNumber,SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.SOURCEKEY));
+                                    Utils.getDeviceUniqueID(GenerateOTPActivity.this), Double.parseDouble(SharePrefs.getStringSharedPreferences(GenerateOTPActivity.this, SharePrefs.LAT)), Double.parseDouble(SharePrefs.getStringSharedPreferences(GenerateOTPActivity.this, SharePrefs.LON)), SharePrefs.getInstance(GenerateOTPActivity.this).getString(SharePrefs.PIN_CODE), "GET", mobileNumber,SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.FIRST_NAME),SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.SOURCEKEY));
                 } else {
                     Binding.btLoddingOtp.setText(dbHelper.getString(R.string.next));
                     Utils.setToast(GenerateOTPActivity.this, dbHelper.getString(R.string.valid_otp));

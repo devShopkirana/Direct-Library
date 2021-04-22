@@ -32,8 +32,9 @@ public class SocialMallLendingActivity extends AppCompatActivity {
     private double latitude = 0;
     private double longitude = 0;
     private CommonClassForAPI commonClassForAPI;
-    private String fcmToken;
-    private String SOURCEKEY;
+    private String fcmToken = "";
+    private String SOURCEKEY = "";
+    private String BUYERNAME = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,7 @@ public class SocialMallLendingActivity extends AppCompatActivity {
         fcmToken = Utils.getFcmToken();
         if (getIntent().getExtras() != null) {
             mobileNumber = getIntent().getStringExtra("MOBILE_NUMBER");
+            BUYERNAME = getIntent().getStringExtra("BUYERNAME");
             address = getIntent().getStringExtra("ADDRESS");
             pincode = getIntent().getStringExtra("PINCODE");
             latitude = getIntent().getDoubleExtra("LATITUDE", 0);
@@ -55,6 +57,7 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SOURCEKEY, "");
             }
             if (latitude == 0 || longitude == 0 || TextUtils.isNullOrEmpty(pincode)) {
+                SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.FIRST_NAME, BUYERNAME);
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
                 startActivity(new Intent(this, PlaceSearchActivity.class));
             } else {
@@ -84,7 +87,7 @@ public class SocialMallLendingActivity extends AppCompatActivity {
                                 Utils.hideProgressDialog();
                             }
                         });
-                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(this), Utils.getDeviceUniqueID(this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(this), latitude, longitude, pincode, "", mobileNumber, SOURCEKEY);
+                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(this), Utils.getDeviceUniqueID(this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(this), latitude, longitude, pincode, "", mobileNumber,BUYERNAME, SOURCEKEY);
                     }
                 } else {
                     Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));

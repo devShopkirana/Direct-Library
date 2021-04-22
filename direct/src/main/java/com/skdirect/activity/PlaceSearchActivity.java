@@ -87,7 +87,7 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
         } else {
             if (Utils.isNetworkAvailable(this)) {
                 if (commonClassForAPI != null) {
-                    commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(PlaceSearchActivity.this), Utils.getDeviceUniqueID(PlaceSearchActivity.this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(PlaceSearchActivity.this), latLng.latitude, latLng.longitude, pinCode, "",SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.MOBILE_NUMBER),SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
+                    commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(PlaceSearchActivity.this), Utils.getDeviceUniqueID(PlaceSearchActivity.this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(PlaceSearchActivity.this), latLng.latitude, latLng.longitude, pinCode, "",SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.MOBILE_NUMBER),SharePrefs.getInstance(getApplicationContext()).getString(SharePrefs.FIRST_NAME),SharePrefs.getInstance(this).getString(SharePrefs.SOURCEKEY));
                 }
             } else {
                 Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));
