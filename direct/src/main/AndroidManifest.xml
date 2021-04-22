@@ -19,7 +19,9 @@
 
     <application
         android:requestLegacyExternalStorage="true">
-        <activity android:name=".activity.SocialMallLendingActivity" />
+
+        <activity android:name=".activity.SocialMallLendingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".activity.WebviewActivity"
