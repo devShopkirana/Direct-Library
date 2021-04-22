@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setVarible();
         openFragment(new HomeFragment());
 
+
         clickListener();
         setupBadge();
         ///callRunTimePermissions();
