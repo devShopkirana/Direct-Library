@@ -211,7 +211,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         mBinding.toolbarTittle.tvTittle.setText("");
         float density = getResources().getDisplayMetrics().density;
         mBinding.indicator.setRadius(3 * density);
-        mBinding.indicator.setFillColor(getResources().getColor(R.color.colorAccent));
+        mBinding.indicator.setFillColor(getResources().getColor(R.color.colorAccentD));
         mBinding.pager.startAutoScroll(900);
         mBinding.pager.setInterval(900);
         mBinding.pager.setCycle(true);

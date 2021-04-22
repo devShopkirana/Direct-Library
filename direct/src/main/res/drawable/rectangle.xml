@@ -5,7 +5,7 @@
     <size
         android:width="20dp"
         android:height="15dp" />
-    <stroke android:color="@color/colorAccent"
+    <stroke android:color="@color/colorAccentD"
         android:width="1dp"/>
     <solid android:color="#FFFFFFFF" />
 </shape>

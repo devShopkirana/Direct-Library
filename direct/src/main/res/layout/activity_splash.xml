@@ -13,7 +13,7 @@
             android:id="@+id/imSplash" />
         <ProgressBar
             android:id="@+id/pBar"
-            android:indeterminateTint="@color/colorPrimaryDark"
+            android:indeterminateTint="@color/colorPrimaryDarkD"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"

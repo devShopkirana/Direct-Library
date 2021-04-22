@@ -7,9 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#343553</color>
-    <color name="colorAccent">#343553</color>
+    <color name="colorPrimaryD">#FFFFFF</color>
+    <color name="colorPrimaryDarkD">#343553</color>
+    <color name="colorAccentD">#343553</color>
     <color name="seller_button_color">#58ccc1</color>
     <color name="transparent">#00000000</color>
     <color name="divider">#ececec</color>

@@ -8,6 +8,6 @@
         android:id="@+id/pBar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTint="@color/colorAccentD"
         android:layout_centerInParent="true" />
 </LinearLayout>

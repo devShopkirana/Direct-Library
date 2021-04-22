@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.WebView" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimaryDarkD</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDarkD</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

@@ -5,13 +5,13 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent">
+        android:background="@color/colorAccentD">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/arrow_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent">
+            android:background="@color/colorAccentD">
 
             <RelativeLayout
                 android:layout_width="match_parent"

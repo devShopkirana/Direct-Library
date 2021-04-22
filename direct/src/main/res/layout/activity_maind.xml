@@ -57,7 +57,7 @@
                             android:layout_marginTop="10dp"
                             android:text="@string/profile"
                             android:id="@+id/tvProfileHead"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -84,7 +84,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/profile"
                                 android:id="@+id/tvProfileTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -118,7 +118,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/change_pass"
                                 android:id="@+id/tvChangePassTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -151,7 +151,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/chat"
                                 android:id="@+id/tvChatTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="18sp"
                                 android:textStyle="normal" />
 
@@ -165,7 +165,7 @@
                             android:layout_marginTop="10dp"
                             android:text="@string/other_settings"
                             android:id="@+id/tvOtherSettingsHead"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -192,7 +192,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/change_language"
                                 android:id="@+id/tvChangeLangTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -223,7 +223,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/rate_app"
                                 android:id="@+id/tvRateAppTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -246,7 +246,7 @@
                                 android:layout_height="50dp"
                                 android:scaleType="centerInside"
                                 android:padding="15dp"
-                                android:tint="@color/colorAccent"
+                                android:tint="@color/colorAccentD"
                                 android:src="@drawable/ic_privcy_policy" />
 
 
@@ -258,7 +258,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/privacy_policy"
                                 android:id="@+id/tvPrivacyTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -292,7 +292,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/about_direct"
                                 android:id="@+id/tvAboutTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -325,7 +325,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/terms_and_condition"
                                 android:id="@+id/tvTermsAndCondition"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
@@ -339,7 +339,7 @@
                             android:layout_marginTop="10dp"
                             android:text="@string/help"
                             android:id="@+id/tvHelpTitle"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -366,7 +366,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/how_to_use"
                                 android:id="@+id/tvHowToTitle"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
