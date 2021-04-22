@@ -35,7 +35,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/divider" />
+                    android:background="@color/dividerD" />
 
                 <ScrollView
                     android:id="@+id/scroll_body"
@@ -50,13 +50,13 @@
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvProfileHead"
                             style="@style/font_Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/profile"
-                            android:id="@+id/tvProfileHead"
                             android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -77,13 +77,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvProfileTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/profile"
-                                android:id="@+id/tvProfileTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -93,15 +93,15 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_chnage_password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:visibility="gone"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                             <ImageView
                                 android:layout_width="50dp"
@@ -111,13 +111,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvChangePassTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/change_pass"
-                                android:id="@+id/tvChangePassTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -127,7 +127,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_chet"
@@ -144,13 +144,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvChatTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/chat"
-                                android:id="@+id/tvChatTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="18sp"
                                 android:textStyle="normal" />
@@ -158,13 +158,13 @@
                         </LinearLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOtherSettingsHead"
                             style="@style/font_Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/other_settings"
-                            android:id="@+id/tvOtherSettingsHead"
                             android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -185,22 +185,24 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvChangeLangTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/change_language"
-                                android:id="@+id/tvChangeLangTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
                         </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
+
                         <LinearLayout
                             android:id="@+id/ll_rate_this_app"
                             android:layout_width="match_parent"
@@ -216,13 +218,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvRateAppTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/rate_app"
-                                android:id="@+id/tvRateAppTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -232,7 +234,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_private_polcy"
@@ -244,20 +246,19 @@
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerInside"
                                 android:padding="15dp"
-                                android:tint="@color/colorAccentD"
-                                android:src="@drawable/ic_privcy_policy" />
-
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_privcy_policy"
+                                app:tint="@color/colorAccentD" />
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPrivacyTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/privacy_policy"
-                                android:id="@+id/tvPrivacyTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -267,7 +268,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_about_app"
@@ -279,28 +280,29 @@
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerInside"
                                 android:padding="10dp"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/social_mall_icon24x24" />
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAboutTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/about_direct"
-                                android:id="@+id/tvAboutTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
 
                         </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_terms_and_condition"
@@ -312,19 +314,19 @@
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerInside"
                                 android:padding="10dp"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_terms_and_conditions" />
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTermsAndCondition"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/terms_and_condition"
-                                android:id="@+id/tvTermsAndCondition"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -332,13 +334,13 @@
                         </LinearLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHelpTitle"
                             style="@style/font_Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:text="@string/help"
-                            android:id="@+id/tvHelpTitle"
                             android:textColor="@color/colorAccentD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -359,13 +361,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvHowToTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/how_to_use"
-                                android:id="@+id/tvHowToTitle"
                                 android:textColor="@color/colorAccentD"
                                 android:textSize="16sp"
                                 android:textStyle="normal" />
@@ -375,16 +377,15 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/divider" />
+                            android:background="@color/dividerD" />
 
                         <LinearLayout
                             android:id="@+id/ll_logout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:visibility="gone"
                             android:orientation="horizontal"
-                            >
+                            android:visibility="gone">
 
                             <ImageView
                                 android:layout_width="50dp"
@@ -394,13 +395,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLogoutTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/logout"
-                                android:id="@+id/tvLogoutTitle"
                                 android:textColor="@color/seller_button_color"
                                 android:textSize="18sp"
                                 android:textStyle="normal" />
@@ -423,13 +424,13 @@
 
 
                             <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSigninTitle"
                                 style="@style/font_normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="20dp"
                                 android:text="@string/sign_in"
-                                android:id="@+id/tvSigninTitle"
                                 android:textColor="@color/seller_button_color"
                                 android:textSize="18sp"
                                 android:textStyle="normal" />
@@ -440,9 +441,6 @@
                 </ScrollView>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
-
         </com.google.android.material.navigation.NavigationView>
-
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

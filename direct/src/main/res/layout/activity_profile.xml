@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:background="@color/divider" />
+                android:background="@color/dividerD" />
 
             <RelativeLayout
                 android:id="@+id/rl_my_order"
@@ -127,7 +127,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:background="@color/divider" />
+                android:background="@color/dividerD" />
 
             <RelativeLayout
                 android:id="@+id/rl_my_address"
@@ -177,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
-                android:background="@color/divider" />
+                android:background="@color/dividerD" />
 
             <RelativeLayout
                 android:id="@+id/rl_chnage_password"
@@ -228,7 +228,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:visibility="gone"
-                android:background="@color/divider" />
+                android:background="@color/dividerD" />
 
 
         </LinearLayout>
