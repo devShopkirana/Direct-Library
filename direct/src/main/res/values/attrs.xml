@@ -44,4 +44,7 @@
         <attr name="badgeSelectedBackgroundColor" format="color" />
         <attr name="tabTextSize" format="dimension" />
     </declare-styleable>
+
+        <attr name="myBackground" format="reference|color" />
+
 </resources>

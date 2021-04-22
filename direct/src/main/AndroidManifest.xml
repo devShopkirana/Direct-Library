@@ -18,7 +18,8 @@
     </queries>
 
     <application
-        android:requestLegacyExternalStorage="true">
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/LibraryTheme">
 
         <activity android:name=".activity.SocialMallLendingActivity"
             android:theme="@style/CustomeAppTheme.NoActionBar"/>
@@ -26,20 +27,20 @@
         <activity
             android:name=".activity.WebviewActivity"
             android:label=""
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            />
         <activity
             android:name=".activity.IntroActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+           />
         <activity
             android:name=".activity.PlaceSearchActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+           />
         <activity
             android:name=".activity.UserLocationActvity"
             android:screenOrientation="portrait"
@@ -75,7 +76,7 @@
         <activity
             android:name=".activity.EditAddressActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/LibraryTheme"/>
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
@@ -174,8 +175,7 @@
             android:theme="@style/CustomeAppTheme.NoActionBar"/>
         <activity
             android:name=".activity.MyOrderActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ReviewActivity"
             android:screenOrientation="portrait"
@@ -234,7 +234,7 @@
             android:name=".activity.CartActivity"
             android:label="@string/shopping_bag"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/LibraryTheme" />
         <activity
             android:name=".activity.PaymentActivity"
             android:label="@string/title_activity_payment"

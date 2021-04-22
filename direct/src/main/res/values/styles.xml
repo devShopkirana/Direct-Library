@@ -72,4 +72,8 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowIsFloating">false</item>
     </style>
+
+    <style name="LibraryTheme">
+        <item name="myBackground">@android:color/black</item>
+    </style>
 </resources>
