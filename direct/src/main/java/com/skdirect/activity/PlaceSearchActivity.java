@@ -181,7 +181,12 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
                     Utils.getTokenData(getApplicationContext(),model);
                     commonClassForAPI.getUpdateToken(updatecallToken, fcmToken);
                     SharePrefs.setSharedPreference(getApplicationContext(), SharePrefs.Is_First_Time, true);
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    if (model.getIsRegistrationComplete()) {
+                        SharePrefs.getInstance(getApplicationContext()).putBoolean(SharePrefs.IS_LOGIN, true);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    } else {
+                        startActivity(new Intent(getApplicationContext(), RegisterationActivity.class));
+                    }
                     finish();
                 }
             } catch (Exception e) {
