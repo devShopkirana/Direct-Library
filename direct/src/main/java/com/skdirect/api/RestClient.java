@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi;
 import com.google.gson.Gson;
 import com.skdirect.BuildConfig;
 import com.skdirect.utils.Aes256;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 
@@ -54,7 +54,7 @@ public class RestClient {
                         request = chain.request();
                         response = chain.proceed(request);
                         if (response.code() == 401) {
-                            MySingltonApplication.getInstance().token();
+                            DirectSDK.getInstance().token();
                         }
                         if (response.code() == 200) {
                             if (!request.url().toString().contains("/token") && !request.url().toString().contains("/appVersion") && !request.url().toString().contains("/imageupload")) {
@@ -82,8 +82,8 @@ public class RestClient {
                 })
                 .addInterceptor(chain -> {
                     request = chain.request().newBuilder()
-                            .header("SOURCEKEY", SharePrefs.getInstance(MySingltonApplication.getInstance().appContext).getString(SharePrefs.SOURCEKEY))
-                            .addHeader("authorization", "Bearer " + Utils.getToken(MySingltonApplication.getInstance().appContext))
+                            .header("SOURCEKEY", SharePrefs.getInstance(DirectSDK.getInstance().context).getString(SharePrefs.SOURCEKEY))
+                            .addHeader("authorization", "Bearer " + Utils.getToken(DirectSDK.getInstance().context))
                             .build();
                     return chain.proceed(request);
                 })

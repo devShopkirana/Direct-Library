@@ -22,7 +22,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.skdirect.R;
 import com.skdirect.activity.MyOrderActivity;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 
@@ -63,8 +63,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             }
 
             if (type != null && type.equals("OTP")) {
-                MySingltonApplication.getInstance().otp = object.getString("body");
-                MySingltonApplication.getInstance().otp.replaceAll("[^0-9]", "");
+                DirectSDK.getInstance().otp = object.getString("body");
+                DirectSDK.getInstance().otp.replaceAll("[^0-9]", "");
             } else {
                 showNotification(object.getString("icon"),
                         object.getString("body"),

@@ -23,7 +23,7 @@ import com.skdirect.model.NearBySallerModel;
 import com.skdirect.model.NearBySellerMainModel;
 import com.skdirect.model.PaginationModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.NearSellerViewMode;
 
@@ -66,7 +66,7 @@ public class NearSellerActivity extends AppCompatActivity implements View.OnClic
         mBinding.toolbarTittle.tvTittle.setText("Seller List");
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
         nearBySallerList.clear();
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL,false);
         mBinding.rvSellerProduct.setLayoutManager(layoutManager);

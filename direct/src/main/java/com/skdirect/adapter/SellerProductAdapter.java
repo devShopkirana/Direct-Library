@@ -17,7 +17,7 @@ import com.skdirect.activity.ProductDetailsActivity;
 import com.skdirect.databinding.ItemSellerProductListBinding;
 import com.skdirect.interfacee.AddItemInterface;
 import com.skdirect.model.SellerProductList;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdap
         holder.mBinding.tvSallerName.setText(model.getProductName());
        // holder.mBinding.tvMrp.setText("₹ " + model.getMrp());
         holder.mBinding.tvSellingPrice.setText("₹ " + model.getSellingPrice());
-        holder.mBinding.tvQuantity.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.qty) + " " + model.getMeasurement() + model.getUom());
+        holder.mBinding.tvQuantity.setText(DirectSDK.getInstance().dbHelper.getString(R.string.qty) + " " + model.getMeasurement() + model.getUom());
 
         if (model.getMrp() == model.getSellingPrice()) {
             holder.mBinding.llSellingPrice.setVisibility(View.GONE);
@@ -83,8 +83,8 @@ public class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdap
             holder.mBinding.llNoOfView.setVisibility(View.INVISIBLE);
         }
 
-        if (MySingltonApplication.getInstance().cartRepository.isItemInCart(model.getId())) {
-            model.setQty(MySingltonApplication.getInstance().cartRepository.getItemQty(model.getId()));
+        if (DirectSDK.getInstance().cartRepository.isItemInCart(model.getId())) {
+            model.setQty(DirectSDK.getInstance().cartRepository.getItemQty(model.getId()));
             holder.mBinding.LLPlusMinus.setVisibility(View.VISIBLE);
             holder.mBinding.tvAdd.setVisibility(View.GONE);
             holder.mBinding.tvSelectedQty.setText("" + model.getQty());

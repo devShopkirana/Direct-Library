@@ -12,7 +12,7 @@ import com.skdirect.R;
 import com.skdirect.adapter.ProductImagesAdapter;
 import com.skdirect.databinding.FragmentImageShoBinding;
 import com.skdirect.model.ImageListModel;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,7 @@ public class ShowImageActivity extends AppCompatActivity {
 
     private void initialization() {
 
-        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.product));
+        mBinding.toolbarTittle.tvTittle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.product));
         mBinding.toolbarTittle.arrowToolbar.setOnClickListener(v -> {
             onBackPressed();
         });

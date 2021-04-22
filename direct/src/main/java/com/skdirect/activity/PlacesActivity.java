@@ -20,7 +20,7 @@ import com.skdirect.adapter.PlacesAutoCompleteMapsAdapter;
 import com.skdirect.databinding.ActivityPlacesBinding;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 
 
@@ -44,7 +44,7 @@ public class PlacesActivity extends AppCompatActivity implements PlacesAutoCompl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_places);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
 
         binding.llGps.setOnClickListener(V -> {
             if(Utils.ISGPSON(PlacesActivity.this)){

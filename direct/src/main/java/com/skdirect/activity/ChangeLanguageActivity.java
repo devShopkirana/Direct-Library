@@ -18,7 +18,7 @@ import com.skdirect.R;
 import com.skdirect.adapter.LanguageListAdapter;
 import com.skdirect.databinding.ActivityChangeLanguageBinding;
 import com.skdirect.interfacee.OnLanguageClick;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.Utils;
 
@@ -44,7 +44,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
     private void initView() {
         Utils.showProgressDialog(activity);
 
-        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.change_language));
+        mBinding.toolbarTittle.tvTittle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.change_language));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(this);
 
         languageList = new ArrayList<>();
@@ -103,6 +103,6 @@ public class ChangeLanguageActivity extends AppCompatActivity implements View.On
     @Override
     public void onSelectLanguage(int position) {
         Utils.showProgressDialog(activity);
-        MySingltonApplication.getInstance().dbHelper.deleteAndUpdateTable(dataPostSnapshot);
+        DirectSDK.getInstance().dbHelper.deleteAndUpdateTable(dataPostSnapshot);
     }
 }

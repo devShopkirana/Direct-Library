@@ -18,10 +18,9 @@
     </queries>
 
     <application
-        android:name=".utils.MySingltonApplication"
-        android:requestLegacyExternalStorage="true"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".activity.SocialMallLendingActivity"></activity>
+        android:requestLegacyExternalStorage="true">
+
+        <activity android:name=".activity.SocialMallLendingActivity" />
         <activity
             android:name=".activity.WebviewActivity"
             android:label=""

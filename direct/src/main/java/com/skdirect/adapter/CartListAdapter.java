@@ -15,7 +15,7 @@ import com.skdirect.R;
 import com.skdirect.databinding.ItemCartListBinding;
 import com.skdirect.interfacee.CartItemInterface;
 import com.skdirect.model.CartModel;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.Utils;
 import com.squareup.picasso.Picasso;
 
@@ -44,10 +44,10 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CartModel cartModel = cartItemList.get(position);
         holder.mBinding.tvProductName.setText(cartModel.getProductName());
-        holder.mBinding.tvSellerName.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.seller_a) + " " + cartModel.getShopName());
+        holder.mBinding.tvSellerName.setText(DirectSDK.getInstance().dbHelper.getString(R.string.seller_a) + " " + cartModel.getShopName());
         holder.mBinding.tvMrp.setText("₹ " + cartModel.getPrice());
         holder.mBinding.tvSelectedQty.setText("" + cartModel.getQuantity());
-        holder.mBinding.tvRomove.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.remove));
+        holder.mBinding.tvRomove.setText(DirectSDK.getInstance().dbHelper.getString(R.string.remove));
 
         if (cartModel.getImagePath() != null && !cartModel.getImagePath().contains("http")) {
             Picasso.get().load(BuildConfig.apiEndpoint + cartModel.getImagePath()).into(holder.mBinding.imItemImage);

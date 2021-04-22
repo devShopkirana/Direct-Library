@@ -22,7 +22,7 @@ import com.skdirect.location.Listener;
 import com.skdirect.location.LocationData;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.GpsUtils;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
@@ -41,7 +41,7 @@ public class UserLocationActvity extends AppCompatActivity implements PlacesAuto
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_location);
         easyWayLocation = new EasyWayLocation(this, false, this);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
 
         if (getIntent() != null) {
             intentActivity = getIntent().getStringExtra("activity");

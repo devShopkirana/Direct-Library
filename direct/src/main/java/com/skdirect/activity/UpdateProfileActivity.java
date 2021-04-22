@@ -14,7 +14,7 @@ import com.google.gson.JsonObject;
 import com.skdirect.R;
 import com.skdirect.databinding.ActivityUpdateProfileBinding;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -32,7 +32,7 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_update_profile);
         updateProfileViewMode = ViewModelProviders.of(this).get(UpdateProfileViewMode.class);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
     }
 

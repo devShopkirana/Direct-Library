@@ -28,7 +28,7 @@ import com.skdirect.model.MyOrderModel;
 import com.skdirect.model.MyOrderRequestModel;
 import com.skdirect.model.OrderModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.SharePrefs;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
@@ -140,7 +140,7 @@ public class AllOrderFragment extends Fragment implements SwipeRefreshLayout.OnR
     }
 
     private void initialization() {
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mBinding.etSearchOrder.setHint(dbHelper.getString(R.string.search_order_by_order_id));
         mBinding.tvNoData.setHint(dbHelper.getString(R.string.no_data_found));
        // mBinding.swiperefresh.setOnRefreshListener(this);

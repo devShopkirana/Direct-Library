@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.skdirect.R;
 import com.skdirect.activity.MainActivity;
 import com.skdirect.databinding.FragmentMyOrderBinding;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 
 public class MyOrderFragment extends Fragment {
     private FragmentMyOrderBinding mBinding;
@@ -36,7 +36,7 @@ public class MyOrderFragment extends Fragment {
     }
 
     private void initViews() {
-        mBinding.toolbarTittle.tvTittle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.my_order));
+        mBinding.toolbarTittle.tvTittle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.my_order));
         mBinding.toolbarTittle.ivBackPress.setVisibility(View.GONE);;
         activity.appBarLayout.setVisibility(View.GONE);
     }

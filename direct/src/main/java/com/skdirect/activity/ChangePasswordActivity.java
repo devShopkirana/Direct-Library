@@ -16,7 +16,7 @@ import com.skdirect.databinding.ActivityChnagePasswordBinding;
 import com.skdirect.model.ChangePasswordRequestModel;
 import com.skdirect.model.CommonResponseModel;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 import com.skdirect.viewmodel.ChangePasswordViewMode;
@@ -31,7 +31,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_chnage_password);
         changePasswordViewMode = ViewModelProviders.of(this).get(ChangePasswordViewMode.class);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
     }
 

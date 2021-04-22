@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import com.skdirect.R;
 import com.skdirect.databinding.FragmentChatBinding;
 import com.skdirect.utils.DBHelper;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 
 public class ChatActivity  extends AppCompatActivity {
     private FragmentChatBinding mBinding;
@@ -18,12 +18,12 @@ public class ChatActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_chat);
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         initViews();
     }
 
     private void initViews() {
-        dbHelper = MySingltonApplication.getInstance().dbHelper;
+        dbHelper = DirectSDK.getInstance().dbHelper;
         mBinding.toolbarTittle.tvTittle.setText(dbHelper.getString(R.string.chat));
         mBinding.toolbarTittle.ivBackPress.setOnClickListener(new View.OnClickListener() {
             @Override

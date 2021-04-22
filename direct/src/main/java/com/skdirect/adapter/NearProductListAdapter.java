@@ -16,7 +16,7 @@ import com.skdirect.R;
 import com.skdirect.activity.ProductDetailsActivity;
 import com.skdirect.databinding.ItemNearProductListBinding;
 import com.skdirect.model.NearProductListModel;
-import com.skdirect.utils.MySingltonApplication;
+import com.skdirect.utils.DirectSDK;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -43,10 +43,10 @@ public class NearProductListAdapter extends RecyclerView.Adapter<NearProductList
         NearProductListModel nearProductListModel = nearProductListList.get(position);
         holder.mBinding.tvItemName.setText(nearProductListModel.getProductName());
 
-        holder.mBinding.tvMrpTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.txt_mrp));
-        holder.mBinding.tvSellingPriceTitle.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.txt_selling_price));
-        holder.mBinding.tvInclusiveAll.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.txt_Inclusive));
-        holder.mBinding.tvNearByViewAll.setText(MySingltonApplication.getInstance().dbHelper.getString(R.string.detail));
+        holder.mBinding.tvMrpTitle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.txt_mrp));
+        holder.mBinding.tvSellingPriceTitle.setText(DirectSDK.getInstance().dbHelper.getString(R.string.txt_selling_price));
+        holder.mBinding.tvInclusiveAll.setText(DirectSDK.getInstance().dbHelper.getString(R.string.txt_Inclusive));
+        holder.mBinding.tvNearByViewAll.setText(DirectSDK.getInstance().dbHelper.getString(R.string.detail));
 
         if (nearProductListModel.getMrp() == nearProductListModel.getSellingPrice()) {
             holder.mBinding.llSellingPrice.setVisibility(View.GONE);
