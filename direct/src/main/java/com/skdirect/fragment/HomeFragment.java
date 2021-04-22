@@ -31,7 +31,7 @@ import com.skdirect.adapter.AllCategoriesAdapter;
 import com.skdirect.adapter.MallCategorieBannerAdapter;
 import com.skdirect.adapter.TopNearByItemAdapter;
 import com.skdirect.adapter.TopSellerAdapter;
-import com.skdirect.databinding.FragmentHomeBinding;
+import com.skdirect.databinding.FragmentHome1Binding;
 import com.skdirect.model.AllCategoresMainModel;
 import com.skdirect.model.MallMainModel;
 import com.skdirect.model.NearByMainModel;
@@ -45,7 +45,7 @@ import com.skdirect.viewmodel.HomeViewModel;
 import org.jetbrains.annotations.NotNull;
 
 public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
-    private FragmentHomeBinding mBinding;
+    private FragmentHome1Binding mBinding;
     private MainActivity activity;
     private HomeViewModel homeViewModel;
     public DBHelper dbHelper;
@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home1, container, false);
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         initViews();
         getMall();
@@ -297,7 +297,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
     private void initViews() {
         if (SharePrefs.getInstance(getActivity()).getBoolean(SharePrefs.IS_Mall)) {
-          mBinding.rlHomeSearch.setVisibility(View.VISIBLE);
+            mBinding.rlHomeSearch.setVisibility(View.VISIBLE);
         } else {
             mBinding.rlHomeSearch.setVisibility(View.GONE);
         }
