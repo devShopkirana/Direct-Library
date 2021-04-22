@@ -21,12 +21,12 @@
         android:requestLegacyExternalStorage="true">
 
         <activity android:name=".activity.SocialMallLendingActivity"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".activity.WebviewActivity"
             android:label=""
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
@@ -34,47 +34,47 @@
         <activity
             android:name=".activity.IntroActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.PlaceSearchActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.UserLocationActvity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.SellerImageGalleryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ShowImageActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.FilterActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.WelcomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.RegisterationActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.MapsExtendedActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.PlacesActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.EditAddressActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
@@ -87,53 +87,53 @@
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.GenerateOTPActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.LoginWithPasswordActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.NearByItemProductListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.SellerProductListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.CategoriesListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.SearchActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.NearSellerActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.MostVisitedSellerActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.NewSellerActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ProductDetailsActivity"
             android:launchMode="singleTask"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/CustomeAppTheme.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -162,48 +162,48 @@
         <activity
             android:name=".activity.ProfilePrimaryAddressActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ChatActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ChangePasswordActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.MyOrderActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ReviewActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.OrderDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ProfileActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.UpdateProfileActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.PrimaryAddressActivity"
-            android:theme="@style/CustomeAppTheme.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.NewAddressActivity"
-            android:theme="@style/CustomeAppTheme.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.SellerProfileActivity"
             android:launchMode="singleTask"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/CustomeAppTheme.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -233,26 +233,26 @@
             android:name=".activity.CartActivity"
             android:label="@string/shopping_bag"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.PaymentActivity"
             android:label="@string/title_activity_payment"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.MapsActivity"
             android:hardwareAccelerated="false"
             android:label=""
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.ChangeLanguageActivity"
             android:label=""
             android:screenOrientation="portrait"
-            android:theme="@style/CustomeAppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.OfferActivity"
-            android:theme="@style/CustomeAppTheme" />
+            android:theme="@style/AppTheme" />
 
         <service
             android:name=".firebase.MyFirebaseMessagingService"

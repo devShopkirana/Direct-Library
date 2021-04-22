@@ -1,33 +1,18 @@
 <resources>
 
-    <style name="AppThemeD" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorAccentD</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkD</item>
         <item name="colorAccent">@color/colorAccentD</item>
     </style>
 
-    <style name="AppThemeD.NoActionBar">
+    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:splitMotionEvents">false</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:windowDisablePreview">true</item>
-    </style>
-
-    <style name="CustomeAppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:splitMotionEvents">false</item>
-        <item name="android:windowEnableSplitTouch">false</item>
-        <item name="android:windowDisablePreview">true</item>
-    </style>
-
-    <style name="CustomeAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#000</item>
-        <item name="colorPrimaryDark">#000</item>
-        <item name="colorAccent">#000</item>
     </style>
 
     <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
