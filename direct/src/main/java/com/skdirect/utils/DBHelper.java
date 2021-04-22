@@ -61,6 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            value = context.getResources().getString(key);
         }
         return value;
     }
