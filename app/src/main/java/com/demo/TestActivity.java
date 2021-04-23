@@ -80,8 +80,11 @@ public class TestActivity extends AppCompatActivity {
                 System.out.println("data::"+data.toString());
             }else
             {
-                System.out.println("data::"+data.getStringExtra("Error"));
-               // Toast.makeText(this, data.getStringExtra("Error"), Toast.LENGTH_SHORT).show();
+                if (data != null)
+                {
+                    System.out.println("data::"+data.getStringExtra("Error"));
+                }
+                // Toast.makeText(this, data.getStringExtra("Error"), Toast.LENGTH_SHORT).show();
             }
 
         }
