@@ -78,15 +78,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <include layout="@layout/activity_my_order_item_shimmer" />
+                        <include layout="@layout/activity_my_order_item_shimmerd" />
 
-                        <include layout="@layout/activity_my_order_item_shimmer" />
+                        <include layout="@layout/activity_my_order_item_shimmerd" />
 
-                        <include layout="@layout/activity_my_order_item_shimmer" />
+                        <include layout="@layout/activity_my_order_item_shimmerd" />
 
-                        <include layout="@layout/activity_my_order_item_shimmer" />
+                        <include layout="@layout/activity_my_order_item_shimmerd" />
 
-                        <include layout="@layout/activity_my_order_item_shimmer" />
+                        <include layout="@layout/activity_my_order_item_shimmerd" />
 
 
                     </LinearLayout>

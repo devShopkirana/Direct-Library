@@ -57,13 +57,32 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_cartd);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable( new ColorDrawable( getResources().getColor(R.color.colorAccentDir )));
-        setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.shopping_bag));
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       // getSupportActionBar().setBackgroundDrawable( new ColorDrawable( getResources().getColor(R.color.colorAccentDir )));
+
+       // setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.shopping_bag));
 
         cartItemViewMode = ViewModelProviders.of(this).get(CartItemViewMode.class);
         dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
+        mBinding.tvTittle.setText(dbHelper.getString(R.string.shopping_bag));
+        mBinding.tvTittleClear.setText(dbHelper.getString(R.string.clear_all));
+        mBinding.ivBackPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               onBackPressed();
+            }
+        });
+        mBinding.tvTittleClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cartItemList.size() > 0) {
+                    showClearCartDialog();
+                } else {
+                    Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.no_items_available));
+                }
+            }
+        });
     }
 
     @Override
@@ -78,26 +97,6 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.cart, menu);
-        MenuItem item = menu.findItem(R.id.clearCart);
-        item.setTitle(dbHelper.getString(R.string.clear_all));
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.clearCart) {
-            if (cartItemList.size() > 0) {
-                showClearCartDialog();
-            } else {
-                Utils.setToast(getApplicationContext(), dbHelper.getString(R.string.no_items_available));
-            }
-        } else
-            onBackPressed();
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onBackPressed() {

@@ -26,7 +26,7 @@
         <activity
             android:name=".activity.WebviewActivity"
             android:label=""
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
@@ -233,7 +233,7 @@
             android:name=".activity.CartActivity"
             android:label="@string/shopping_bag"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.PaymentActivity"
             android:label="@string/title_activity_payment"

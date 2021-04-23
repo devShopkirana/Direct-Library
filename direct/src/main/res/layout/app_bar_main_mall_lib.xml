@@ -131,8 +131,8 @@
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:background="@color/colorAccentDir"
-            app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selectord"
+            app:itemTextColor="@drawable/selectord"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/navigation_d" />
     </RelativeLayout>

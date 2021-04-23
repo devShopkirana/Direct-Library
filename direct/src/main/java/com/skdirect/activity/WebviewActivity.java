@@ -22,6 +22,7 @@ public class WebviewActivity extends AppCompatActivity {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_webview);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable( new ColorDrawable( getResources().getColor(R.color.colorAccentDir )));
+
         if (getIntent().getExtras() != null) {
             if(getIntent().getStringExtra("FunctionName").equalsIgnoreCase("PrivacyPolicy"))
             {
