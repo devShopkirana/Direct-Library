@@ -257,7 +257,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showClearCartDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.AlertDialogCustom);
         builder.setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.clear_cart));
         builder.setMessage(DirectSDK.getInstance().dbHelper.getString(R.string.are_you_sure_clear_cart));
 

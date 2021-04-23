@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/background_for_buttons"
+                    android:background="@drawable/background_for_buttonsd"
                     android:gravity="center"
                     android:padding="15dp"
                     android:visibility="gone"

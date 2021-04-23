@@ -160,7 +160,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/background_for_buttons"
+            android:background="@drawable/background_for_buttonsd"
             android:text="@string/save"
             android:layout_marginBottom="10dp"
             android:textColor="@color/seller_button_color"

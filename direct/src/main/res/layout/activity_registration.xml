@@ -80,7 +80,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@drawable/background_for_buttons"
+            android:background="@drawable/background_for_buttonsd"
             android:text="@string/save"
             android:textColor="@color/seller_button_color"
             android:textStyle="normal" />
