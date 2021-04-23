@@ -1,0 +1,63 @@
+
+g	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€»Ş
+X
+java:S1874Æ":Remove this use of "FirebaseInstanceId"; it is deprecated.(¦¿›8çÃÔÆ/
+g	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—õòô
+G
+java:S1874c"1Remove this use of "TYPE_WIFI"; it is deprecated.(ïæñ¨
+N
+java:S1874a"3Remove this use of "NetworkInfo"; it is deprecated.(Õ¥—ãùÿÿÿÿ
+J
+java:S1874e"/Remove this use of "getType"; it is deprecated.(‹ÊÔÍÿÿÿÿÿ
+N
+java:S1874Æ"0Remove this use of "getToken"; it is deprecated.(¦¿›8çÃÔÆ/
+S
+java:S2209Ÿ"5Change this instance-reference to a static reference.(™‡¼«8õ”Æ/
+S
+java:S2209 "5Change this instance-reference to a static reference.(Ã¹Â8õ”Æ/
+W
+java:S1874a"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(Õ¥—ãùÿÿÿÿ
+H
+java:S14440"2Make this "public static customDialog" field final(É¼ÒÛ
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Ë˜ú
+:
+java:S30108"$Remove this assignment of "context".(½°¥û
+…
+java:S3252‹"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(–âßâ8çÃÔÆ/
+i
+java:S1192¢"MDefine a constant instead of duplicating this literal "com.whatsapp" 3 times.(˜âßİøÿÿÿÿ
+W	java:S125¿"<This block of commented-out lines of code should be removed.(ã²Ššıÿÿÿÿ
+C
+java:S1144‰",Remove this unused private "rad2deg" method.(¿÷Ì¯
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ ÜÓ
+X
+java:S2209"5Change this instance-reference to a static reference.(ô…«…şÿÿÿÿ8õ”Æ/
+H
+java:S14444"-Make this "public static pattern" field final(ó‰®Óøÿÿÿÿ
+f	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â’û
+n
+java:S11040"XMake customDialog a static final constant or non-public and provide accessors if needed.(É¼ÒÛ
+j
+java:S11041"TMake myFormat a static final constant or non-public and provide accessors if needed.(îíúŸ
+g
+java:S11045"QMake isGPS a static final constant or non-public and provide accessors if needed.(óÉ¯«
+n
+java:S11044"SMake pattern a static final constant or non-public and provide accessors if needed.(ó‰®Óøÿÿÿÿ
+E
+java:S1874c"/Remove this use of "getType"; it is deprecated.(ïæñ¨
+O
+java:S1874•"3Remove this use of "isConnected"; it is deprecated.(ûæ¤ñÿÿÿÿÿ
+O
+java:S1874”"3Remove this use of "NetworkInfo"; it is deprecated.(£Ëøüüÿÿÿÿ
+N
+java:S1874e"3Remove this use of "TYPE_MOBILE"; it is deprecated.(‹ÊÔÍÿÿÿÿÿ
+@
+java:S10682"*Remove this unused "status" private field.(äÎ£¦
+F
+java:S10683"+Remove this unused "context" private field.(ÄÖ¤–ıÿÿÿÿ
+A
+java:S14445"+Make this "public static isGPS" field final(óÉ¯«
+d	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊŠÊË
+X
+java:S1874”"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(£Ëøüüÿÿÿÿ
+^	java:S125ã"<This block of commented-out lines of code should be removed.(Û¼¨ñøÿÿÿÿ8«¸åÈ/

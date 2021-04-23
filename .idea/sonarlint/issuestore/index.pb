@@ -25,8 +25,6 @@ s
 Cdirect/src/main/java/com/skdirect/activity/PlaceSearchActivity.java,0\4\0470f3f3debd7807aef3bc7649c1e72b075badea
 y
 Idirect/src/main/java/com/skdirect/activity/SocialMallLendingActivity.java,6\1\611f83ef0491671ccdd94e3d772b4720224600f8
-j
-:direct/src/main/java/com/skdirect/utils/MyApplication.java,1\6\16419f335c9fd7e3af3999ca3186c8b90e15eeb6
 s
 Cdirect/src/main/java/com/skdirect/activity/GenerateOTPActivity.java,2\b\2b97d3345f6d7c65b1cbd506906a187c95e70ddb
 l
@@ -35,3 +33,21 @@ f
 6direct/src/main/java/com/skdirect/api/APIServices.java,8\e\8e186dd211e50bcf53ff99547d434b245c4875bc
 y
 Idirect/src/main/java/com/skdirect/activity/LoginWithPasswordActivity.java,0\5\0575c66db6df3c6f6564f41e5cb53ed14f5e1cf1
+]
+-app/src/main/java/com/demo/AppController.java,1\4\14498af70a997c35080379c8b5122494138af2b3
+f
+6direct/src/main/java/com/skdirect/utils/DirectSDK.java,0\a\0a763bbc42af92a78a0105cb7d3293bf5086ce2f
+b
+2direct/src/main/java/com/skdirect/utils/Utils.java,7\1\71979f00af0b7bc3383be63582a46e306c096139
+l
+<direct/src/main/java/com/skdirect/fragment/HomeFragment.java,0\7\07f6b125c803d272b50f7483e96e2a73cb75e3bb
+e
+5direct/src/main/java/com/skdirect/utils/DBHelper.java,0\b\0b65e99397234652d6717cc2442e51f72cd528f8
+o
+?direct/src/main/java/com/skdirect/activity/MyOrderActivity.java,3\9\392c37e1c42981e5f920433f5b5a1c320234b0e7
+S
+#direct/src/main/AndroidManifest.xml,3\d\3db69d52ace069738fb6ace76583c77e3cf92322
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+l
+<direct/src/main/java/com/skdirect/activity/MainActivity.java,f\f\ff1367638b316fe3309880dfb2901e9f9b67f30f

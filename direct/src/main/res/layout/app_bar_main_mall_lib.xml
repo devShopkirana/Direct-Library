@@ -134,7 +134,7 @@
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/navigation" />
+            app:menu="@menu/navigation_d" />
     </RelativeLayout>
 
 </layout>

@@ -1,0 +1,65 @@
+
+}
+java:S1104,"[Make positionChanged a static final constant or non-public and provide accessors if needed.(§¸ƒúÿÿÿÿ8äº“Ë/
+E
+java:S5411F"*Use the primitive boolean expression here.(Øö×£ûÿÿÿÿ
+u
+java:S1104-"XMake appBarLayout a static final constant or non-public and provide accessors if needed.(ä¿¼Ñ8äº“Ë/
+s
+java:S1104."VMake userNameTV a static final constant or non-public and provide accessors if needed.(‹”İƒ8äº“Ë/
+
+java:S3252ñ"hUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_SHORT".( •™à
+K
+java:S1874ò"/Remove this use of "Handler"; it is deprecated.(¶¿óóøÿÿÿÿ
+Q
+java:S2209À"5Change this instance-reference to a static reference.(úç äÿÿÿÿÿ
+H
+java:S1659."+Declare "setLocationTV" on a separate line.(‹”İƒ8äº“Ë/
+L
+java:S2209¼"5Change this instance-reference to a static reference.(şˆïâ
+L
+java:S2209¹"5Change this instance-reference to a static reference.(êûƒÍ
+v
+java:S1104."YMake setLocationTV a static final constant or non-public and provide accessors if needed.(‹”İƒ8äº“Ë/
+L
+java:S2209Õ"5Change this instance-reference to a static reference.(êûƒÍ
+R	java:S125ü"<This block of commented-out lines of code should be removed.(­×¬
+H
+java:S1602Ã",Remove useless curly braces around statement(‡õóŸøÿÿÿÿ
+R	java:S125Û"<This block of commented-out lines of code should be removed.(¼ÏÈø
+@
+java:S5411H"*Use the primitive boolean expression here.(‡úƒî
+v
+java:S11040"TMake dbHelper a static final constant or non-public and provide accessors if needed.(»èĞ»ıÿÿÿÿ8äº“Ë/
+i
+java:S3776†"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(šœ•²
+Q	java:S125A"<This block of commented-out lines of code should be removed.(‡Ø”‘
+O	java:S106Ï"9Replace this use of System.out or System.err by a logger.(’ºÁÓ
+R	java:S125‚"<This block of commented-out lines of code should be removed.(İù¾Ò
+I
+java:S1659.",Declare "mobileNumberTV" on a separate line.(‹”İƒ8äº“Ë/
+R	java:S125ì"<This block of commented-out lines of code should be removed.(ı‹ßÚ
+L
+java:S2209Ó"5Change this instance-reference to a static reference.(ç­É
+E
+java:S5411d"*Use the primitive boolean expression here.(ŸÂ²˜úÿÿÿÿ
+X	java:S110("<This class has 9 parents which is greater than 5 authorized.(ÄÇ‚·8äº“Ë/
+Q
+java:S2209‡"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+J
+java:S1066|"/Merge this if statement with the enclosing one.(î´ÅÎúÿÿÿÿ
+_
+java:S1874ˆ"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(©Ÿşáûÿÿÿÿ
+i
+java:S1192­"MDefine a constant instead of duplicating this literal "FunctionName" 3 times.(‰å“ğÿÿÿÿÿ
+w
+java:S1104."ZMake mobileNumberTV a static final constant or non-public and provide accessors if needed.(‹”İƒ8äº“Ë/
+q
+java:S1104)"TMake mBinding a static final constant or non-public and provide accessors if needed.(êéøÑ8äº“Ë/
+n
+java:S3776‡"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ğ¸™áúÿÿÿÿ
+f	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¶ğ
+O
+java:S1874Ğ"3Remove this use of "getDrawable"; it is deprecated.(˜½˜şÿÿÿÿ
+U
+java:S1874ˆ"9Remove this use of "PreferenceManager"; it is deprecated.(©Ÿşáûÿÿÿÿ

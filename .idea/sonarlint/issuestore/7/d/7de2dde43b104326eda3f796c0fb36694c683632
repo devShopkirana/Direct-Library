@@ -1,30 +1,38 @@
 
-V	java:S110!"<This class has 9 parents which is greater than 5 authorized.(äÊãøÿÿÿÿ
-L
-java:S1874*"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD
-E
-java:S5411q"*Use the primitive boolean expression here.(¢‹‡©ûÿÿÿÿ
-L
-java:S1874*"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD
-\
-java:S1874+"GRemove this use of "SYSTEM_UI_FLAG_IMMERSIVE_STICKY"; it is deprecated.(şÚÒ
-R
-java:S1874+"=Remove this use of "setSystemUiVisibility"; it is deprecated.(şÚÒ
-]	java:S125I"<This block of commented-out lines of code should be removed.(Â‘ğÕûÿÿÿÿ8†ì¹œ/
-X	java:S125R"<This block of commented-out lines of code should be removed.(¡Õ±š8õ®¹œ/
 K
-java:S1144x"5Remove this unused private "checkVersionData" method.(²çƒ
-d
-java:S1128"BRemove this unused import 'androidx.lifecycle.ViewModelProviders'.(ê· ºÿÿÿÿÿ8Ç—´œ/
-T
-java:S1874l"9Remove this use of "PreferenceManager"; it is deprecated.(Ñ¨ıÔıÿÿÿÿ
-Q
-java:S1066H"/Merge this if statement with the enclosing one.(¤‹“¢ıÿÿÿÿ8·Š³œ/
-W	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-[
-java:S1874+"FRemove this use of "SYSTEM_UI_FLAG_HIDE_NAVIGATION"; it is deprecated.(şÚÒ
-V	java:S125|"<This block of commented-out lines of code should be removed.(˜ªñ¬ûÿÿÿÿ
-Y
-java:S2589G"7Remove this expression which always evaluates to "true"(†§ŸÂûÿÿÿÿ8·Š³œ/
+java:S1144{"5Remove this unused private "checkVersionData" method.(²çƒ
+]	java:S125J"<This block of commented-out lines of code should be removed.(Â‘ğÕûÿÿÿÿ8†ì¹œ/
 ^
-java:S1874l"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(Ñ¨ıÔıÿÿÿÿ
+java:S1874o"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(Ñ¨ıÔıÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+T
+java:S1874o"9Remove this use of "PreferenceManager"; it is deprecated.(Ñ¨ıÔıÿÿÿÿ
+V	java:S110 "<This class has 9 parents which is greater than 5 authorized.(äÊãøÿÿÿÿ
+L
+java:S1874+"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD
+X	java:S125S"<This block of commented-out lines of code should be removed.(¡Õ±š8õ®¹œ/
+V	java:S125"<This block of commented-out lines of code should be removed.(˜ªñ¬ûÿÿÿÿ
+Y
+java:S2589H"7Remove this expression which always evaluates to "true"(†§ŸÂûÿÿÿÿ8·Š³œ/
+E
+java:S5411t"*Use the primitive boolean expression here.(¢‹‡©ûÿÿÿÿ
+L
+java:S1874+"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD
+R
+java:S1874,"=Remove this use of "setSystemUiVisibility"; it is deprecated.(şÚÒ
+\
+java:S1874,"GRemove this use of "SYSTEM_UI_FLAG_IMMERSIVE_STICKY"; it is deprecated.(şÚÒ
+Q
+java:S1066I"/Merge this if statement with the enclosing one.(¤‹“¢ıÿÿÿÿ8·Š³œ/
+[
+java:S1874,"FRemove this use of "SYSTEM_UI_FLAG_HIDE_NAVIGATION"; it is deprecated.(şÚÒ
+W
+java:S2209f"5Change this instance-reference to a static reference.(‰·ƒşÿÿÿÿ8ŒÎÊÇ/
+S
+java:S2209…"5Change this instance-reference to a static reference.(ŸóÄë8ŒÎÊÇ/
+S
+java:S2209…"5Change this instance-reference to a static reference.(ŸóÄë8ŒÎÊÇ/
+X
+java:S2209‡"5Change this instance-reference to a static reference.(¯î½¾ıÿÿÿÿ8ŒÎÊÇ/
+S
+java:S2209‹"5Change this instance-reference to a static reference.(ˆà¸á8ŒÎÊÇ/

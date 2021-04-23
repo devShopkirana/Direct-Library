@@ -1,0 +1,19 @@
+
+i
+java:S1104"SMake context a static final constant or non-public and provide accessors if needed.(Òò®­
+p
+java:S1104"ZMake cartRepository a static final constant or non-public and provide accessors if needed.(ØµòÛ
+I
+java:S1444".Make this "public static dbHelper" field final(Õ…é¤ûÿÿÿÿ
+j
+java:S1104"TMake activity a static final constant or non-public and provide accessors if needed.(î«ùù
+J
+java:S1444"4Make this "public static cartRepository" field final(ØµòÛ
+M
+java:S25895"7Remove this expression which always evaluates to "true"(ÁÚî§
+C
+java:S1444"-Make this "public static context" field final(Òò®­
+o
+java:S1104"TMake dbHelper a static final constant or non-public and provide accessors if needed.(Õ…é¤ûÿÿÿÿ
+e
+java:S1104"OMake otp a static final constant or non-public and provide accessors if needed.(ø¾ÍÇ
