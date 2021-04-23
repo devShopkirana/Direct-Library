@@ -31,7 +31,7 @@ public class DirectSDK {
     public static void initialize(Context context1) {
         context = context1;
         mInstance = new DirectSDK();
-        SoLoader.init(context, false);
+       SoLoader.init(context, false);
         cartRepository = new CartRepository(context);
         dbHelper = new DBHelper(context);
     }

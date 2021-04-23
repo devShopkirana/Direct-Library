@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584369951914",
+    "firebase_url": "https://retailer-debug.firebaseio.com",
+    "project_id": "retailer-debug",
+    "storage_bucket": "retailer-debug.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584369951914:android:c247a56261f8d5b9dfacd3",
+        "android_client_info": {
+          "package_name": "app.retailer.krina.shop.com.shopkrina_retailer.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584369951914-ijmo2m50sshrodcrfi1lqv6mj3a8n7k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBax6l4cJnwB8TXu__omvt0SGbExScQgo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584369951914-ijmo2m50sshrodcrfi1lqv6mj3a8n7k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
