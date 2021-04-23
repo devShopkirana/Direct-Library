@@ -20,7 +20,7 @@ import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
 import com.skdirect.R;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.ActivityPlacesSearchBinding;
+import com.skdirect.databinding.ActivityPlacesSearchdBinding;
 import com.skdirect.model.TokenModel;
 import com.skdirect.utils.DBHelper;
 import com.skdirect.utils.DirectSDK;
@@ -38,7 +38,7 @@ import io.reactivex.observers.DisposableObserver;
 
 public class PlaceSearchActivity extends AppCompatActivity implements View.OnClickListener {
     private final int REQUEST_FOR_ADDRESS = 1001;
-    private ActivityPlacesSearchBinding mBinding;
+    private ActivityPlacesSearchdBinding mBinding;
     private Place place;
     private Geocoder mGeocoder;
     private LatLng latLng;
@@ -52,7 +52,7 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_places_search);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_places_searchd);
         dbHelper = DirectSDK.getInstance().dbHelper;
         initView();
 

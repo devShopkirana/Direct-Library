@@ -16,7 +16,7 @@ import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
 import com.skdirect.R;
 import com.skdirect.adapter.PlacesAutoCompleteAdapter;
-import com.skdirect.databinding.ActivityUserLocationBinding;
+import com.skdirect.databinding.ActivityUserLocationdBinding;
 import com.skdirect.location.EasyWayLocation;
 import com.skdirect.location.Listener;
 import com.skdirect.location.LocationData;
@@ -27,7 +27,7 @@ import com.skdirect.utils.TextUtils;
 import com.skdirect.utils.Utils;
 
 public class UserLocationActvity extends AppCompatActivity implements PlacesAutoCompleteAdapter.ClickListener, Listener, LocationData.AddressCallBack {
-    private ActivityUserLocationBinding mBinding;
+    private ActivityUserLocationdBinding mBinding;
     private PlacesAutoCompleteAdapter mAutoCompleteAdapter;
     private String cityName = "", intentActivity;
     private boolean searchCity = false;
@@ -39,7 +39,7 @@ public class UserLocationActvity extends AppCompatActivity implements PlacesAuto
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_location);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_locationd);
         easyWayLocation = new EasyWayLocation(this, false, this);
         dbHelper = DirectSDK.getInstance().dbHelper;
 
