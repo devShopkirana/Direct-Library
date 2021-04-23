@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class TestActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

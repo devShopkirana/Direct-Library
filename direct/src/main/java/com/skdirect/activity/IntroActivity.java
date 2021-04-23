@@ -16,8 +16,6 @@ public class IntroActivity extends AppCompatActivity {
     private ActivityIntrodBinding mBinding;
     private IntroActivity activity;
     private DBHelper dbHelper;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
