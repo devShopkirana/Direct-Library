@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -167,9 +168,10 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public void orderPlaceAlertDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.AlertDialogCustom);
         builder.setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.Confirmation));
         builder.setMessage(DirectSDK.getInstance().dbHelper.getString(R.string.order_place));
+
         builder.setPositiveButton(DirectSDK.getInstance().dbHelper.getString(R.string.yes), (dialog, which) -> {
             if (Utils.isNetworkAvailable(getApplicationContext())) {
                 Utils.showProgressDialog(this);
@@ -184,7 +186,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         AlertDialog dialog = builder.create();
-        dialog.setCancelable(false);
+          dialog.setCancelable(false);
         dialog.show();
     }
 
@@ -212,14 +214,15 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void orderPlaceDialog() {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.congratulation));
-        dialog.setMessage(DirectSDK.getInstance().dbHelper.getString(R.string.order_place__popoup));
-        dialog.setPositiveButton(DirectSDK.getInstance().dbHelper.getString(R.string.ok),
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.AlertDialogCustom);
+        builder.setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.congratulation));
+        builder.setMessage(DirectSDK.getInstance().dbHelper.getString(R.string.order_place__popoup));
+        builder.setPositiveButton(DirectSDK.getInstance().dbHelper.getString(R.string.ok),
                 (dialog1, which) -> {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     finish();
                 });
+        AlertDialog dialog = builder.create();
         dialog.show();
     }
 

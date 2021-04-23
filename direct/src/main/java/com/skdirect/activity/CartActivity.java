@@ -1,6 +1,7 @@
 package com.skdirect.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -57,6 +58,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_cartd);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable( new ColorDrawable( getResources().getColor(R.color.colorAccentDir )));
         setTitle(DirectSDK.getInstance().dbHelper.getString(R.string.shopping_bag));
 
         cartItemViewMode = ViewModelProviders.of(this).get(CartItemViewMode.class);

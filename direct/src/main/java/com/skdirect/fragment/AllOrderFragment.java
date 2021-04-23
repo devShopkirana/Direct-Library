@@ -23,7 +23,7 @@ import com.skdirect.R;
 import com.skdirect.activity.MyOrderActivity;
 import com.skdirect.adapter.MyOrderAdapter;
 import com.skdirect.api.CommonClassForAPI;
-import com.skdirect.databinding.FragmentAllOrderBinding;
+import com.skdirect.databinding.FragmentAllOrderdBinding;
 import com.skdirect.model.MyOrderModel;
 import com.skdirect.model.MyOrderRequestModel;
 import com.skdirect.model.OrderModel;
@@ -41,7 +41,7 @@ import io.reactivex.observers.DisposableObserver;
 
 public class AllOrderFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
     private MyOrderActivity activity;
-    private FragmentAllOrderBinding mBinding;
+    private FragmentAllOrderdBinding mBinding;
     private final ArrayList<MyOrderModel> orderModelArrayList = new ArrayList<>();
     private int skipCount = 0;
     private int takeCount = 10;
@@ -70,7 +70,7 @@ public class AllOrderFragment extends Fragment implements SwipeRefreshLayout.OnR
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_all_order, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_all_orderd, container, false);
         orderstatus = statusId;
         return mBinding.getRoot();
     }

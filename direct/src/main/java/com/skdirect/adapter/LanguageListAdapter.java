@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.database.DataSnapshot;
 import com.skdirect.R;
-import com.skdirect.databinding.ItemLanguageBinding;
+import com.skdirect.databinding.ItemLanguagedBinding;
 import com.skdirect.interfacee.OnLanguageClick;
 import com.skdirect.utils.SharePrefs;
 
@@ -30,7 +30,7 @@ public class LanguageListAdapter extends RecyclerView.Adapter<LanguageListAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.item_language, parent, false));
+                R.layout.item_languaged, parent, false));
     }
 
     @Override
@@ -56,9 +56,9 @@ public class LanguageListAdapter extends RecyclerView.Adapter<LanguageListAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ItemLanguageBinding mBinding;
+        ItemLanguagedBinding mBinding;
 
-        public ViewHolder(ItemLanguageBinding binding) {
+        public ViewHolder(ItemLanguagedBinding binding) {
             super(binding.getRoot());
             this.mBinding = binding;
         }

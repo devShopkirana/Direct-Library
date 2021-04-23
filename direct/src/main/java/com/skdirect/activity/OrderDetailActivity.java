@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.skdirect.R;
 import com.skdirect.adapter.OrderDetailsItemAdapter;
 import com.skdirect.adapter.OrderStatusStepperAdapter;
-import com.skdirect.databinding.ActivityOrderDeatilsBinding;
+import com.skdirect.databinding.ActivityOrderDeatilsdBinding;
 import com.skdirect.model.MallMainModelBolleanResult;
 import com.skdirect.model.MyOrderModel;
 import com.skdirect.model.OrderDetailsModel;
@@ -26,7 +26,7 @@ import com.skdirect.viewmodel.OrderDetailsViewMode;
 import java.util.ArrayList;
 
 public class OrderDetailActivity extends AppCompatActivity implements View.OnClickListener {
-    private ActivityOrderDeatilsBinding mBinding;
+    private ActivityOrderDeatilsdBinding mBinding;
     private MyOrderModel myOrderModel;
     private OrderDetailsViewMode orderDetailsViewMode;
     private final ArrayList<OrderStatusDC> OrderStatusDCList = new ArrayList<>();
@@ -38,7 +38,7 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_order_deatils);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_order_deatilsd);
         orderDetailsViewMode = ViewModelProviders.of(this).get(OrderDetailsViewMode.class);
         dbHelper = DirectSDK.getInstance().dbHelper;
         getIntentData();

@@ -12,11 +12,12 @@ import androidx.fragment.app.Fragment;
 
 import com.skdirect.R;
 import com.skdirect.activity.MainActivity;
-import com.skdirect.databinding.FragmentMyOrderBinding;
+
+import com.skdirect.databinding.FragmentMyOrderdBinding;
 import com.skdirect.utils.DirectSDK;
 
 public class MyOrderFragment extends Fragment {
-    private FragmentMyOrderBinding mBinding;
+    private FragmentMyOrderdBinding mBinding;
     private MainActivity activity;
 
 
@@ -29,7 +30,7 @@ public class MyOrderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_order, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_orderd, container, false);
         initViews();
 
         return mBinding.getRoot();
