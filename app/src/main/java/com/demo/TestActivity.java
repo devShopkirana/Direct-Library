@@ -45,8 +45,8 @@ public class TestActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(getApplicationContext(), SocialMallLendingActivity.class);
-                intent.putExtra("MOBILE_NUMBER", "9752640201");
-                intent.putExtra("BUYERNAME", "BUYERNAME");
+                intent.putExtra("MOBILE_NUMBER", "1111111111");
+                intent.putExtra("BUYERNAME", "Test");
                 intent.putExtra("SOURCEKEY", "73F6CF7B-7C14-48B1-A392-C0590AB6A06C");
                 intent.putExtra("ADDRESS", address);
                 intent.putExtra("PINCODE", pincode);

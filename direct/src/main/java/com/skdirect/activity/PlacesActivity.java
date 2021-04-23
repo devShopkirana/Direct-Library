@@ -70,7 +70,7 @@ public class PlacesActivity extends AppCompatActivity implements PlacesAutoCompl
         binding.tvCurrentLocation.setText(dbHelper.getString(R.string.current_location));
         binding.tvSearchResult.setText(dbHelper.getString(R.string.search_results));
 
-        Places.initialize(this, getResources().getString(R.string.google_maps_key));
+        Places.initialize(this, getResources().getString(R.string.google_maps_key_for_mall_use));
         binding.etSearchPlace.addTextChangedListener(filterTextWatcher);
         mAutoCompleteAdapter = new PlacesAutoCompleteMapsAdapter(this, searchCity);
         binding.rvPlaces.setLayoutManager(new LinearLayoutManager(this));

@@ -65,7 +65,7 @@ public class UserLocationActvity extends AppCompatActivity implements PlacesAuto
         mBinding.tvOr.setText(dbHelper.getString(R.string.or));
         mBinding.btUseCurrentLocation.setText(dbHelper.getString(R.string.use_current_location));
 
-        Places.initialize(getApplicationContext(), getResources().getString(R.string.google_maps_key));
+        Places.initialize(getApplicationContext(), getResources().getString(R.string.google_maps_key_for_mall_use));
         //mBinding.etSearchPlace.addTextChangedListener(filterTextWatcher);
         mAutoCompleteAdapter = new PlacesAutoCompleteAdapter(this, searchCity);
         mAutoCompleteAdapter.setClickListener(this);

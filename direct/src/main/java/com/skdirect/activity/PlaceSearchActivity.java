@@ -97,7 +97,7 @@ public class PlaceSearchActivity extends AppCompatActivity implements View.OnCli
 
     private void findLocation() {
         if (!Places.isInitialized()) {
-            Places.initialize(getApplicationContext(), getResources().getString(R.string.google_maps_key));
+            Places.initialize(getApplicationContext(), getResources().getString(R.string.google_maps_key_for_mall_use));
         }
         startActivityForResult(new Intent(getApplicationContext(), UserLocationActvity.class)
                 .putExtra("activity", "PlaceSearch")
