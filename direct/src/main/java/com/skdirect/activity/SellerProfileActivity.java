@@ -93,7 +93,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
             startActivity(new Intent(getApplicationContext(), CartActivity.class));
         } else if (id == R.id.RLShare) {
             Utils.showShareWhatsappDialog(this,
-                    dbHelper.getString(R.string.hello_check_seller)
+                    /*dbHelper.getString(R.string.hello_check_seller)*/"Hello! Check"
                             + " " +
                             sellerShopName
                             + "'" +

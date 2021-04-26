@@ -28,7 +28,6 @@ import com.skdirect.BuildConfig;
 import com.skdirect.R;
 import com.skdirect.model.TokenModel;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -275,29 +274,37 @@ public class Utils {
     }
 
     public static void showShareWhatsappDialog(Context context, String textMsg, String number) {
-        BottomSheetDialog dialog = new BottomSheetDialog(context, R.style.BottomTheme);
-        dialog.setContentView(R.layout.dialog_whatsapp_share);
-        dialog.setCanceledOnTouchOutside(true);
-        LinearLayout llWhatsapp = dialog.findViewById(R.id.llWhatsapp);
-        LinearLayout llWhatsappBusiness = dialog.findViewById(R.id.llWhatsappBusiness);
-        TextView tvSharewith = dialog.findViewById(R.id.tvSharewith);
-        TextView tvWhasapp = dialog.findViewById(R.id.tvWhasapp);
-        TextView tvWhasappBusiness = dialog.findViewById(R.id.tvWhasappBusiness);
-        tvSharewith.setText(DirectSDK.getInstance().dbHelper.getString(R.string.share_with));
-        tvWhasapp.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp));
-        tvWhasappBusiness.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp_business));
+        try {
+            BottomSheetDialog dialog = new BottomSheetDialog(context, R.style.BottomTheme);
+            dialog.setContentView(R.layout.dialog_whatsapp_shared);
+            dialog.setCanceledOnTouchOutside(true);
+            LinearLayout llWhatsapp = dialog.findViewById(R.id.llWhatsapp);
+            LinearLayout llWhatsappBusiness = dialog.findViewById(R.id.llWhatsappBusiness);
+            TextView tvSharewith = dialog.findViewById(R.id.tvSharewith);
+            TextView tvWhasapp = dialog.findViewById(R.id.tvWhasapp);
+            TextView tvWhasappBusiness = dialog.findViewById(R.id.tvWhasappBusiness);
+            tvSharewith.setText("Share with");
+            tvWhasapp.setText("Whatsapp");
+            tvWhasappBusiness.setText("Whatsapp Business");
+          /*  tvSharewith.setText("DirectSDK.getInstance().dbHelper.getString(R.string.share_with)");
+            tvWhasapp.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp));
+            tvWhasappBusiness.setText(DirectSDK.getInstance().dbHelper.getString(R.string.whatsapp_business));*/
+            if (appInstalledOrNot(context,"com.whatsapp") && appInstalledOrNot(context,"com.whatsapp.w4b")) {
+                dialog.show();
+            } else shareOnWhatsapp(context, textMsg, number, !appInstalledOrNot(context,"com.whatsapp"));
+            llWhatsapp.setOnClickListener(view -> {
+                shareOnWhatsapp(context, textMsg, number, false);
+                dialog.dismiss();
+            });
+            llWhatsappBusiness.setOnClickListener(view -> {
+                shareOnWhatsapp(context, textMsg, number, true);
+                dialog.dismiss();
+            });
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
-        if (appInstalledOrNot(context,"com.whatsapp") && appInstalledOrNot(context,"com.whatsapp.w4b")) {
-            dialog.show();
-        } else shareOnWhatsapp(context, textMsg, number, !appInstalledOrNot(context,"com.whatsapp"));
-        llWhatsapp.setOnClickListener(view -> {
-            shareOnWhatsapp(context, textMsg, number, false);
-            dialog.dismiss();
-        });
-        llWhatsappBusiness.setOnClickListener(view -> {
-            shareOnWhatsapp(context, textMsg, number, true);
-            dialog.dismiss();
-        });
     }
 
     public static void shareOnWhatsapp(Context context, String textMsg, String number, boolean isWB) {
