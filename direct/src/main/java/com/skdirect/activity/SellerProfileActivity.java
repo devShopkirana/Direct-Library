@@ -2,6 +2,7 @@ package com.skdirect.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.LinearLayout;
@@ -92,6 +93,7 @@ public class SellerProfileActivity extends AppCompatActivity implements View.OnC
         } else if (id == R.id.notifiction_count) {
             startActivity(new Intent(getApplicationContext(), CartActivity.class));
         } else if (id == R.id.RLShare) {
+            Log.d("TAG", "BuyerURL:::: "+SharePrefs.getInstance(this).getString(SharePrefs.BUYER_URL));
             Utils.showShareWhatsappDialog(this,
                     /*dbHelper.getString(R.string.hello_check_seller)*/"Hello! Check"
                             + " " +

@@ -56,43 +56,45 @@ public class SocialMallLendingActivity extends AppCompatActivity {
             } else {
                 SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SOURCEKEY, "");
             }
-            if (latitude == 0 || longitude == 0 || TextUtils.isNullOrEmpty(pincode)) {
-                SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.FIRST_NAME, BUYERNAME);
-                SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
-                startActivity(new Intent(this, PlaceSearchActivity.class));
-            } else {
-                if (Utils.isNetworkAvailable(this)) {
-                    if (commonClassForAPI != null) {
-                        commonClassForAPI.getAppInfo(new DisposableObserver<AppVersionModel>() {
-                            @Override
-                            public void onNext(@NotNull AppVersionModel appVersionModels) {
-                                if (appVersionModels != null) {
-                                    if (appVersionModels.isSuccess()) {
-                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SELLER_URL, appVersionModels.getResultItem().getSellerUrl());
-                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.BUYER_URL, appVersionModels.getResultItem().getBuyerUrl());
-                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.PRIVACY_POLICY, appVersionModels.getResultItem().getPrivacyPolicy());
-                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.TERMS_CONDITION, appVersionModels.getResultItem().getTermsCondition());
-                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.ABOUT_APP, appVersionModels.getResultItem().getAboutApp());
+            if (Utils.isNetworkAvailable(this)) {
+                if (commonClassForAPI != null) {
+                    commonClassForAPI.getAppInfo(new DisposableObserver<AppVersionModel>() {
+                        @Override
+                        public void onNext(@NotNull AppVersionModel appVersionModels) {
+                            if (appVersionModels != null) {
+                                if (appVersionModels.isSuccess()) {
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.SELLER_URL, appVersionModels.getResultItem().getSellerUrl());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.BUYER_URL, appVersionModels.getResultItem().getBuyerUrl());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.PRIVACY_POLICY, appVersionModels.getResultItem().getPrivacyPolicy());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.TERMS_CONDITION, appVersionModels.getResultItem().getTermsCondition());
+                                    SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.ABOUT_APP, appVersionModels.getResultItem().getAboutApp());
+                                    if (latitude == 0 || longitude == 0 || TextUtils.isNullOrEmpty(pincode)) {
+                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.FIRST_NAME, BUYERNAME);
+                                        SharePrefs.getInstance(getApplicationContext()).putString(SharePrefs.MOBILE_NUMBER, mobileNumber);
+                                        startActivity(new Intent(getApplicationContext(), PlaceSearchActivity.class));
+                                    } else {
+                                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(getApplicationContext()), Utils.getDeviceUniqueID(getApplicationContext()), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(getApplicationContext()), latitude, longitude, pincode, "", mobileNumber,BUYERNAME, SOURCEKEY);
+
                                     }
+
                                 }
                             }
+                        }
+                        @Override
+                        public void onError(Throwable e) {
+                            e.printStackTrace();
+                        }
 
-                            @Override
-                            public void onError(Throwable e) {
-                                e.printStackTrace();
-                            }
-
-                            @Override
-                            public void onComplete() {
-                                Utils.hideProgressDialog();
-                            }
-                        });
-                        commonClassForAPI.getTokenwithphoneNo(callToken, "password", Utils.getDeviceUniqueID(this), Utils.getDeviceUniqueID(this), true, true, "BUYERAPP", true, Utils.getDeviceUniqueID(this), latitude, longitude, pincode, "", mobileNumber,BUYERNAME, SOURCEKEY);
-                    }
-                } else {
-                    Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));
+                        @Override
+                        public void onComplete() {
+                            Utils.hideProgressDialog();
+                        }
+                    });
                 }
+            } else {
+                Utils.setToast(this, dbHelper.getString(R.string.no_internet_connection));
             }
+
         } else {
             Intent intent = new Intent();
             intent.putExtra("Error", "No data found");
