@@ -2,21 +2,26 @@ package com.skdirect.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.os.Parcelable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.databinding.DataBindingUtil;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.skdirect.BuildConfig;
 import com.skdirect.R;
 import com.skdirect.activity.ShowImageActivity;
+import com.skdirect.databinding.ViewPagerItemdBinding;
 import com.skdirect.model.ImageListModel;
-import com.skdirect.utils.Utils;
+import com.skdirect.utils.TextUtils;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -39,30 +44,31 @@ public class ShowImagesAdapter extends PagerAdapter {
         container.removeView((View) object);
     }
 
-    @NotNull
+    @NonNull
     @Override
-    public Object instantiateItem(@NotNull ViewGroup view, int position) {
-        View imageLayout = inflater.inflate(R.layout.slidingimages_layout, view, false);
-
-        assert imageLayout != null;
-        final ImageView imageView = imageLayout.findViewById(R.id.iv_item_image);
-
-        if (imageListModels.get(position).getImagePath() != null && !imageListModels.get(position).getImagePath().contains("http")) {
-            Picasso.get().load(BuildConfig.apiEndpoint+imageListModels.get(position).getImagePath()).into(imageView);
-        }else {
-            Picasso.get().load(imageListModels.get(position).getImagePath()).into(imageView);
-        }
-
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.startActivity(new Intent(context, ShowImageActivity.class).putExtra("ImageData",imageListModels));
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        ViewPagerItemdBinding mBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
+                R.layout.view_pager_itemd, null, false);
+        View itemView = mBinding.getRoot();
+        try {
+            if (!TextUtils.isNullOrEmpty(imageListModels.get(position).getImagePath())) {
+                if (!imageListModels.get(position).getImagePath().contains("http")) {
+                    Picasso.get().load(BuildConfig.apiEndpoint + imageListModels.get(position).getImagePath()).into(mBinding.itemImaged);
+                } else {
+                    Picasso.get().load(imageListModels.get(position).getImagePath()).into(mBinding.itemImaged);
+                }
             }
-        });
-
-        view.addView(imageLayout, 0);
-
-        return imageLayout;
+            mBinding.itemImaged.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, ShowImageActivity.class).putExtra("ImageData", imageListModels));
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        container.addView(itemView);
+        return itemView;
     }
 
     @Override

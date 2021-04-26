@@ -1,0 +1,20 @@
+
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(£âÏÛ
+K
+java:S2209j"5Change this instance-reference to a static reference.(Ğµ¹š
+K
+java:S2209/"5Change this instance-reference to a static reference.(ñƒå™
+J
+java:S1874["/Remove this use of "Handler"; it is deprecated.(’àŞ–úÿÿÿÿ
+—
+java:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦
+—
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯øÓÀ
+—
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùÆ¿Ø
+—
+java:S1186R"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹²æµ
+G
+java:S1612[",Replace this lambda with a method reference.(’àŞ–úÿÿÿÿ
+G
+java:S1602[",Remove useless curly braces around statement(’àŞ–úÿÿÿÿ

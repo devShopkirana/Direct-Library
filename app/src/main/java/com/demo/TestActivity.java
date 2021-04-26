@@ -5,25 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.location.Address;
-import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
 import com.skdirect.activity.SocialMallLendingActivity;
-import com.skdirect.activity.SplashActivity;
-import com.skdirect.utils.GPSTracker;
-
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 public class TestActivity extends AppCompatActivity {
+    private  String MOBILE_NUMBER = "9752640201";
+    private  String CUSTOMER_NAME = "Test";
+    private  String SOURCEKEY = "73F6CF7B-7C14-48B1-A392-C0590AB6A06C";
+    private  String ADDRESS = "Vijay Nagar";
+    private  String PINCODE = "452010";
+    private  double LATITUDE = 22.7533;
+    private  double LONGITUDE = 75.8937;
+    private  int REQUEST_CODE = 1199;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,8 @@ public class TestActivity extends AppCompatActivity {
         findViewById(R.id.btnOpen).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GPSTracker gpsTracker = new GPSTracker(getApplicationContext());
+                if (MarshmallowPermissions.checkPermissionLocation(TestActivity.this)) {
+                    /* GPSTracker gpsTracker = new GPSTracker(getApplicationContext());
                 Geocoder mGeocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
                 List<Address> addresses = null;
                 String address = "",pincode = "";
@@ -42,16 +42,19 @@ public class TestActivity extends AppCompatActivity {
                     pincode = addresses.get(0).getPostalCode();
                 } catch (IOException e) {
                     e.printStackTrace();
+                }*/
+                    Intent intent = new Intent(getApplicationContext(), SocialMallLendingActivity.class);
+                    intent.putExtra("MOBILE_NUMBER", MOBILE_NUMBER);
+                    intent.putExtra("BUYERNAME", CUSTOMER_NAME);
+                    intent.putExtra("SOURCEKEY", SOURCEKEY);
+                    intent.putExtra("ADDRESS", ADDRESS);
+                    intent.putExtra("PINCODE", PINCODE);
+                    intent.putExtra("LATITUDE", LATITUDE);
+                    intent.putExtra("LONGITUDE", LONGITUDE);
+                    startActivityForResult(intent, REQUEST_CODE);
+                } else {
+                    MarshmallowPermissions.requestPermissionLocation(TestActivity.this, 999);
                 }
-                Intent intent = new Intent(getApplicationContext(), SocialMallLendingActivity.class);
-                intent.putExtra("MOBILE_NUMBER", "9752640201");
-                intent.putExtra("BUYERNAME", "Test");
-                intent.putExtra("SOURCEKEY", "73F6CF7B-7C14-48B1-A392-C0590AB6A06C");
-                intent.putExtra("ADDRESS", address);
-                intent.putExtra("PINCODE", pincode);
-                intent.putExtra("LATITUDE", gpsTracker.getLatitude());
-                intent.putExtra("LONGITUDE", gpsTracker.getLongitude());
-                startActivityForResult(intent, 1199);
             }
         });
 
@@ -75,7 +78,7 @@ public class TestActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1199) {
+        if (requestCode == REQUEST_CODE) {
             if (data != null && resultCode == RESULT_OK) {
                 System.out.println("data::"+data.toString());
             }else

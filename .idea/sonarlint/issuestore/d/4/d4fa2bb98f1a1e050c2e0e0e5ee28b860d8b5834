@@ -1,0 +1,14 @@
+
+P
+java:S2209%"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+T
+java:S1155d">Use isEmpty() to check whether the collection is empty or not.(–øù¨
+s
+java:S1450"]Remove the "userLocationId" field and declare it as a local variable in the relevant methods.(ÂØÕì
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(…·Öü
+P
+java:S2209="5Change this instance-reference to a static reference.(öŽËéÿÿÿÿÿ
+H
+java:S1068"2Remove this unused "userLocationId" private field.(ÂØÕì
+Y
+java:S11557">Use isEmpty() to check whether the collection is empty or not.(É©üÇÿÿÿÿÿ

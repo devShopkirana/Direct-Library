@@ -1,0 +1,8 @@
+
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(‘›½µ
+P
+java:S2209"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+>
+java:S1185"(Remove this method to simply inherit it.(Ù«µ§
+Q	java:S125!"<This block of commented-out lines of code should be removed.(‡„×Ž
+Q	java:S125Q"<This block of commented-out lines of code should be removed.(¹ñŽú

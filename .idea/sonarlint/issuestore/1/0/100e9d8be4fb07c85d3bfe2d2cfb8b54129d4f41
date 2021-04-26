@@ -1,0 +1,75 @@
+
+
+java:S1319
+"tThe type of the "ImageList" object should be an interface such as "List" rather than the implementation "ArrayList".(³ØØüÿÿÿÿ
+œ
+java:S1319"†The type of the "ProductVariantSpecification" object should be an interface such as "List" rather than the implementation "ArrayList".(æ¯è3
+˜
+java:S1319"}The type of the "VariationListModel" object should be an interface such as "List" rather than the implementation "ArrayList".(Ì‰Âİûÿÿÿÿ
+‡
+java:S1319—"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(å¢®
+
+java:S1319›"tThe type of the "imageList" object should be an interface such as "List" rather than the implementation "ArrayList".(ú‘òÀüÿÿÿÿ
+‡
+java:S1319Ÿ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(­—Ü×
+£
+java:S1319£"†The type of the "productVariantSpecification" object should be an interface such as "List" rather than the implementation "ArrayList".(šÒÂúÿÿÿÿ
+‡
+java:S1319§"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ã“Ñ½
+”
+java:S1319«"xThe type of the "variationList" object should be an interface such as "List" rather than the implementation "ArrayList".(ƒå¿Ïûÿÿÿÿ
+¡
+java:S1319³"„The type of the "productVariantAttributeDC" object should be an interface such as "List" rather than the implementation "ArrayList".(Ëøééúÿÿÿÿ
+Œ
+java:S1319‡"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(èš¤Òúÿÿÿÿ
+—
+java:S1319‹"{The type of the "deliveryOptionDC" object should be an interface such as "List" rather than the implementation "ArrayList".(‘ÒËóşÿÿÿÿ
+e
+java:S1104S"OMake qty a static final constant or non-public and provide accessors if needed.(Ì°ë¸
+n	java:S116
+"TRename this field "ImageList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ØØüÿÿÿÿ
+z	java:S116"fRename this field "ProductVariantSpecification" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¯è3
+w	java:S116"]Rename this field "VariationListModel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì‰Âİûÿÿÿÿ
+~	java:S116"dRename this field "ProductVariantAttributeDC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÊ‡‚ûÿÿÿÿ
+u	java:S116"[Rename this field "DeliveryOptionDC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ûäÜşÿÿÿÿ
+o	java:S116"ZRename this field "EncryptSellerId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Å£É
+l	java:S116"RRename this field "StockId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Â›Ëıÿÿÿÿ
+h	java:S116"SRename this field "SellerId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÔ‚Œ
+r	java:S116"XRename this field "OffPercentage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¨ ùÿÿÿÿ
+l	java:S116"WRename this field "SellingPrice" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢´¨Ï
+e	java:S116"PRename this field "Stock" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½§Ğ¾
+h	java:S116 "SRename this field "IsActive" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¯„„
+h	java:S116""SRename this field "IsDelete" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘óä
+t	java:S116$"ZRename this field "IsStockRequired" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê·«ûÿÿÿÿ
+o	java:S116&"ZRename this field "ParentProductId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íçœ†
+m	java:S116("SRename this field "UomValue" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ»æıÿÿÿÿ
+h	java:S116*"NRename this field "Uom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™è¶Öıÿÿÿÿ
+c	java:S116,"NRename this field "Tax" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ëöø
+o	java:S116."URename this field "TaxGroupId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µŞºšøÿÿÿÿ
+j	java:S1160"URename this field "WeightInKg" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ›üı
+f	java:S1162"QRename this field "Length" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æøè÷
+j	java:S1164"PRename this field "Width" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÓ¯ãÿÿÿÿÿ
+f	java:S1166"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®¾Ù¡
+p	java:S1168"VRename this field "Measurement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¿û˜üÿÿÿÿ
+h	java:S116:"NRename this field "Mrp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÁ£ßûÿÿÿÿ
+j	java:S116<"URename this field "IsApproved" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õŞö
+k	java:S116>"WRename this field "CategoryName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÿÎ
+o	java:S116@"URename this field "CategoryId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¥¶²şÿÿÿÿ
+p	java:S116B"VRename this field "ProductName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êØú¢üÿÿÿÿ
+t	java:S116D"ZRename this field "ProductMasterId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¸Æšÿÿÿÿÿ
+b	java:S116F"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ó´Œ
+j	java:S116H"URename this field "AddressOne" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—èâ½
+o	java:S116J"URename this field "AddressTwo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êàÍøşÿÿÿÿ
+g	java:S116L"RRename this field "Pincode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Í
+e	java:S116N"PRename this field "State" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ö‘
+n	java:S116P"YRename this field "DiscountAmount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËâËİ
+h	java:S116R"SRename this field "ShopName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÔÉ¼
+o	java:S116U"[Rename this field "MaxOrderQuantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å±Í
+
+java:S1845ç"hRename method "isActive" to prevent any misunderstanding/clash with field "IsActive" defined on line 32.(°…ÙË
+„
+java:S1845ï"hRename method "isDelete" to prevent any misunderstanding/clash with field "IsDelete" defined on line 34.(à·„Ùıÿÿÿÿ
+’
+java:S1845÷"vRename method "isStockRequired" to prevent any misunderstanding/clash with field "IsStockRequired" defined on line 36.(şïì­ùÿÿÿÿ
+ƒ
+java:S1845×"lRename method "isApproved" to prevent any misunderstanding/clash with field "IsApproved" defined on line 60.(†Ê¬è

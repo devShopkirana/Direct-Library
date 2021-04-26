@@ -1,12 +1,12 @@
 
-T	java:S110"<This class has 9 parents which is greater than 5 authorized.(ŠÌî«úÿÿÿÿ
-m
-java:S1104"TMake dbHelper a static final constant or non-public and provide accessors if needed.(»èÐ»ýÿÿÿÿ
-N
-java:S2209"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
-O	java:S125"<This block of commented-out lines of code should be removed.(ªÖª¾
-—
-java:S1186N"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÝŠÎ
 Q	java:S125a"<This block of commented-out lines of code should be removed.(„”ä×
 T
 java:S3398Z">Move this method into the anonymous class declared at line 53.(íÄ‰÷
+o
+java:S1104"TMake dbHelper a static final constant or non-public and provide accessors if needed.(»èÐ»ýÿÿÿÿ
+—
+java:S1186N"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÝŠÎ
+P
+java:S2209+"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+Q	java:S125."<This block of commented-out lines of code should be removed.(ªÖª¾
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(ŠÌî«úÿÿÿÿ

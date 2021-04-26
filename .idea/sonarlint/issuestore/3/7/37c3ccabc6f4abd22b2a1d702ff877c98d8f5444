@@ -1,0 +1,82 @@
+
+u
+java:S1104D"_Make isPermissionAllowed a static final constant or non-public and provide accessors if needed.(¨Ùêè
+l	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯è…ûÿÿÿÿ
+P
+java:S2209w"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+M
+java:S18749"7Remove this use of "GoogleApiClient"; it is deprecated.(ÆöşÌ
+S
+java:S1874"7Remove this use of "GoogleApiClient"; it is deprecated.(£şÙ‚øÿÿÿÿ
+M
+java:S1874>"7Remove this use of "GoogleApiClient"; it is deprecated.(Ÿõ¸Ú
+F
+java:S5411š"*Use the primitive boolean expression here.(½ùŸßøÿÿÿÿ
+O
+java:S1874ã"8Remove this use of "FusedLocationApi"; it is deprecated.(û†§
+v	java:S116B"aRename this field "LAUNCH_PLACES_ACTIVITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Âß
+s
+java:S3252ó"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(Ìîş½ùÿÿÿÿ
+s
+java:S3252ô"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(ó„Âœüÿÿÿÿ
+?
+java:S1604ª"(Make this anonymous inner class a lambda(Ò½æ‚
+X
+java:S18749"BRemove this use of "OnConnectionFailedListener"; it is deprecated.(ÆöşÌ
+Q
+java:S18749";Remove this use of "ConnectionCallbacks"; it is deprecated.(ÆöşÌ
+?
+java:S1604Ø"(Make this anonymous inner class a lambda(›–Œ
+D
+java:S1604Ÿ"(Make this anonymous inner class a lambda(Û’¹¬üÿÿÿÿ
+l	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¥À•üÿÿÿÿ
+n
+java:S3252Õ"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+R
+java:S1874¿"6Remove this use of "getErrorDialog"; it is deprecated.(£Û–Üıÿÿÿÿ
+U
+java:S1874¾">Remove this use of "isUserRecoverableError"; it is deprecated.(Š¤ù
+n
+java:S3252İ"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+R	java:S125ğ"<This block of commented-out lines of code should be removed.(ã“¢¦
+T
+java:S1197É"8Move the array designator from the variable to the type.( ‘üâúÿÿÿÿ
+M
+java:S18749"7Remove this use of "GoogleApiClient"; it is deprecated.(ÆöşÌ
+x
+java:S1104B"bMake LAUNCH_PLACES_ACTIVITY a static final constant or non-public and provide accessors if needed.(·Âß
+W	java:S125À"<This block of commented-out lines of code should be removed.(Úİé ùÿÿÿÿ
+n
+java:S3252Õ"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+F
+java:S1066¥"/Merge this if statement with the enclosing one.(¾Çß
+i
+java:S3776Ù"RRefactor this method to reduce its Cognitive Complexity from 96 to the 15 allowed.(óêæï
+K
+java:S1874"/Remove this use of "Builder"; it is deprecated.(£şÙ‚øÿÿÿÿ
+g	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¢é„
+Q	java:S1109"<This class has 9 parents which is greater than 5 authorized.(ÆöşÌ
+W	java:S125À"<This block of commented-out lines of code should be removed.(Ç¹­øÿÿÿÿ
+[
+java:S1124?"EReorder the modifiers to comply with the Java Language Specification.(ï¾
+S
+java:S1874ß"7Remove this use of "LocationRequest"; it is deprecated.(¸·ÒŞüÿÿÿÿ
+˜
+java:S1186‹"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ˜å¨
+A
+java:S5411Ã"*Use the primitive boolean expression here.(àØşı
+T
+java:S1874Ù"8Remove this use of "FusedLocationApi"; it is deprecated.(œìÓüÿÿÿÿÿ
+g	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Œ©§
+i
+java:S3008@"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ùíßşÿÿÿÿ
+a
+java:S1874¼"ERemove this use of "isGooglePlayServicesAvailable"; it is deprecated.(¦¸‹Êùÿÿÿÿ
+K
+java:S1066Ë"/Merge this if statement with the enclosing one.(Ø’µ•şÿÿÿÿ
+n
+java:S3252İ"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+K
+java:S1066 "/Merge this if statement with the enclosing one.(ÖöáÏûÿÿÿÿ
+T
+java:S1874„"8Remove this use of "FusedLocationApi"; it is deprecated.(œìÓüÿÿÿÿÿ

@@ -1,15 +1,12 @@
 
 J
-java:S1604!"(Make this anonymous inner class a lambda(¡®Şœüÿÿÿÿ8Àóú™/
-X	java:S125U"<This block of commented-out lines of code should be removed.(ò¼ğ˜8şÃæŸ/
-Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(ğˆˆÄøÿÿÿÿ8îªãŸ/
-B
-java:S1659'"%Declare "pincode" on a separate line.(Ò®­ÿ8Àóú™/
-d
-java:S2259T"BA "NullPointerException" could be thrown; "data" is nullable here.(´èôÎúÿÿÿÿ8³ÓàŸ/
+java:S1604 "(Make this anonymous inner class a lambda(¡®Şœüÿÿÿÿ8Àóú™/
 f
-java:S1192A"IDefine a constant instead of duplicating this literal "onDenied" 3 times.(á œ8Ğ°ı™/
-X	java:S110"<This class has 9 parents which is greater than 5 authorized.(öº„ƒ8Ë¹ÔÆ/
+java:S1192@"IDefine a constant instead of duplicating this literal "onDenied" 3 times.(á œ8Ğ°ı™/
+Z	java:S106U"9Replace this use of System.out or System.err by a logger.(´èôÎúÿÿÿÿ8´‡Üö/
+B
+java:S1659&"%Declare "pincode" on a separate line.(Ò®­ÿ8Àóú™/
 ^
 java:S1128"ARemove this unused import 'com.skdirect.activity.SplashActivity'.(äÚÛ¬8Ğäû™/
-Z	java:S106T"9Replace this use of System.out or System.err by a logger.(´èôÎúÿÿÿÿ8¦„àŸ/
+X	java:S125W"<This block of commented-out lines of code should be removed.(ò¼ğ˜8şÃæŸ/
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(ğˆˆÄøÿÿÿÿ8îªãŸ/

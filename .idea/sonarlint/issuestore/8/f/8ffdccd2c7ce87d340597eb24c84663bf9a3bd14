@@ -1,0 +1,27 @@
+
+P
+java:S2209+"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+]
+java:S1854}"BRemove this useless assignment to local variable "deliveryCharge".(î­ÈÄøÿÿÿÿ
+>
+java:S1604^"(Make this anonymous inner class a lambda(ØÂÊ
+p	java:S116 "\Rename this field "OrderStatusDCList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¯¢0
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(Êïø‹
+D
+java:S1604¡"(Make this anonymous inner class a lambda(İƒïğùÿÿÿÿ
+f
+java:S2259‰"OA "NullPointerException" could be thrown; "orderDetailsModel" is nullable here.(ÆËğ 
+Z
+java:S1155¥">Use isEmpty() to check whether the collection is empty or not.(ÄêŠùùÿÿÿÿ
+U
+java:S1155‰">Use isEmpty() to check whether the collection is empty or not.(ÆËğ 
+?	java:S108—")Either remove or fill this block of code.(å¥‡
+?
+java:S1604»"(Make this anonymous inner class a lambda(™‰ ´
+W	java:S125–"<This block of commented-out lines of code should be removed.(¢ïåÿÿÿÿÿ
+K
+java:S1068!"6Remove this unused "mainStepperAdapter" private field.(˜°÷
+N
+java:S1481}"3Remove this unused "deliveryCharge" local variable.(î­ÈÄøÿÿÿÿ
+m
+java:S3776\"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(„º‰¤ûÿÿÿÿ

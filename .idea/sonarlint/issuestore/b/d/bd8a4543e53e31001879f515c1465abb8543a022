@@ -1,0 +1,113 @@
+
+P
+java:S2209?"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+M
+java:S1066"/Merge this if statement with the enclosing one.(Á§÷ï8£»ì/
+Q
+java:S2209­"5Change this instance-reference to a static reference.(ŠæŠ¼ùÿÿÿÿ
+i	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïñ˜£ıÿÿÿÿ
+Q
+java:S2209›"5Change this instance-reference to a static reference.(ŠæŠ¼ùÿÿÿÿ
+@
+java:S5411u"*Use the primitive boolean expression here.(ÈÀ‰
+d	java:S100à"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ö¼Ñ
+U
+java:S1155õ">Use isEmpty() to check whether the collection is empty or not.(§°ğ
+Q
+java:S2209Ú"5Change this instance-reference to a static reference.( Äâ´øÿÿÿÿ
+M
+java:S5411Œ"*Use the primitive boolean expression here.(Å »Íıÿÿÿÿ8£»ì/
+Q
+java:S2209"5Change this instance-reference to a static reference.(šœ®šøÿÿÿÿ
+Z
+java:S1155ê">Use isEmpty() to check whether the collection is empty or not.(¸úÛòûÿÿÿÿ
+Q
+java:S2209«"5Change this instance-reference to a static reference.(•üËªøÿÿÿÿ
+C
+java:S1602Å",Remove useless curly braces around statement(»‡ˆç
+R	java:S125"<This block of commented-out lines of code should be removed.(‚±·¼
+g	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éö¿€
+E
+java:S1172³")Remove this unused method parameter "id".(‘û˜µşÿÿÿÿ
+\
+java:S1155´">Use isEmpty() to check whether the collection is empty or not.(ÂóŠ8£»ì/
+S
+java:S1874¿"0Remove this use of "getColor"; it is deprecated.(§ÔË‹ûÿÿÿÿ8£»ì/
+D
+java:S1604»"(Make this anonymous inner class a lambda(ğêêÂıÿÿÿÿ
+D
+java:S1604å"(Make this anonymous inner class a lambda(—¸à´ÿÿÿÿÿ
+\
+java:S1155š">Use isEmpty() to check whether the collection is empty or not.(ÎĞ‘8£»ì/
+W	java:S125É"<This block of commented-out lines of code should be removed.(ñâ‰õÿÿÿÿÿ
+L
+java:S2209‡"5Change this instance-reference to a static reference.(øÅ”õ
+Q
+java:S2209Î"5Change this instance-reference to a static reference.(Œ€“’úÿÿÿÿ
+?
+java:S1643"Use a StringBuilder instead.(æáë©ıÿÿÿÿ8£»ì/
+s
+java:S3252Á"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8£»ì/
+l	java:S1164"WRename this field "SellerItemID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ø²ÿ
+n	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÕù¾8£»ì/
+i	java:S100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À„Î¨ÿÿÿÿÿ
+n
+java:S3252Å"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ø»¦¨8£»ì/
+“
+java:S1319ñ"|The type of the "variationListMain" object should be an interface such as "List" rather than the implementation "ArrayList".(¢ŸàĞ
+\
+java:S1155Î">Use isEmpty() to check whether the collection is empty or not.(¡úí¢8£»ì/
+s
+java:S3252Á"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8£»ì/
+?
+java:S1604Ğ"(Make this anonymous inner class a lambda(¯®
+Q
+java:S2209"5Change this instance-reference to a static reference.(§–…»úÿÿÿÿ
+W	java:S125İ"<This block of commented-out lines of code should be removed.(Š·¶Ëøÿÿÿÿ
+8
+java:S1643—"Use a StringBuilder instead.(Ú¯ëÿÿÿÿÿ
+L
+java:S2209Ï"5Change this instance-reference to a static reference.(êûƒÍ
+Q
+java:S2209İ"5Change this instance-reference to a static reference.(È¯¿üÿÿÿÿ
+l	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖúÅƒüÿÿÿÿ
+L
+java:S2209¤"5Change this instance-reference to a static reference.(êûƒÍ
+N
+java:S1144‚"2Remove this unused private "addProductAPI" method.(áü³¾şÿÿÿÿ
+d	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“„Åé
+?
+java:S1604‡"(Make this anonymous inner class a lambda(ìÅÿÙ
+U
+java:S1155À">Use isEmpty() to check whether the collection is empty or not.(„ÔŸÿ
+a
+java:S1155Ø">Use isEmpty() to check whether the collection is empty or not.(àÃ¹¿úÿÿÿÿ8£»ì/
+R	java:S125ò"<This block of commented-out lines of code should be removed.(·ÿïì
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û”¥
+G
+java:S1874Ö"0Remove this use of "getColor"; it is deprecated.(ã“Û
+L
+java:S2209ş"5Change this instance-reference to a static reference.(Šà–ñ
+}
+java:S14502"gRemove the "variantAttributeDCModels" field and declare it as a local variable in the relevant methods.(ğ‡ÈÔ
+n
+java:S3252Å"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ø»¦¨8£»ì/
+R	java:S125ı"<This block of commented-out lines of code should be removed.(–ÿ¯¹
+U
+java:S1155Õ">Use isEmpty() to check whether the collection is empty or not.(çËçá
+?
+java:S1604Ñ"(Make this anonymous inner class a lambda(ãò¬ş
+C
+java:S1602´",Remove useless curly braces around statement(©¾³‡
+Q
+java:S2209ç"5Change this instance-reference to a static reference.(°ä§Èıÿÿÿÿ
+U
+java:S1155œ">Use isEmpty() to check whether the collection is empty or not.(˜’¬«
+i
+java:S3776…"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(ä®æí
+S
+java:S1874¾"0Remove this use of "getColor"; it is deprecated.(¶¢¢°ıÿÿÿÿ8£»ì/
+Q	java:S110,"<This class has 9 parents which is greater than 5 authorized.(ÎÜ«ü
+i	java:S100‹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‰Ë´ùÿÿÿÿ
+Z
+java:S1155”">Use isEmpty() to check whether the collection is empty or not.(Ï²óşÿÿÿÿ

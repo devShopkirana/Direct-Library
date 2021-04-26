@@ -1,30 +1,30 @@
 
-t
-java:S1450"WRemove the "dbHelper" field and declare it as a local variable in the relevant methods.(ã¶ÅÍ8ôÎ¿Å/
-s
-java:S1450"VRemove the "pincode" field and declare it as a local variable in the relevant methods.(¢¿ïÜ8ôÎ¿Å/
-p	java:S116%"TRename this field "BUYERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãñï8ôÎ¿Å/
-u
-java:S1450%"XRemove the "BUYERNAME" field and declare it as a local variable in the relevant methods.(Ãñï8ôÎ¿Å/
-
-java:S1186p"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù šé8­ÕÆœ/
+Y	java:S125¡"<This block of commented-out lines of code should be removed.(ïóÕ¦8Ş¦¿/
+z
+java:S1450$"XRemove the "SOURCEKEY" field and declare it as a local variable in the relevant methods.(ŒØúêşÿÿÿÿ8ôÎ¿Å/
 x
 java:S1450"[Remove the "mobileNumber" field and declare it as a local variable in the relevant methods.(Æ›¡ó8ôÎ¿Å/
-Q
-java:S1066F"/Merge this if statement with the enclosing one.(¤‹“¢ıÿÿÿÿ8Ù‡° /
-z
-java:S1450!"XRemove the "longitude" field and declare it as a local variable in the relevant methods.(Ï¯ÿÿÿÿÿ8ôÎ¿Å/
 s
 java:S1450"VRemove the "address" field and declare it as a local variable in the relevant methods.(›—Ô8ôÎ¿Å/
-u	java:S116$"TRename this field "SOURCEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒØúêşÿÿÿÿ8ôÎ¿Å/
+s
+java:S1450"VRemove the "pincode" field and declare it as a local variable in the relevant methods.(¢¿ïÜ8ôÎ¿Å/
+u
+java:S1450%"XRemove the "BUYERNAME" field and declare it as a local variable in the relevant methods.(Ãñï8ôÎ¿Å/
 t
 java:S1450 "WRemove the "latitude" field and declare it as a local variable in the relevant methods.(Æ²å×8ôÎ¿Å/
+z
+java:S1450!"XRemove the "longitude" field and declare it as a local variable in the relevant methods.(Ï¯ÿÿÿÿÿ8ôÎ¿Å/
+u	java:S116$"TRename this field "SOURCEKEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒØúêşÿÿÿÿ8ôÎ¿Å/
+p	java:S116%"TRename this field "BUYERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãñï8ôÎ¿Å/
 t
 java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(¨Œşÿÿÿÿ8ôÎ¿Å/
 H
 java:S1068"+Remove this unused "address" private field.(›—Ô8ôÎ¿Å/
-z
-java:S1450$"XRemove the "SOURCEKEY" field and declare it as a local variable in the relevant methods.(ŒØúêşÿÿÿÿ8ôÎ¿Å/
-Y	java:S125¡"<This block of commented-out lines of code should be removed.(ïóÕ¦8Ş¦¿/
+
+java:S1186p"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù šé8­ÕÆœ/
+t
+java:S1450"WRemove the "dbHelper" field and declare it as a local variable in the relevant methods.(ã¶ÅÍ8ôÎ¿Å/
+Q
+java:S1066F"/Merge this if statement with the enclosing one.(¤‹“¢ıÿÿÿÿ8Ù‡° /
 W
 java:S2209*"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ8ÿ±´Æ/

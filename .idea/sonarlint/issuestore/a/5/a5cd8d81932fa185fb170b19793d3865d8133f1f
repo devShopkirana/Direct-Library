@@ -1,0 +1,14 @@
+
+™
+java:S1319"~The type of the "nearProductListList" object should be an interface such as "List" rather than the implementation "ArrayList".(†–ô‘ùÿÿÿÿ
+e	java:S117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïŠ|
+>
+java:S1604R"(Make this anonymous inner class a lambda(Ó´¾
+J
+java:S2209."5Change this instance-reference to a static reference.(³¾æG
+K
+java:S2209/"5Change this instance-reference to a static reference.(ÜÎµ•
+K
+java:S22090"5Change this instance-reference to a static reference.(˜ûäÈ
+P
+java:S22091"5Change this instance-reference to a static reference.(°î¯¥ùÿÿÿÿ

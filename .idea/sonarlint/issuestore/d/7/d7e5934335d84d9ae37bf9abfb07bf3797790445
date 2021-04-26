@@ -1,0 +1,63 @@
+
+L
+java:S2209Û"5Change this instance-reference to a static reference.(–ù‹¥
+P
+java:S2209~"5Change this instance-reference to a static reference.(Ã°Õûÿÿÿÿ
+?
+java:S1604¤"(Make this anonymous inner class a lambda(ù¤µ
+Q
+java:S2209­"5Change this instance-reference to a static reference.(‘ù¨Íùÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(½üÀøÿÿÿÿ
+W	java:S125ğ"<This block of commented-out lines of code should be removed.(ñ¸¥øûÿÿÿÿ
+P
+java:S2209{"5Change this instance-reference to a static reference.(Îöë±úÿÿÿÿ
+J
+java:S2209z"5Change this instance-reference to a static reference.(©‘¤g
+L
+java:S2209ƒ"5Change this instance-reference to a static reference.(üºÅ
+W	java:S125ç"<This block of commented-out lines of code should be removed.(é¿ÀÆøÿÿÿÿ
+P
+java:S22098"5Change this instance-reference to a static reference.(÷éˆÙşÿÿÿÿ
+Q	java:S110&"<This class has 9 parents which is greater than 5 authorized.(±‰Ûœ
+D
+java:S1604"(Make this anonymous inner class a lambda(„ø—üÿÿÿÿ
+L
+java:S2209€"5Change this instance-reference to a static reference.(ğ–”¸
+P
+java:S2209x"5Change this instance-reference to a static reference.(îñÀşÿÿÿÿ
+Q
+java:S2209¸"5Change this instance-reference to a static reference.(ºúàÉüÿÿÿÿ
+P
+java:S2209y"5Change this instance-reference to a static reference.(ªÍƒˆùÿÿÿÿ
+Q
+java:S2209"5Change this instance-reference to a static reference.(à¬îËüÿÿÿÿ
+Q
+java:S2209‚"5Change this instance-reference to a static reference.(ÕİÑùÿÿÿÿ
+L
+java:S2209Ü"5Change this instance-reference to a static reference.(¡À’ò
+K
+java:S2209}"5Change this instance-reference to a static reference.(˜®„
+L
+java:S2209Ë"5Change this instance-reference to a static reference.(êûƒÍ
+Q
+java:S2209ˆ"5Change this instance-reference to a static reference.(ßÛàõúÿÿÿÿ
+Q
+java:S2209¯"5Change this instance-reference to a static reference.(Üø™ğùÿÿÿÿ
+Q
+java:S2209¬"5Change this instance-reference to a static reference.(‰ïúñùÿÿÿÿ
+Z
+java:S1155ü">Use isEmpty() to check whether the collection is empty or not.(¿È™ııÿÿÿÿ
+<
+java:S1659/"&Declare "discount" on a separate line.(ÙÖ¦
+P
+java:S2209g"5Change this instance-reference to a static reference.(ÕİÑùÿÿÿÿ
+L
+java:S2209Ú"5Change this instance-reference to a static reference.(ìÕšú
+_
+java:S1128"=Remove this unused import 'android.view.ContextThemeWrapper'.(ÜÎ¹„úÿÿÿÿ8¾ç¯ì/
+?
+java:S1659/")Declare "totalAmount" on a separate line.(ÙÖ¦
+Q	java:S125S"<This block of commented-out lines of code should be removed.(‹ââ
+K
+java:S2209|"5Change this instance-reference to a static reference.(™¶

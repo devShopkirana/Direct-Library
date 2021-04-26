@@ -1,0 +1,33 @@
+
+V	java:S110$"<This class has 9 parents which is greater than 5 authorized.(ÄÄ¸œúÿÿÿÿ
+Q
+java:S1141Û"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¢é„
+l	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¥À•üÿÿÿÿ
+g	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Œ©§
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë±ËË
+l	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú’»˜øÿÿÿÿ
+g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒªû
+A
+java:S5411‹"*Use the primitive boolean expression here.(ŸØÄş
+C
+java:S1604W"(Make this anonymous inner class a lambda(ÚÊŠÖüÿÿÿÿ
+?
+java:S1604‡"(Make this anonymous inner class a lambda(®¬°Ş
+?
+java:S1604¿"(Make this anonymous inner class a lambda(ÓüÅô
+^
+java:S2259‚"BA "NullPointerException" could be thrown; "data" is nullable here.(›Ç¯úÿÿÿÿ
+o
+java:S1450*"TRemove the "place" field and declare it as a local variable in the relevant methods.(éˆ Šüÿÿÿÿ
+P
+java:S22093"5Change this instance-reference to a static reference.(õœË¢ÿÿÿÿÿ
+n
+java:S3776½"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(î®Æƒøÿÿÿÿ
+W
+java:S1854Î"@Remove this useless assignment to local variable "Addressthree".(ƒªû
+5
+java:S2178"Correct this "&" to "&&".(¢Åâƒúÿÿÿÿ
+W	java:S125…"<This block of commented-out lines of code should be removed.(èï½²şÿÿÿÿ
+H
+java:S1481Î"1Remove this unused "Addressthree" local variable.(ƒªû
