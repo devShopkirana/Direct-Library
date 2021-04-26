@@ -5,28 +5,21 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.viewpager.widget.ViewPager;
-
 import com.skdirect.BuildConfig;
 import com.skdirect.R;
-import com.skdirect.adapter.ProductImagesAdapter;
-import com.skdirect.databinding.FragmentImageShoBinding;
-import com.skdirect.databinding.FragmentSellerImageBinding;
-import com.skdirect.model.ImageListModel;
+
+import com.skdirect.databinding.FragmentSellerImagedBinding;
 import com.skdirect.utils.TextUtils;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-
-
 public class SellerImageGalleryActivity extends AppCompatActivity {
-    private FragmentSellerImageBinding mBinding;
+    private FragmentSellerImagedBinding mBinding;
     private String irImagesModels, sellerShopName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_seller_image);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_seller_imaged);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             irImagesModels = getIntent().getStringExtra("ImageData");

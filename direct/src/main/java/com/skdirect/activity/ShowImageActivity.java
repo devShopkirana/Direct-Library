@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.skdirect.R;
 import com.skdirect.adapter.ProductImagesAdapter;
-import com.skdirect.databinding.FragmentImageShoBinding;
+import com.skdirect.databinding.FragmentImageShowdBinding;
 import com.skdirect.model.ImageListModel;
 import com.skdirect.utils.DirectSDK;
 
@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 
 public class ShowImageActivity extends AppCompatActivity {
-    private FragmentImageShoBinding mBinding;
+    private FragmentImageShowdBinding mBinding;
     private ArrayList<ImageListModel> irImagesModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_image_sho);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.fragment_image_showd);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             irImagesModels = (ArrayList<ImageListModel>) getIntent().getSerializableExtra("ImageData");
