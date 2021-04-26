@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -318,6 +319,8 @@ public class Utils {
         if (number != null && !number.equals("")) {
             whatsappIntent.putExtra("jid", PhoneNumberUtils.stripSeparators("91" + number) + "@s.whatsapp.net");
         }
+        Log.d("TAG", "Share Msg:::: "+textMsg);
+
         whatsappIntent.putExtra(Intent.EXTRA_TEXT, textMsg);
         try {
             context.startActivity(whatsappIntent);
